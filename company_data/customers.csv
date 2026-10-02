@@ -1,0 +1,2001 @@
+customer_id,customer_name,region,segment,priority
+CUST-00001,Grace Clark,Midwest,Consumer,Priority
+CUST-00002,Rossi Holdings,West,Corporate,Standard
+CUST-00003,Ana Smith,Midwest,Home Office,Standard
+CUST-00004,Elena Chen,Northeast,Corporate,Standard
+CUST-00005,Sharma Partners,Northeast,Corporate,Standard
+CUST-00006,Yuki Kim,Midwest,Consumer,VIP
+CUST-00007,Silva Solutions,Midwest,Corporate,VIP
+CUST-00008,Fatima Sharma,West,Consumer,Standard
+CUST-00009,Thomas Wilson,Midwest,Home Office,Standard
+CUST-00010,Khan Holdings,South,Corporate,Priority
+CUST-00011,Priya Davis,Midwest,Corporate,Standard
+CUST-00012,Johnson Group,West,Consumer,Standard
+CUST-00013,Wei Khan,West,Consumer,Standard
+CUST-00014,Carlos Anderson,West,Consumer,Priority
+CUST-00015,Hassan Group,Northeast,Consumer,Standard
+CUST-00016,Fatima Ali,Midwest,Consumer,Standard
+CUST-00017,Mohammed Silva,Midwest,Consumer,Standard
+CUST-00018,Aisha Ali,Northeast,Consumer,Priority
+CUST-00019,Carlos Davis,South,Consumer,Standard
+CUST-00020,David Chen,Midwest,Consumer,Standard
+CUST-00021,Khan Enterprises,South,Home Office,Standard
+CUST-00022,Robert Tanaka,Northeast,Consumer,Priority
+CUST-00023,Yuki Ali,South,Home Office,Standard
+CUST-00024,Hassan Solutions,Northeast,Consumer,Priority
+CUST-00025,Daniel Wilson,West,Corporate,Standard
+CUST-00026,Grace Silva,South,Corporate,Standard
+CUST-00027,Ali Enterprises,West,Consumer,Standard
+CUST-00028,Kim Enterprises,Midwest,Consumer,Standard
+CUST-00029,Grace Nguyen,Midwest,Consumer,Standard
+CUST-00030,Sharma Solutions,Midwest,Consumer,Standard
+CUST-00031,Michael Clark,West,Consumer,Standard
+CUST-00032,Fatima Brown,West,Consumer,Priority
+CUST-00033,Silva Enterprises,Northeast,Corporate,Priority
+CUST-00034,Priya Kowalski,West,Consumer,Standard
+CUST-00035,Wei Davis,Northeast,Corporate,Standard
+CUST-00036,Thomas Rossi,West,Corporate,Standard
+CUST-00037,John Martinez,West,Corporate,Standard
+CUST-00038,Silva Solutions,South,Corporate,VIP
+CUST-00039,Khan Enterprises,West,Home Office,Priority
+CUST-00040,Johnson Solutions,Midwest,Corporate,Priority
+CUST-00041,Grace Johnson,West,Corporate,Standard
+CUST-00042,Wei Chen,West,Corporate,Priority
+CUST-00043,Kim Group,South,Corporate,Standard
+CUST-00044,Sofia Chen,South,Consumer,Standard
+CUST-00045,Kim Solutions,Midwest,Consumer,Standard
+CUST-00046,Grace Hassan,West,Consumer,Standard
+CUST-00047,Smith Partners,Midwest,Consumer,VIP
+CUST-00048,Linh Martinez,West,Home Office,Standard
+CUST-00049,David Chen,West,Consumer,Priority
+CUST-00050,Aisha Garcia,South,Corporate,Priority
+CUST-00051,Linh Chen,South,Consumer,Standard
+CUST-00052,Thomas Sharma,Midwest,Consumer,Priority
+CUST-00053,Fatima Nguyen,West,Consumer,Standard
+CUST-00054,Khan Solutions,West,Consumer,Priority
+CUST-00055,Johnson Holdings,South,Corporate,Standard
+CUST-00056,Sofia Martinez,West,Home Office,Standard
+CUST-00057,Martinez Group,West,Corporate,Standard
+CUST-00058,Robert Rossi,Midwest,Corporate,Standard
+CUST-00059,Wei Sharma,West,Corporate,Standard
+CUST-00060,Kowalski Holdings,South,Consumer,Standard
+CUST-00061,Maria Sharma,Northeast,Consumer,Standard
+CUST-00062,Wei Anderson,South,Home Office,VIP
+CUST-00063,John Wilson,South,Consumer,Standard
+CUST-00064,Aisha Kim,South,Consumer,Standard
+CUST-00065,Martinez Group,South,Consumer,Standard
+CUST-00066,Daniel Nguyen,South,Consumer,Standard
+CUST-00067,Johnson Solutions,South,Consumer,Standard
+CUST-00068,Silva Holdings,South,Consumer,Standard
+CUST-00069,Garcia Enterprises,Northeast,Consumer,Standard
+CUST-00070,Ali Partners,South,Consumer,VIP
+CUST-00071,Daniel Anderson,West,Consumer,Standard
+CUST-00072,David Khan,South,Consumer,Standard
+CUST-00073,Chen Holdings,South,Consumer,Standard
+CUST-00074,Maria Kim,South,Consumer,Standard
+CUST-00075,Fatima Clark,Northeast,Consumer,Standard
+CUST-00076,Smith Enterprises,West,Consumer,Standard
+CUST-00077,Maria Silva,Northeast,Consumer,Standard
+CUST-00078,Mohammed Brown,South,Consumer,Standard
+CUST-00079,Ali Holdings,West,Home Office,Standard
+CUST-00080,Michael Kowalski,South,Consumer,Standard
+CUST-00081,Rossi Holdings,South,Corporate,Standard
+CUST-00082,Sofia Clark,West,Corporate,Standard
+CUST-00083,Johnson Enterprises,South,Consumer,Standard
+CUST-00084,Hassan Enterprises,South,Consumer,Standard
+CUST-00085,Priya Nguyen,West,Home Office,Standard
+CUST-00086,Chen Partners,South,Consumer,Priority
+CUST-00087,Michael Chen,South,Consumer,Priority
+CUST-00088,Wei Clark,Northeast,Corporate,Standard
+CUST-00089,Elena Brown,South,Corporate,Priority
+CUST-00090,Davis Group,West,Consumer,Priority
+CUST-00091,Johnson Enterprises,Midwest,Consumer,Standard
+CUST-00092,Sofia Martinez,Midwest,Consumer,Standard
+CUST-00093,Aisha Kowalski,West,Consumer,Priority
+CUST-00094,Johnson Partners,West,Consumer,Standard
+CUST-00095,Elena Brown,South,Consumer,Standard
+CUST-00096,Michael Silva,Midwest,Consumer,Standard
+CUST-00097,Khan Partners,West,Consumer,Standard
+CUST-00098,Wei Clark,South,Consumer,Standard
+CUST-00099,Johnson Solutions,Northeast,Consumer,Standard
+CUST-00100,Aisha Clark,South,Consumer,Standard
+CUST-00101,Linh Ali,South,Consumer,Standard
+CUST-00102,John Garcia,West,Consumer,Standard
+CUST-00103,Linh Silva,South,Consumer,Standard
+CUST-00104,Anderson Holdings,South,Home Office,Priority
+CUST-00105,Sofia Kim,West,Consumer,Standard
+CUST-00106,Wilson Group,Midwest,Corporate,Standard
+CUST-00107,David Garcia,West,Consumer,Priority
+CUST-00108,Ali Partners,West,Consumer,Priority
+CUST-00109,Maria Sharma,South,Consumer,Priority
+CUST-00110,Ali Solutions,West,Home Office,Standard
+CUST-00111,Sofia Clark,South,Home Office,Priority
+CUST-00112,Silva Enterprises,West,Consumer,Standard
+CUST-00113,Priya Smith,South,Consumer,Standard
+CUST-00114,John Hassan,Midwest,Consumer,Standard
+CUST-00115,John Khan,West,Home Office,Standard
+CUST-00116,Clark Solutions,Midwest,Consumer,Standard
+CUST-00117,Linh Kim,South,Corporate,Standard
+CUST-00118,Rossi Holdings,South,Consumer,Priority
+CUST-00119,Johnson Group,South,Consumer,VIP
+CUST-00120,Garcia Solutions,West,Consumer,Standard
+CUST-00121,Johnson Group,Midwest,Consumer,Standard
+CUST-00122,Wei Hassan,West,Consumer,Priority
+CUST-00123,Sofia Brown,South,Consumer,Standard
+CUST-00124,Linh Ali,West,Home Office,Standard
+CUST-00125,Robert Khan,South,Corporate,Priority
+CUST-00126,Davis Group,South,Consumer,Standard
+CUST-00127,Chen Enterprises,South,Corporate,Standard
+CUST-00128,Wei Hassan,West,Home Office,Priority
+CUST-00129,Linh Ali,Northeast,Consumer,Standard
+CUST-00130,Carlos Martinez,Midwest,Corporate,Priority
+CUST-00131,Kowalski Group,West,Consumer,Standard
+CUST-00132,Johnson Group,Northeast,Consumer,Priority
+CUST-00133,Kim Group,West,Consumer,Standard
+CUST-00134,Wei Kim,South,Corporate,Standard
+CUST-00135,David Chen,South,Consumer,Priority
+CUST-00136,Sofia Ali,West,Consumer,Standard
+CUST-00137,Clark Group,South,Corporate,Priority
+CUST-00138,Clark Group,South,Corporate,Standard
+CUST-00139,Ana Kim,Midwest,Consumer,Standard
+CUST-00140,Maria Anderson,South,Corporate,Priority
+CUST-00141,Johnson Enterprises,South,Home Office,Standard
+CUST-00142,Martinez Enterprises,South,Home Office,Standard
+CUST-00143,Tanaka Group,South,Consumer,Standard
+CUST-00144,Mohammed Brown,South,Corporate,Standard
+CUST-00145,Nguyen Partners,West,Corporate,Standard
+CUST-00146,Fatima Khan,Northeast,Corporate,Priority
+CUST-00147,Nguyen Enterprises,South,Corporate,Standard
+CUST-00148,Wilson Holdings,South,Consumer,Priority
+CUST-00149,Sharma Enterprises,West,Home Office,Standard
+CUST-00150,Kowalski Enterprises,Northeast,Home Office,Standard
+CUST-00151,Elena Davis,Midwest,Consumer,Standard
+CUST-00152,Wei Martinez,Northeast,Corporate,Priority
+CUST-00153,Sofia Garcia,South,Consumer,Priority
+CUST-00154,Robert Johnson,South,Home Office,Standard
+CUST-00155,Carlos Martinez,Midwest,Consumer,Standard
+CUST-00156,Martinez Enterprises,South,Consumer,VIP
+CUST-00157,James Sharma,West,Consumer,VIP
+CUST-00158,Grace Clark,West,Consumer,Priority
+CUST-00159,Kowalski Group,South,Home Office,Priority
+CUST-00160,Carlos Sharma,West,Consumer,Standard
+CUST-00161,James Smith,West,Corporate,Standard
+CUST-00162,Sharma Solutions,West,Consumer,Standard
+CUST-00163,Davis Enterprises,South,Corporate,Priority
+CUST-00164,Clark Holdings,West,Corporate,Standard
+CUST-00165,Elena Kowalski,West,Consumer,VIP
+CUST-00166,Brown Solutions,West,Consumer,Priority
+CUST-00167,Maria Tanaka,Midwest,Corporate,Priority
+CUST-00168,Kowalski Enterprises,South,Consumer,Standard
+CUST-00169,Martinez Partners,Midwest,Corporate,Standard
+CUST-00170,Anderson Partners,Midwest,Consumer,Standard
+CUST-00171,John Brown,Midwest,Corporate,Standard
+CUST-00172,Chen Partners,South,Consumer,Priority
+CUST-00173,Sofia Brown,Midwest,Home Office,Standard
+CUST-00174,Thomas Clark,South,Consumer,Standard
+CUST-00175,Fatima Wilson,Northeast,Consumer,Priority
+CUST-00176,Martinez Holdings,Midwest,Consumer,Priority
+CUST-00177,Aisha Chen,South,Consumer,Standard
+CUST-00178,Brown Partners,South,Corporate,Standard
+CUST-00179,Wei Johnson,Northeast,Consumer,VIP
+CUST-00180,Smith Partners,West,Home Office,Priority
+CUST-00181,Martinez Group,Midwest,Consumer,Priority
+CUST-00182,Johnson Holdings,South,Consumer,Standard
+CUST-00183,Maria Kowalski,Midwest,Corporate,Standard
+CUST-00184,Mohammed Nguyen,West,Consumer,VIP
+CUST-00185,Martinez Enterprises,South,Consumer,Priority
+CUST-00186,John Martinez,South,Consumer,Standard
+CUST-00187,Maria Wilson,West,Corporate,Standard
+CUST-00188,Yuki Garcia,South,Consumer,Standard
+CUST-00189,Wilson Solutions,West,Corporate,Standard
+CUST-00190,James Kowalski,Northeast,Corporate,Standard
+CUST-00191,Yuki Johnson,Northeast,Consumer,Standard
+CUST-00192,Elena Khan,West,Consumer,Standard
+CUST-00193,David Anderson,West,Corporate,Standard
+CUST-00194,Maria Silva,West,Corporate,Standard
+CUST-00195,Smith Group,Northeast,Corporate,Priority
+CUST-00196,John Chen,South,Corporate,Standard
+CUST-00197,David Sharma,South,Consumer,Standard
+CUST-00198,Aisha Garcia,West,Corporate,Standard
+CUST-00199,Fatima Khan,West,Consumer,Standard
+CUST-00200,Aisha Hassan,Midwest,Home Office,Standard
+CUST-00201,Wei Rossi,South,Consumer,Standard
+CUST-00202,Michael Brown,West,Corporate,Standard
+CUST-00203,Khan Group,South,Consumer,VIP
+CUST-00204,Grace Clark,South,Corporate,Priority
+CUST-00205,Yuki Smith,West,Consumer,Standard
+CUST-00206,Davis Solutions,Midwest,Consumer,Priority
+CUST-00207,Daniel Clark,Midwest,Home Office,Priority
+CUST-00208,Mohammed Anderson,West,Consumer,Priority
+CUST-00209,Kim Enterprises,West,Corporate,Standard
+CUST-00210,Garcia Partners,South,Corporate,Priority
+CUST-00211,Aisha Chen,Midwest,Consumer,VIP
+CUST-00212,Anderson Enterprises,South,Corporate,Standard
+CUST-00213,Michael Clark,West,Consumer,Standard
+CUST-00214,Smith Enterprises,West,Corporate,Standard
+CUST-00215,Wei Tanaka,South,Home Office,Standard
+CUST-00216,Michael Hassan,West,Corporate,Priority
+CUST-00217,Mohammed Silva,West,Consumer,Priority
+CUST-00218,Khan Partners,South,Consumer,Priority
+CUST-00219,Elena Silva,Northeast,Consumer,Standard
+CUST-00220,Nguyen Holdings,West,Consumer,VIP
+CUST-00221,Robert Martinez,West,Corporate,Standard
+CUST-00222,Linh Garcia,South,Consumer,Priority
+CUST-00223,Michael Clark,West,Home Office,Standard
+CUST-00224,Maria Silva,South,Consumer,Standard
+CUST-00225,Clark Partners,Northeast,Consumer,Standard
+CUST-00226,Mohammed Anderson,Northeast,Home Office,VIP
+CUST-00227,Priya Brown,Midwest,Home Office,Standard
+CUST-00228,John Johnson,South,Consumer,Priority
+CUST-00229,Mohammed Silva,West,Consumer,Priority
+CUST-00230,Sofia Johnson,South,Consumer,Priority
+CUST-00231,Mohammed Khan,Midwest,Consumer,Standard
+CUST-00232,Silva Enterprises,South,Consumer,Standard
+CUST-00233,John Garcia,West,Consumer,Priority
+CUST-00234,Brown Group,South,Consumer,Standard
+CUST-00235,Davis Holdings,Midwest,Corporate,Standard
+CUST-00236,Priya Anderson,South,Corporate,Standard
+CUST-00237,Robert Wilson,Midwest,Home Office,Standard
+CUST-00238,David Martinez,Midwest,Corporate,VIP
+CUST-00239,Sofia Clark,West,Consumer,Priority
+CUST-00240,Carlos Kowalski,South,Consumer,Standard
+CUST-00241,Daniel Khan,Northeast,Consumer,Standard
+CUST-00242,Aisha Clark,South,Consumer,Priority
+CUST-00243,Garcia Solutions,West,Consumer,VIP
+CUST-00244,Yuki Kowalski,South,Corporate,Standard
+CUST-00245,Anderson Partners,South,Consumer,Standard
+CUST-00246,Linh Silva,South,Consumer,Priority
+CUST-00247,Mohammed Hassan,West,Home Office,Standard
+CUST-00248,Grace Silva,South,Consumer,Standard
+CUST-00249,Priya Tanaka,Midwest,Home Office,Priority
+CUST-00250,Mohammed Wilson,Northeast,Consumer,Standard
+CUST-00251,Elena Smith,West,Consumer,Standard
+CUST-00252,Garcia Partners,Midwest,Consumer,VIP
+CUST-00253,Aisha Silva,South,Consumer,Standard
+CUST-00254,Carlos Nguyen,West,Consumer,Priority
+CUST-00255,Linh Chen,West,Consumer,Priority
+CUST-00256,Chen Partners,West,Corporate,Standard
+CUST-00257,Priya Brown,Midwest,Corporate,Standard
+CUST-00258,James Wilson,Midwest,Consumer,Priority
+CUST-00259,Clark Group,West,Home Office,Standard
+CUST-00260,Tanaka Enterprises,South,Consumer,Priority
+CUST-00261,Grace Ali,West,Corporate,Priority
+CUST-00262,Ana Kowalski,West,Consumer,Priority
+CUST-00263,Sofia Smith,Midwest,Consumer,Standard
+CUST-00264,Thomas Tanaka,Midwest,Home Office,Standard
+CUST-00265,Sofia Martinez,South,Consumer,Standard
+CUST-00266,Brown Partners,South,Home Office,Priority
+CUST-00267,Ana Davis,South,Consumer,Standard
+CUST-00268,Fatima Martinez,West,Home Office,Standard
+CUST-00269,Khan Group,West,Consumer,Standard
+CUST-00270,Yuki Kowalski,West,Corporate,Standard
+CUST-00271,Nguyen Solutions,Midwest,Corporate,Priority
+CUST-00272,Linh Brown,West,Corporate,Standard
+CUST-00273,Grace Davis,South,Consumer,Standard
+CUST-00274,Yuki Chen,West,Home Office,Standard
+CUST-00275,Wei Chen,South,Corporate,Priority
+CUST-00276,Thomas Wilson,West,Home Office,Standard
+CUST-00277,Ana Silva,West,Consumer,Standard
+CUST-00278,Kowalski Holdings,South,Consumer,Standard
+CUST-00279,James Sharma,West,Corporate,Priority
+CUST-00280,Davis Holdings,South,Corporate,VIP
+CUST-00281,Rossi Enterprises,Midwest,Consumer,Standard
+CUST-00282,Maria Martinez,West,Consumer,VIP
+CUST-00283,Maria Garcia,Midwest,Consumer,VIP
+CUST-00284,David Brown,South,Consumer,Priority
+CUST-00285,Sofia Clark,South,Consumer,Standard
+CUST-00286,Priya Anderson,West,Consumer,Standard
+CUST-00287,Yuki Smith,West,Consumer,Standard
+CUST-00288,Brown Partners,South,Consumer,Priority
+CUST-00289,Fatima Sharma,Midwest,Corporate,Standard
+CUST-00290,Kim Partners,Northeast,Consumer,Standard
+CUST-00291,Clark Holdings,West,Home Office,Standard
+CUST-00292,Aisha Brown,South,Home Office,Standard
+CUST-00293,Thomas Smith,South,Home Office,Standard
+CUST-00294,Yuki Kim,South,Consumer,Standard
+CUST-00295,John Clark,South,Corporate,Standard
+CUST-00296,Aisha Hassan,West,Corporate,Standard
+CUST-00297,Johnson Partners,South,Home Office,Standard
+CUST-00298,Linh Johnson,South,Consumer,Standard
+CUST-00299,Maria Silva,Northeast,Consumer,Priority
+CUST-00300,Yuki Silva,Northeast,Consumer,Standard
+CUST-00301,Maria Anderson,West,Corporate,Standard
+CUST-00302,Clark Partners,West,Consumer,Standard
+CUST-00303,Wei Kowalski,Midwest,Consumer,Standard
+CUST-00304,James Clark,South,Consumer,Priority
+CUST-00305,Mohammed Nguyen,West,Consumer,Standard
+CUST-00306,David Silva,West,Corporate,VIP
+CUST-00307,Robert Martinez,Midwest,Consumer,Standard
+CUST-00308,Kim Solutions,South,Consumer,Priority
+CUST-00309,John Khan,Midwest,Corporate,VIP
+CUST-00310,Fatima Martinez,Midwest,Corporate,Standard
+CUST-00311,Maria Ali,South,Corporate,Priority
+CUST-00312,Grace Tanaka,South,Consumer,Standard
+CUST-00313,Yuki Garcia,South,Corporate,Standard
+CUST-00314,Yuki Garcia,South,Corporate,Standard
+CUST-00315,Anderson Group,West,Consumer,Priority
+CUST-00316,Yuki Ali,West,Consumer,Standard
+CUST-00317,Aisha Chen,South,Consumer,Standard
+CUST-00318,Thomas Martinez,South,Home Office,Standard
+CUST-00319,Clark Solutions,Midwest,Corporate,Standard
+CUST-00320,Clark Partners,Northeast,Consumer,Standard
+CUST-00321,Kowalski Group,South,Home Office,Priority
+CUST-00322,Thomas Brown,South,Corporate,Priority
+CUST-00323,Mohammed Davis,South,Home Office,Standard
+CUST-00324,David Chen,Midwest,Corporate,Standard
+CUST-00325,Mohammed Nguyen,South,Consumer,Priority
+CUST-00326,Sharma Enterprises,Midwest,Consumer,VIP
+CUST-00327,Grace Hassan,South,Consumer,VIP
+CUST-00328,Carlos Kim,Midwest,Corporate,Priority
+CUST-00329,Sharma Partners,West,Consumer,Priority
+CUST-00330,Fatima Chen,West,Corporate,Priority
+CUST-00331,Ana Garcia,West,Corporate,Standard
+CUST-00332,Thomas Brown,South,Consumer,Standard
+CUST-00333,Johnson Enterprises,West,Home Office,Standard
+CUST-00334,Sofia Wilson,South,Consumer,Standard
+CUST-00335,Davis Group,South,Corporate,Standard
+CUST-00336,Fatima Hassan,West,Consumer,Standard
+CUST-00337,David Kim,Midwest,Consumer,Standard
+CUST-00338,Carlos Nguyen,West,Consumer,Standard
+CUST-00339,Michael Ali,South,Corporate,Priority
+CUST-00340,David Sharma,South,Consumer,Priority
+CUST-00341,John Kim,South,Consumer,Standard
+CUST-00342,Daniel Silva,West,Consumer,Standard
+CUST-00343,Thomas Garcia,South,Consumer,Priority
+CUST-00344,Grace Khan,Midwest,Consumer,Standard
+CUST-00345,Brown Enterprises,Northeast,Consumer,Priority
+CUST-00346,Yuki Martinez,Midwest,Consumer,Priority
+CUST-00347,Sofia Hassan,West,Corporate,Standard
+CUST-00348,Wei Wilson,Midwest,Corporate,Standard
+CUST-00349,Aisha Hassan,West,Corporate,Priority
+CUST-00350,Chen Partners,Midwest,Consumer,Standard
+CUST-00351,David Tanaka,West,Home Office,Priority
+CUST-00352,Sofia Clark,Midwest,Consumer,Standard
+CUST-00353,James Johnson,West,Home Office,Priority
+CUST-00354,Martinez Group,Northeast,Consumer,Priority
+CUST-00355,Garcia Enterprises,South,Corporate,Standard
+CUST-00356,Tanaka Enterprises,South,Consumer,Priority
+CUST-00357,Johnson Partners,South,Consumer,Standard
+CUST-00358,Mohammed Kim,Midwest,Home Office,Standard
+CUST-00359,Silva Holdings,Midwest,Corporate,Standard
+CUST-00360,Thomas Nguyen,Midwest,Consumer,Standard
+CUST-00361,Ana Sharma,Midwest,Consumer,Standard
+CUST-00362,Kowalski Holdings,West,Consumer,Standard
+CUST-00363,James Kim,West,Consumer,Priority
+CUST-00364,Tanaka Group,Midwest,Consumer,Standard
+CUST-00365,Ana Nguyen,South,Corporate,Standard
+CUST-00366,Sharma Enterprises,Midwest,Consumer,Priority
+CUST-00367,Brown Holdings,West,Consumer,Priority
+CUST-00368,Johnson Enterprises,West,Consumer,Priority
+CUST-00369,Martinez Partners,West,Home Office,Standard
+CUST-00370,Kowalski Enterprises,South,Consumer,Standard
+CUST-00371,Martinez Solutions,West,Home Office,Standard
+CUST-00372,Hassan Partners,West,Consumer,Standard
+CUST-00373,Kim Solutions,South,Corporate,Standard
+CUST-00374,Priya Wilson,Midwest,Consumer,VIP
+CUST-00375,Carlos Davis,Northeast,Consumer,VIP
+CUST-00376,Grace Wilson,South,Home Office,Standard
+CUST-00377,Maria Silva,West,Consumer,Standard
+CUST-00378,Sofia Garcia,West,Home Office,Standard
+CUST-00379,Hassan Solutions,South,Consumer,Priority
+CUST-00380,James Garcia,West,Corporate,Standard
+CUST-00381,Sharma Group,West,Consumer,VIP
+CUST-00382,Maria Garcia,West,Corporate,Priority
+CUST-00383,Kim Holdings,West,Corporate,Standard
+CUST-00384,Carlos Smith,West,Corporate,Standard
+CUST-00385,Maria Kim,Midwest,Consumer,Priority
+CUST-00386,Clark Solutions,Midwest,Corporate,Standard
+CUST-00387,Silva Holdings,West,Consumer,Priority
+CUST-00388,Ana Rossi,South,Consumer,Standard
+CUST-00389,James Tanaka,West,Consumer,Priority
+CUST-00390,Wilson Enterprises,Midwest,Consumer,Standard
+CUST-00391,Hassan Holdings,South,Consumer,VIP
+CUST-00392,Garcia Enterprises,West,Consumer,Standard
+CUST-00393,Robert Kim,South,Consumer,Standard
+CUST-00394,Chen Partners,West,Home Office,Priority
+CUST-00395,Michael Garcia,Northeast,Corporate,Priority
+CUST-00396,Tanaka Group,South,Corporate,Standard
+CUST-00397,Anderson Partners,Midwest,Consumer,Standard
+CUST-00398,Priya Clark,South,Corporate,Standard
+CUST-00399,Fatima Clark,Midwest,Corporate,Standard
+CUST-00400,Fatima Ali,Midwest,Consumer,Standard
+CUST-00401,Aisha Silva,Midwest,Home Office,VIP
+CUST-00402,Ana Hassan,Northeast,Corporate,Standard
+CUST-00403,Tanaka Holdings,West,Consumer,Standard
+CUST-00404,David Rossi,Midwest,Home Office,Standard
+CUST-00405,Maria Kowalski,South,Consumer,Priority
+CUST-00406,James Kowalski,West,Home Office,Standard
+CUST-00407,David Silva,South,Home Office,Standard
+CUST-00408,Maria Davis,West,Consumer,Priority
+CUST-00409,Sharma Solutions,South,Corporate,Standard
+CUST-00410,Carlos Chen,West,Consumer,Priority
+CUST-00411,Thomas Khan,South,Consumer,Priority
+CUST-00412,Robert Chen,Midwest,Consumer,Priority
+CUST-00413,Linh Khan,Midwest,Corporate,Priority
+CUST-00414,Wilson Holdings,West,Consumer,Standard
+CUST-00415,Mohammed Anderson,West,Consumer,Priority
+CUST-00416,Robert Davis,South,Consumer,Standard
+CUST-00417,Wilson Solutions,South,Consumer,Priority
+CUST-00418,Wilson Enterprises,South,Consumer,Priority
+CUST-00419,John Kim,West,Consumer,Standard
+CUST-00420,Ana Tanaka,South,Consumer,Standard
+CUST-00421,Linh Hassan,South,Consumer,Priority
+CUST-00422,Rossi Solutions,West,Corporate,Standard
+CUST-00423,Elena Ali,West,Corporate,Priority
+CUST-00424,Yuki Johnson,Midwest,Consumer,Standard
+CUST-00425,Wei Khan,Midwest,Home Office,VIP
+CUST-00426,Smith Group,South,Consumer,Standard
+CUST-00427,Silva Holdings,South,Corporate,Standard
+CUST-00428,Yuki Johnson,South,Consumer,VIP
+CUST-00429,Garcia Group,South,Consumer,Priority
+CUST-00430,David Garcia,South,Consumer,Priority
+CUST-00431,Khan Enterprises,Midwest,Home Office,Standard
+CUST-00432,Fatima Hassan,West,Consumer,Standard
+CUST-00433,Daniel Davis,South,Consumer,VIP
+CUST-00434,Elena Hassan,South,Consumer,Priority
+CUST-00435,Kowalski Holdings,West,Corporate,Standard
+CUST-00436,Robert Smith,West,Consumer,Standard
+CUST-00437,Johnson Enterprises,South,Home Office,Standard
+CUST-00438,Nguyen Partners,Northeast,Home Office,VIP
+CUST-00439,Mohammed Davis,West,Corporate,Standard
+CUST-00440,Johnson Holdings,West,Consumer,VIP
+CUST-00441,John Clark,Midwest,Consumer,Standard
+CUST-00442,Ali Partners,South,Corporate,Priority
+CUST-00443,Nguyen Solutions,West,Corporate,Standard
+CUST-00444,Aisha Smith,West,Corporate,Standard
+CUST-00445,Yuki Sharma,Midwest,Corporate,Standard
+CUST-00446,Grace Johnson,West,Consumer,Standard
+CUST-00447,Aisha Wilson,West,Consumer,Standard
+CUST-00448,Linh Smith,Northeast,Consumer,Priority
+CUST-00449,Martinez Enterprises,West,Consumer,Standard
+CUST-00450,Michael Sharma,West,Corporate,Priority
+CUST-00451,Mohammed Wilson,South,Corporate,Standard
+CUST-00452,Anderson Enterprises,West,Home Office,Standard
+CUST-00453,Ana Wilson,West,Corporate,Standard
+CUST-00454,Martinez Enterprises,South,Corporate,Standard
+CUST-00455,Nguyen Group,South,Home Office,Standard
+CUST-00456,Michael Chen,Northeast,Consumer,Standard
+CUST-00457,Ana Johnson,Midwest,Consumer,Standard
+CUST-00458,Thomas Martinez,South,Consumer,Priority
+CUST-00459,Khan Enterprises,West,Consumer,Priority
+CUST-00460,Daniel Tanaka,South,Corporate,Standard
+CUST-00461,Aisha Hassan,West,Consumer,Standard
+CUST-00462,Nguyen Enterprises,South,Corporate,Standard
+CUST-00463,Martinez Solutions,South,Consumer,Priority
+CUST-00464,Ana Smith,West,Consumer,Standard
+CUST-00465,Grace Davis,South,Corporate,Standard
+CUST-00466,Ana Brown,Midwest,Corporate,Standard
+CUST-00467,Johnson Solutions,West,Consumer,Standard
+CUST-00468,Tanaka Group,West,Consumer,VIP
+CUST-00469,Aisha Kowalski,West,Corporate,Standard
+CUST-00470,Michael Clark,West,Consumer,Standard
+CUST-00471,Sofia Wilson,Northeast,Corporate,Standard
+CUST-00472,Johnson Solutions,Midwest,Consumer,Standard
+CUST-00473,Tanaka Holdings,South,Home Office,Standard
+CUST-00474,Yuki Kowalski,Midwest,Consumer,Standard
+CUST-00475,Yuki Rossi,West,Corporate,Standard
+CUST-00476,Grace Kim,West,Consumer,Standard
+CUST-00477,Smith Enterprises,Northeast,Corporate,Standard
+CUST-00478,Yuki Nguyen,Midwest,Consumer,Priority
+CUST-00479,Carlos Smith,South,Consumer,Standard
+CUST-00480,Elena Anderson,South,Consumer,Standard
+CUST-00481,Robert Clark,South,Corporate,Standard
+CUST-00482,Mohammed Kim,West,Corporate,Standard
+CUST-00483,Michael Silva,Midwest,Corporate,Standard
+CUST-00484,Anderson Solutions,Midwest,Consumer,Standard
+CUST-00485,Rossi Partners,West,Corporate,Standard
+CUST-00486,Robert Silva,South,Corporate,Standard
+CUST-00487,Fatima Kowalski,Midwest,Corporate,Standard
+CUST-00488,Wei Kim,West,Consumer,VIP
+CUST-00489,Anderson Group,West,Corporate,Priority
+CUST-00490,Wei Davis,West,Home Office,Standard
+CUST-00491,Mohammed Kim,South,Consumer,Standard
+CUST-00492,Fatima Anderson,West,Consumer,Standard
+CUST-00493,Anderson Solutions,West,Corporate,Standard
+CUST-00494,Wei Hassan,West,Consumer,Priority
+CUST-00495,Elena Smith,South,Corporate,Standard
+CUST-00496,Martinez Holdings,Midwest,Corporate,Priority
+CUST-00497,Johnson Group,South,Home Office,Standard
+CUST-00498,Fatima Martinez,Midwest,Consumer,Standard
+CUST-00499,Clark Group,South,Corporate,Standard
+CUST-00500,Garcia Enterprises,West,Consumer,Standard
+CUST-00501,Wilson Holdings,South,Corporate,Priority
+CUST-00502,Michael Tanaka,Midwest,Corporate,Priority
+CUST-00503,Ana Chen,Midwest,Corporate,Standard
+CUST-00504,Michael Khan,Midwest,Consumer,VIP
+CUST-00505,Tanaka Solutions,South,Consumer,VIP
+CUST-00506,Mohammed Hassan,South,Consumer,Standard
+CUST-00507,Grace Davis,South,Corporate,Standard
+CUST-00508,Anderson Group,Midwest,Corporate,Standard
+CUST-00509,Elena Silva,South,Consumer,Standard
+CUST-00510,Ana Ali,South,Consumer,Standard
+CUST-00511,Thomas Nguyen,Northeast,Corporate,Standard
+CUST-00512,Priya Ali,South,Corporate,Priority
+CUST-00513,Grace Khan,Midwest,Consumer,Standard
+CUST-00514,Ali Enterprises,South,Corporate,Priority
+CUST-00515,Wilson Group,South,Consumer,Standard
+CUST-00516,Thomas Smith,West,Consumer,Standard
+CUST-00517,Yuki Clark,West,Corporate,Standard
+CUST-00518,Thomas Kowalski,Northeast,Corporate,VIP
+CUST-00519,Clark Holdings,South,Corporate,Priority
+CUST-00520,Maria Rossi,West,Consumer,Standard
+CUST-00521,Sofia Khan,South,Consumer,Priority
+CUST-00522,Robert Hassan,South,Consumer,Standard
+CUST-00523,Kim Holdings,South,Corporate,Standard
+CUST-00524,Johnson Partners,West,Consumer,Standard
+CUST-00525,John Kim,West,Consumer,Standard
+CUST-00526,Linh Davis,West,Home Office,Standard
+CUST-00527,Michael Anderson,Midwest,Consumer,Standard
+CUST-00528,Tanaka Enterprises,Midwest,Corporate,Standard
+CUST-00529,Ana Clark,West,Corporate,Priority
+CUST-00530,Fatima Clark,South,Consumer,Priority
+CUST-00531,David Davis,South,Home Office,Standard
+CUST-00532,Grace Chen,Midwest,Corporate,Standard
+CUST-00533,Maria Hassan,South,Consumer,Standard
+CUST-00534,Grace Clark,Northeast,Consumer,VIP
+CUST-00535,Kowalski Holdings,South,Corporate,Standard
+CUST-00536,Maria Kim,South,Consumer,VIP
+CUST-00537,Smith Group,West,Consumer,Priority
+CUST-00538,Brown Solutions,West,Home Office,Standard
+CUST-00539,Tanaka Holdings,West,Corporate,Standard
+CUST-00540,Aisha Brown,Midwest,Consumer,Priority
+CUST-00541,Maria Hassan,West,Corporate,Priority
+CUST-00542,Grace Nguyen,Midwest,Corporate,Priority
+CUST-00543,Aisha Martinez,West,Consumer,Standard
+CUST-00544,Garcia Enterprises,West,Consumer,Priority
+CUST-00545,Ana Sharma,South,Consumer,Standard
+CUST-00546,Smith Enterprises,South,Corporate,VIP
+CUST-00547,Maria Khan,West,Home Office,Standard
+CUST-00548,Hassan Group,West,Corporate,Standard
+CUST-00549,Priya Clark,South,Consumer,Priority
+CUST-00550,Aisha Hassan,South,Corporate,Standard
+CUST-00551,Anderson Enterprises,West,Consumer,Standard
+CUST-00552,Garcia Group,West,Home Office,Priority
+CUST-00553,Carlos Tanaka,Northeast,Consumer,Standard
+CUST-00554,Robert Clark,South,Home Office,Priority
+CUST-00555,David Kowalski,South,Corporate,VIP
+CUST-00556,David Nguyen,Midwest,Consumer,Priority
+CUST-00557,David Garcia,Midwest,Home Office,Standard
+CUST-00558,David Ali,West,Home Office,Standard
+CUST-00559,Robert Ali,Northeast,Consumer,Priority
+CUST-00560,Carlos Tanaka,Midwest,Corporate,Standard
+CUST-00561,Wei Chen,West,Corporate,Standard
+CUST-00562,Grace Johnson,South,Home Office,Priority
+CUST-00563,David Johnson,South,Corporate,Standard
+CUST-00564,Grace Kim,South,Consumer,Standard
+CUST-00565,Grace Khan,West,Consumer,Standard
+CUST-00566,Maria Chen,Midwest,Consumer,Standard
+CUST-00567,Martinez Group,South,Corporate,Standard
+CUST-00568,Robert Khan,West,Consumer,Priority
+CUST-00569,Martinez Partners,South,Corporate,Standard
+CUST-00570,Wilson Holdings,South,Consumer,VIP
+CUST-00571,Smith Group,Midwest,Corporate,Standard
+CUST-00572,Fatima Martinez,South,Consumer,Priority
+CUST-00573,Ana Johnson,Midwest,Home Office,Standard
+CUST-00574,John Kim,West,Home Office,Standard
+CUST-00575,Johnson Group,South,Corporate,Standard
+CUST-00576,Yuki Ali,South,Corporate,Standard
+CUST-00577,Grace Tanaka,Midwest,Consumer,Standard
+CUST-00578,Wilson Holdings,Midwest,Consumer,Priority
+CUST-00579,Carlos Garcia,Midwest,Consumer,Standard
+CUST-00580,Linh Ali,Midwest,Consumer,Standard
+CUST-00581,Garcia Holdings,South,Corporate,Standard
+CUST-00582,Chen Partners,South,Corporate,Standard
+CUST-00583,Elena Nguyen,West,Corporate,Standard
+CUST-00584,David Anderson,Midwest,Home Office,Standard
+CUST-00585,Tanaka Enterprises,West,Home Office,Standard
+CUST-00586,Elena Rossi,Midwest,Consumer,Standard
+CUST-00587,Daniel Khan,Midwest,Consumer,Standard
+CUST-00588,Brown Group,West,Corporate,VIP
+CUST-00589,Kim Group,West,Corporate,Standard
+CUST-00590,Brown Enterprises,West,Consumer,Standard
+CUST-00591,Ali Group,West,Consumer,Standard
+CUST-00592,Priya Davis,Midwest,Consumer,Priority
+CUST-00593,Mohammed Sharma,Midwest,Consumer,Standard
+CUST-00594,Linh Martinez,Midwest,Consumer,Standard
+CUST-00595,Nguyen Holdings,Midwest,Consumer,Standard
+CUST-00596,Michael Martinez,West,Consumer,Standard
+CUST-00597,Garcia Group,Midwest,Consumer,Standard
+CUST-00598,Mohammed Sharma,West,Consumer,Priority
+CUST-00599,Yuki Ali,Midwest,Home Office,Standard
+CUST-00600,Daniel Kim,West,Corporate,Priority
+CUST-00601,David Smith,Midwest,Consumer,Standard
+CUST-00602,Priya Clark,South,Home Office,Standard
+CUST-00603,Maria Garcia,South,Consumer,Standard
+CUST-00604,Grace Khan,Midwest,Consumer,Priority
+CUST-00605,Martinez Solutions,Midwest,Corporate,Standard
+CUST-00606,Kowalski Enterprises,South,Corporate,Standard
+CUST-00607,Michael Davis,South,Consumer,Priority
+CUST-00608,Michael Smith,South,Consumer,Priority
+CUST-00609,Garcia Solutions,West,Consumer,Priority
+CUST-00610,Wei Tanaka,West,Consumer,VIP
+CUST-00611,Garcia Solutions,Midwest,Corporate,Standard
+CUST-00612,Aisha Silva,Midwest,Corporate,Standard
+CUST-00613,Mohammed Sharma,West,Corporate,Priority
+CUST-00614,Sharma Solutions,South,Corporate,Standard
+CUST-00615,Rossi Enterprises,South,Consumer,Standard
+CUST-00616,Ana Silva,Midwest,Corporate,Priority
+CUST-00617,Wei Martinez,Midwest,Consumer,Standard
+CUST-00618,Aisha Kowalski,South,Consumer,Standard
+CUST-00619,Kim Partners,South,Home Office,Standard
+CUST-00620,Linh Silva,West,Consumer,Standard
+CUST-00621,Kowalski Group,Midwest,Corporate,Standard
+CUST-00622,Mohammed Nguyen,Midwest,Consumer,Priority
+CUST-00623,Daniel Silva,South,Corporate,Priority
+CUST-00624,Elena Ali,Midwest,Consumer,VIP
+CUST-00625,Maria Johnson,Midwest,Home Office,Standard
+CUST-00626,Silva Partners,West,Consumer,Standard
+CUST-00627,Clark Solutions,West,Consumer,Standard
+CUST-00628,Maria Hassan,West,Consumer,Standard
+CUST-00629,Silva Group,South,Home Office,Priority
+CUST-00630,Hassan Holdings,South,Consumer,Priority
+CUST-00631,Grace Kowalski,South,Corporate,Priority
+CUST-00632,Michael Hassan,West,Home Office,Standard
+CUST-00633,Khan Enterprises,West,Corporate,Standard
+CUST-00634,Hassan Partners,South,Consumer,Priority
+CUST-00635,Martinez Holdings,Midwest,Corporate,VIP
+CUST-00636,Wilson Solutions,West,Corporate,VIP
+CUST-00637,Wilson Enterprises,West,Consumer,Standard
+CUST-00638,Rossi Enterprises,Midwest,Consumer,Priority
+CUST-00639,Michael Nguyen,South,Consumer,Priority
+CUST-00640,Nguyen Holdings,West,Consumer,Standard
+CUST-00641,Grace Anderson,South,Home Office,Standard
+CUST-00642,Chen Solutions,Northeast,Consumer,Standard
+CUST-00643,Johnson Enterprises,South,Corporate,Standard
+CUST-00644,Clark Holdings,Midwest,Consumer,Priority
+CUST-00645,Brown Enterprises,Northeast,Corporate,Priority
+CUST-00646,Linh Ali,Midwest,Consumer,Priority
+CUST-00647,Grace Chen,West,Corporate,Standard
+CUST-00648,David Kim,Northeast,Consumer,Priority
+CUST-00649,Brown Group,West,Consumer,Priority
+CUST-00650,Rossi Solutions,West,Consumer,VIP
+CUST-00651,Garcia Holdings,South,Consumer,Priority
+CUST-00652,Aisha Khan,South,Consumer,Priority
+CUST-00653,Elena Brown,West,Consumer,Standard
+CUST-00654,Smith Solutions,West,Corporate,Standard
+CUST-00655,Khan Holdings,Midwest,Corporate,Priority
+CUST-00656,Ana Tanaka,South,Corporate,Priority
+CUST-00657,Fatima Nguyen,South,Consumer,Standard
+CUST-00658,Kim Solutions,West,Corporate,Priority
+CUST-00659,Yuki Anderson,Midwest,Consumer,Standard
+CUST-00660,Sharma Partners,Midwest,Consumer,Standard
+CUST-00661,Wei Nguyen,Northeast,Consumer,Priority
+CUST-00662,Garcia Group,South,Corporate,Standard
+CUST-00663,Garcia Group,Northeast,Corporate,VIP
+CUST-00664,Carlos Clark,South,Corporate,Standard
+CUST-00665,John Brown,West,Consumer,Priority
+CUST-00666,Yuki Sharma,South,Consumer,Standard
+CUST-00667,Anderson Partners,South,Consumer,Priority
+CUST-00668,James Khan,South,Home Office,Standard
+CUST-00669,Thomas Ali,Northeast,Consumer,Standard
+CUST-00670,Nguyen Partners,Northeast,Consumer,VIP
+CUST-00671,Davis Partners,West,Corporate,Priority
+CUST-00672,Garcia Enterprises,Northeast,Consumer,Standard
+CUST-00673,Davis Enterprises,South,Home Office,Standard
+CUST-00674,Wei Kim,West,Consumer,VIP
+CUST-00675,Grace Khan,South,Corporate,Standard
+CUST-00676,John Wilson,South,Home Office,Priority
+CUST-00677,Aisha Chen,West,Consumer,Standard
+CUST-00678,Khan Enterprises,West,Consumer,Priority
+CUST-00679,Clark Enterprises,West,Consumer,Standard
+CUST-00680,Robert Kim,West,Corporate,Standard
+CUST-00681,David Kim,West,Consumer,Priority
+CUST-00682,Wei Kim,South,Consumer,Priority
+CUST-00683,John Kowalski,Northeast,Corporate,Priority
+CUST-00684,Daniel Kim,West,Consumer,Standard
+CUST-00685,Daniel Brown,Midwest,Consumer,VIP
+CUST-00686,Maria Nguyen,Northeast,Consumer,Standard
+CUST-00687,Robert Davis,West,Consumer,Priority
+CUST-00688,Elena Ali,West,Consumer,Standard
+CUST-00689,Fatima Clark,Midwest,Corporate,Standard
+CUST-00690,Grace Silva,South,Consumer,Standard
+CUST-00691,Thomas Wilson,West,Corporate,Standard
+CUST-00692,Maria Smith,West,Corporate,Standard
+CUST-00693,Thomas Smith,Midwest,Consumer,Standard
+CUST-00694,Sofia Nguyen,Midwest,Consumer,Standard
+CUST-00695,Thomas Chen,South,Home Office,Standard
+CUST-00696,Aisha Smith,West,Consumer,Priority
+CUST-00697,Thomas Anderson,West,Consumer,Standard
+CUST-00698,James Hassan,South,Consumer,Standard
+CUST-00699,Grace Khan,West,Consumer,Standard
+CUST-00700,Mohammed Ali,West,Home Office,Standard
+CUST-00701,Silva Solutions,West,Consumer,Standard
+CUST-00702,Priya Tanaka,South,Corporate,Standard
+CUST-00703,Hassan Holdings,South,Consumer,Standard
+CUST-00704,Wei Kowalski,South,Consumer,Standard
+CUST-00705,Carlos Nguyen,West,Consumer,Priority
+CUST-00706,Ana Ali,South,Home Office,Standard
+CUST-00707,Davis Holdings,West,Home Office,VIP
+CUST-00708,Thomas Garcia,West,Consumer,Standard
+CUST-00709,Elena Nguyen,South,Corporate,Priority
+CUST-00710,David Kowalski,West,Corporate,Standard
+CUST-00711,Khan Group,Midwest,Corporate,Standard
+CUST-00712,Grace Silva,Northeast,Corporate,Standard
+CUST-00713,Brown Solutions,West,Corporate,Standard
+CUST-00714,Maria Kim,West,Home Office,Standard
+CUST-00715,Yuki Kowalski,Northeast,Home Office,Priority
+CUST-00716,Wei Wilson,West,Consumer,Standard
+CUST-00717,Daniel Khan,South,Home Office,VIP
+CUST-00718,David Kim,Midwest,Corporate,Priority
+CUST-00719,Mohammed Hassan,South,Corporate,Priority
+CUST-00720,Martinez Partners,West,Home Office,Standard
+CUST-00721,Clark Holdings,West,Corporate,Standard
+CUST-00722,Ana Nguyen,Midwest,Home Office,Priority
+CUST-00723,John Rossi,West,Corporate,Standard
+CUST-00724,Yuki Garcia,West,Corporate,Priority
+CUST-00725,Priya Brown,South,Corporate,Priority
+CUST-00726,Fatima Silva,Midwest,Consumer,VIP
+CUST-00727,Brown Partners,South,Consumer,Priority
+CUST-00728,Michael Hassan,Northeast,Corporate,Standard
+CUST-00729,Wei Kim,Northeast,Home Office,Standard
+CUST-00730,Linh Khan,West,Consumer,Standard
+CUST-00731,Yuki Silva,Midwest,Corporate,Priority
+CUST-00732,Aisha Davis,West,Consumer,Standard
+CUST-00733,Elena Hassan,Northeast,Consumer,Standard
+CUST-00734,John Tanaka,Midwest,Consumer,Priority
+CUST-00735,Brown Holdings,Midwest,Corporate,Standard
+CUST-00736,Rossi Enterprises,South,Consumer,VIP
+CUST-00737,Ana Tanaka,South,Home Office,Standard
+CUST-00738,Aisha Garcia,Northeast,Corporate,Standard
+CUST-00739,Sofia Ali,Northeast,Consumer,Standard
+CUST-00740,Kim Partners,West,Home Office,Priority
+CUST-00741,David Kowalski,South,Consumer,Priority
+CUST-00742,Yuki Martinez,South,Corporate,Standard
+CUST-00743,Aisha Nguyen,South,Consumer,Standard
+CUST-00744,Yuki Davis,West,Corporate,Standard
+CUST-00745,Wei Smith,Midwest,Home Office,Standard
+CUST-00746,Carlos Wilson,West,Consumer,Standard
+CUST-00747,Garcia Partners,West,Home Office,VIP
+CUST-00748,Garcia Holdings,West,Consumer,VIP
+CUST-00749,Sofia Johnson,Midwest,Consumer,Standard
+CUST-00750,Aisha Anderson,Midwest,Home Office,Standard
+CUST-00751,Mohammed Anderson,West,Consumer,Standard
+CUST-00752,John Kim,West,Corporate,VIP
+CUST-00753,Elena Brown,West,Consumer,Standard
+CUST-00754,Aisha Hassan,West,Corporate,Standard
+CUST-00755,Garcia Group,Midwest,Consumer,Standard
+CUST-00756,Aisha Davis,West,Consumer,Standard
+CUST-00757,Ana Kim,Northeast,Corporate,Priority
+CUST-00758,Rossi Solutions,South,Corporate,Priority
+CUST-00759,David Clark,South,Consumer,VIP
+CUST-00760,James Anderson,South,Consumer,Standard
+CUST-00761,Grace Khan,South,Consumer,VIP
+CUST-00762,Fatima Wilson,Northeast,Corporate,Standard
+CUST-00763,Wei Davis,West,Consumer,VIP
+CUST-00764,Smith Group,West,Home Office,Standard
+CUST-00765,Johnson Group,South,Consumer,Standard
+CUST-00766,Wei Silva,South,Consumer,Standard
+CUST-00767,Wilson Partners,South,Consumer,Standard
+CUST-00768,Khan Enterprises,South,Home Office,Standard
+CUST-00769,Sofia Khan,South,Consumer,Standard
+CUST-00770,Kim Holdings,Northeast,Consumer,Standard
+CUST-00771,Tanaka Enterprises,South,Consumer,Standard
+CUST-00772,Michael Sharma,West,Home Office,Standard
+CUST-00773,Chen Enterprises,South,Home Office,Standard
+CUST-00774,John Johnson,South,Corporate,Standard
+CUST-00775,Clark Group,West,Consumer,Standard
+CUST-00776,Linh Khan,South,Corporate,Standard
+CUST-00777,Thomas Chen,South,Consumer,Priority
+CUST-00778,Aisha Ali,West,Consumer,Priority
+CUST-00779,Elena Hassan,Midwest,Corporate,Standard
+CUST-00780,David Hassan,South,Consumer,Standard
+CUST-00781,Yuki Brown,Northeast,Consumer,Standard
+CUST-00782,Khan Enterprises,Midwest,Corporate,Priority
+CUST-00783,Kim Holdings,West,Corporate,VIP
+CUST-00784,Kowalski Partners,South,Consumer,Priority
+CUST-00785,Smith Partners,Midwest,Consumer,Standard
+CUST-00786,Martinez Enterprises,West,Consumer,Standard
+CUST-00787,Aisha Johnson,Midwest,Home Office,Standard
+CUST-00788,Clark Solutions,South,Corporate,Standard
+CUST-00789,Smith Enterprises,Northeast,Corporate,Priority
+CUST-00790,Yuki Silva,West,Consumer,Standard
+CUST-00791,Thomas Tanaka,West,Consumer,Standard
+CUST-00792,James Nguyen,Midwest,Consumer,Priority
+CUST-00793,Kim Holdings,West,Consumer,Standard
+CUST-00794,Aisha Kowalski,West,Consumer,Standard
+CUST-00795,Priya Clark,Midwest,Home Office,Priority
+CUST-00796,Michael Johnson,South,Home Office,Priority
+CUST-00797,Sofia Kim,South,Corporate,Standard
+CUST-00798,Kim Partners,South,Corporate,Standard
+CUST-00799,Kim Partners,Midwest,Consumer,Standard
+CUST-00800,David Rossi,South,Corporate,Priority
+CUST-00801,Chen Group,West,Consumer,Standard
+CUST-00802,Grace Brown,West,Corporate,Priority
+CUST-00803,Ana Brown,South,Corporate,Standard
+CUST-00804,Maria Davis,Northeast,Home Office,Priority
+CUST-00805,Yuki Khan,West,Consumer,Standard
+CUST-00806,Fatima Martinez,South,Corporate,Priority
+CUST-00807,Daniel Kim,Northeast,Consumer,Standard
+CUST-00808,John Khan,Midwest,Home Office,Priority
+CUST-00809,James Sharma,West,Consumer,Standard
+CUST-00810,Wei Brown,Northeast,Consumer,Priority
+CUST-00811,John Anderson,Midwest,Consumer,Standard
+CUST-00812,Linh Davis,South,Corporate,Standard
+CUST-00813,Davis Group,South,Home Office,Standard
+CUST-00814,Mohammed Wilson,South,Consumer,Standard
+CUST-00815,Maria Johnson,West,Home Office,VIP
+CUST-00816,Daniel Kowalski,Midwest,Home Office,Priority
+CUST-00817,Rossi Solutions,South,Corporate,Standard
+CUST-00818,Robert Davis,Midwest,Corporate,Standard
+CUST-00819,Michael Rossi,South,Corporate,Priority
+CUST-00820,Wei Garcia,South,Corporate,Priority
+CUST-00821,John Anderson,South,Consumer,Standard
+CUST-00822,Anderson Partners,South,Consumer,Priority
+CUST-00823,Brown Solutions,Northeast,Home Office,Standard
+CUST-00824,Rossi Holdings,West,Consumer,Priority
+CUST-00825,Davis Group,Midwest,Consumer,Standard
+CUST-00826,Thomas Clark,Midwest,Corporate,Standard
+CUST-00827,Elena Kowalski,South,Corporate,Priority
+CUST-00828,Sharma Holdings,South,Consumer,Priority
+CUST-00829,Khan Enterprises,Northeast,Consumer,Standard
+CUST-00830,Kim Group,West,Corporate,Standard
+CUST-00831,Ana Anderson,West,Corporate,Standard
+CUST-00832,Michael Kim,Northeast,Corporate,Standard
+CUST-00833,John Kim,West,Home Office,Standard
+CUST-00834,Daniel Khan,Midwest,Consumer,Priority
+CUST-00835,Ana Rossi,Northeast,Corporate,Standard
+CUST-00836,Fatima Rossi,West,Consumer,Standard
+CUST-00837,Rossi Enterprises,South,Corporate,Standard
+CUST-00838,Nguyen Solutions,South,Consumer,Priority
+CUST-00839,Smith Solutions,South,Home Office,Standard
+CUST-00840,Thomas Kowalski,Midwest,Corporate,Standard
+CUST-00841,Yuki Johnson,South,Corporate,Priority
+CUST-00842,Michael Johnson,Midwest,Consumer,Standard
+CUST-00843,Yuki Nguyen,South,Consumer,Standard
+CUST-00844,Michael Brown,South,Corporate,Standard
+CUST-00845,Elena Silva,Midwest,Consumer,VIP
+CUST-00846,Ana Clark,South,Consumer,Priority
+CUST-00847,Smith Holdings,South,Home Office,Standard
+CUST-00848,Carlos Sharma,South,Consumer,Priority
+CUST-00849,Yuki Hassan,West,Consumer,VIP
+CUST-00850,Nguyen Group,South,Consumer,Standard
+CUST-00851,Fatima Khan,South,Consumer,Standard
+CUST-00852,Johnson Enterprises,South,Consumer,VIP
+CUST-00853,Aisha Smith,South,Consumer,Standard
+CUST-00854,Hassan Group,West,Consumer,Priority
+CUST-00855,Thomas Sharma,South,Consumer,Standard
+CUST-00856,Maria Hassan,Northeast,Consumer,Standard
+CUST-00857,Smith Holdings,Northeast,Consumer,Standard
+CUST-00858,John Kowalski,Midwest,Consumer,Standard
+CUST-00859,Carlos Johnson,South,Corporate,Standard
+CUST-00860,Linh Silva,South,Corporate,VIP
+CUST-00861,Yuki Kowalski,South,Consumer,VIP
+CUST-00862,Grace Brown,South,Home Office,Priority
+CUST-00863,Carlos Clark,South,Consumer,Priority
+CUST-00864,Chen Enterprises,Northeast,Corporate,Priority
+CUST-00865,Nguyen Holdings,Midwest,Home Office,VIP
+CUST-00866,Davis Solutions,Midwest,Consumer,VIP
+CUST-00867,Mohammed Smith,West,Corporate,Standard
+CUST-00868,Grace Smith,South,Consumer,Priority
+CUST-00869,Grace Wilson,South,Consumer,Priority
+CUST-00870,Michael Khan,South,Corporate,Standard
+CUST-00871,Smith Solutions,West,Consumer,Standard
+CUST-00872,James Brown,West,Consumer,Priority
+CUST-00873,Sharma Enterprises,West,Consumer,Standard
+CUST-00874,Martinez Enterprises,Northeast,Home Office,Standard
+CUST-00875,Grace Ali,South,Corporate,Standard
+CUST-00876,Aisha Chen,South,Consumer,VIP
+CUST-00877,Priya Anderson,West,Consumer,Priority
+CUST-00878,Tanaka Holdings,Midwest,Consumer,Standard
+CUST-00879,Maria Hassan,Northeast,Consumer,Priority
+CUST-00880,Michael Kim,West,Home Office,Standard
+CUST-00881,David Nguyen,Midwest,Consumer,Standard
+CUST-00882,Wei Clark,Midwest,Home Office,Standard
+CUST-00883,Sharma Solutions,South,Consumer,Standard
+CUST-00884,James Kim,South,Corporate,Standard
+CUST-00885,Brown Enterprises,Midwest,Home Office,Priority
+CUST-00886,Mohammed Anderson,South,Corporate,Standard
+CUST-00887,Fatima Davis,South,Home Office,VIP
+CUST-00888,Robert Hassan,South,Corporate,Standard
+CUST-00889,Garcia Enterprises,South,Consumer,Standard
+CUST-00890,Maria Kowalski,South,Consumer,Priority
+CUST-00891,Priya Tanaka,West,Consumer,Standard
+CUST-00892,Linh Tanaka,Midwest,Corporate,Priority
+CUST-00893,James Davis,South,Consumer,Standard
+CUST-00894,Yuki Chen,West,Home Office,Standard
+CUST-00895,Daniel Brown,West,Corporate,Standard
+CUST-00896,Priya Johnson,West,Consumer,Standard
+CUST-00897,Rossi Holdings,West,Consumer,Standard
+CUST-00898,Mohammed Kowalski,South,Consumer,Priority
+CUST-00899,Garcia Holdings,West,Consumer,Standard
+CUST-00900,Carlos Martinez,Midwest,Consumer,Standard
+CUST-00901,Michael Tanaka,South,Corporate,Standard
+CUST-00902,Nguyen Group,Midwest,Home Office,VIP
+CUST-00903,Grace Sharma,Midwest,Corporate,Standard
+CUST-00904,Carlos Sharma,Midwest,Corporate,Standard
+CUST-00905,Robert Ali,South,Consumer,Standard
+CUST-00906,Silva Solutions,Midwest,Consumer,Standard
+CUST-00907,Sofia Garcia,West,Consumer,Standard
+CUST-00908,Ali Holdings,Midwest,Consumer,Standard
+CUST-00909,Khan Partners,South,Corporate,Priority
+CUST-00910,Martinez Partners,West,Corporate,Priority
+CUST-00911,Daniel Tanaka,South,Consumer,Priority
+CUST-00912,Martinez Enterprises,West,Consumer,Standard
+CUST-00913,Priya Garcia,South,Consumer,Standard
+CUST-00914,Hassan Solutions,West,Home Office,VIP
+CUST-00915,Grace Martinez,West,Corporate,Standard
+CUST-00916,Aisha Anderson,South,Consumer,Standard
+CUST-00917,Aisha Hassan,South,Corporate,Priority
+CUST-00918,Kim Enterprises,South,Corporate,Standard
+CUST-00919,Carlos Davis,South,Consumer,Standard
+CUST-00920,Clark Solutions,West,Corporate,Standard
+CUST-00921,Wei Kowalski,West,Consumer,Standard
+CUST-00922,Tanaka Enterprises,Midwest,Consumer,Standard
+CUST-00923,Hassan Group,South,Consumer,Standard
+CUST-00924,Wei Rossi,South,Corporate,Standard
+CUST-00925,Wei Brown,Northeast,Consumer,Standard
+CUST-00926,Martinez Solutions,West,Consumer,Priority
+CUST-00927,David Martinez,West,Home Office,Priority
+CUST-00928,Brown Solutions,South,Corporate,Priority
+CUST-00929,Robert Wilson,South,Consumer,Standard
+CUST-00930,Wilson Partners,West,Consumer,Standard
+CUST-00931,Ana Davis,Midwest,Consumer,Standard
+CUST-00932,Carlos Nguyen,Northeast,Consumer,Standard
+CUST-00933,Ana Smith,South,Home Office,Standard
+CUST-00934,James Kim,West,Consumer,Standard
+CUST-00935,Silva Holdings,South,Corporate,Standard
+CUST-00936,John Johnson,Midwest,Corporate,Priority
+CUST-00937,Yuki Clark,South,Consumer,Standard
+CUST-00938,Wilson Group,Midwest,Corporate,Standard
+CUST-00939,Chen Holdings,South,Consumer,Priority
+CUST-00940,Smith Group,South,Consumer,Standard
+CUST-00941,Daniel Chen,West,Consumer,Standard
+CUST-00942,Wilson Group,West,Consumer,Standard
+CUST-00943,Wei Wilson,West,Consumer,Standard
+CUST-00944,Kim Holdings,South,Corporate,Standard
+CUST-00945,Brown Partners,Midwest,Consumer,Standard
+CUST-00946,Anderson Holdings,West,Consumer,Standard
+CUST-00947,Wei Kowalski,Midwest,Consumer,Priority
+CUST-00948,Elena Wilson,South,Consumer,Standard
+CUST-00949,Yuki Nguyen,South,Corporate,Standard
+CUST-00950,Maria Sharma,South,Consumer,Standard
+CUST-00951,Elena Chen,West,Home Office,Standard
+CUST-00952,Ana Khan,South,Corporate,Standard
+CUST-00953,Mohammed Nguyen,West,Consumer,Standard
+CUST-00954,James Chen,Midwest,Consumer,Priority
+CUST-00955,Wilson Solutions,Northeast,Corporate,Standard
+CUST-00956,Michael Kim,South,Consumer,Standard
+CUST-00957,Michael Johnson,West,Corporate,Standard
+CUST-00958,Tanaka Solutions,Northeast,Consumer,Standard
+CUST-00959,Wei Smith,West,Consumer,Standard
+CUST-00960,Silva Group,South,Corporate,Priority
+CUST-00961,Fatima Wilson,Midwest,Consumer,Standard
+CUST-00962,Robert Martinez,West,Home Office,Standard
+CUST-00963,Nguyen Group,Midwest,Corporate,Priority
+CUST-00964,Wei Sharma,Northeast,Corporate,Priority
+CUST-00965,Ali Holdings,Northeast,Corporate,Standard
+CUST-00966,Tanaka Holdings,South,Home Office,Standard
+CUST-00967,Carlos Khan,South,Consumer,Priority
+CUST-00968,Wilson Partners,South,Corporate,Standard
+CUST-00969,Rossi Partners,Northeast,Consumer,Standard
+CUST-00970,Fatima Silva,South,Consumer,VIP
+CUST-00971,Yuki Hassan,South,Corporate,VIP
+CUST-00972,Hassan Solutions,West,Consumer,Standard
+CUST-00973,Thomas Davis,Midwest,Consumer,Priority
+CUST-00974,Sharma Group,South,Consumer,Standard
+CUST-00975,Tanaka Partners,West,Consumer,Standard
+CUST-00976,Robert Martinez,Midwest,Home Office,Standard
+CUST-00977,Hassan Solutions,West,Consumer,VIP
+CUST-00978,Smith Solutions,Midwest,Consumer,Standard
+CUST-00979,Priya Sharma,South,Consumer,Standard
+CUST-00980,James Chen,South,Home Office,Standard
+CUST-00981,Martinez Partners,South,Consumer,Priority
+CUST-00982,Carlos Sharma,Northeast,Corporate,Standard
+CUST-00983,Carlos Sharma,West,Consumer,Standard
+CUST-00984,Martinez Enterprises,South,Home Office,Standard
+CUST-00985,Robert Ali,Northeast,Consumer,Priority
+CUST-00986,Kim Enterprises,Northeast,Home Office,Priority
+CUST-00987,Elena Tanaka,Midwest,Corporate,Standard
+CUST-00988,Michael Kowalski,South,Corporate,Standard
+CUST-00989,Mohammed Johnson,West,Consumer,Standard
+CUST-00990,James Anderson,West,Consumer,VIP
+CUST-00991,Robert Rossi,South,Corporate,Standard
+CUST-00992,Linh Garcia,Northeast,Consumer,Standard
+CUST-00993,Carlos Nguyen,West,Consumer,Standard
+CUST-00994,Sofia Garcia,Northeast,Corporate,Standard
+CUST-00995,Maria Rossi,South,Corporate,Standard
+CUST-00996,David Tanaka,West,Consumer,Standard
+CUST-00997,Smith Group,South,Consumer,Standard
+CUST-00998,Wei Anderson,Northeast,Consumer,Standard
+CUST-00999,Elena Anderson,South,Corporate,Priority
+CUST-01000,Wei Khan,West,Corporate,Standard
+CUST-01001,Carlos Wilson,South,Home Office,Priority
+CUST-01002,Khan Enterprises,South,Consumer,Standard
+CUST-01003,Ali Partners,West,Consumer,Standard
+CUST-01004,Fatima Davis,West,Consumer,Standard
+CUST-01005,Martinez Enterprises,Midwest,Corporate,Standard
+CUST-01006,Chen Enterprises,Northeast,Consumer,Standard
+CUST-01007,Thomas Sharma,Northeast,Consumer,Standard
+CUST-01008,James Clark,West,Consumer,Standard
+CUST-01009,James Wilson,West,Home Office,Standard
+CUST-01010,Mohammed Tanaka,West,Corporate,Standard
+CUST-01011,Mohammed Sharma,South,Consumer,Standard
+CUST-01012,Sofia Hassan,South,Consumer,Priority
+CUST-01013,John Smith,South,Consumer,Priority
+CUST-01014,Priya Rossi,West,Consumer,Priority
+CUST-01015,Hassan Solutions,West,Home Office,Priority
+CUST-01016,Michael Sharma,South,Corporate,Priority
+CUST-01017,Sofia Nguyen,West,Home Office,Priority
+CUST-01018,Wilson Partners,West,Home Office,Priority
+CUST-01019,Garcia Group,South,Corporate,VIP
+CUST-01020,Michael Ali,Northeast,Consumer,Standard
+CUST-01021,Martinez Group,Northeast,Consumer,Priority
+CUST-01022,Aisha Hassan,West,Consumer,Standard
+CUST-01023,Grace Khan,Midwest,Corporate,Standard
+CUST-01024,Mohammed Sharma,West,Consumer,Standard
+CUST-01025,Robert Silva,Northeast,Corporate,Standard
+CUST-01026,Kowalski Group,Midwest,Corporate,VIP
+CUST-01027,Fatima Clark,Midwest,Home Office,Standard
+CUST-01028,Kowalski Holdings,West,Corporate,VIP
+CUST-01029,Mohammed Rossi,West,Consumer,Standard
+CUST-01030,Priya Khan,Midwest,Home Office,Standard
+CUST-01031,Elena Sharma,Midwest,Consumer,Standard
+CUST-01032,Tanaka Holdings,Northeast,Consumer,Priority
+CUST-01033,Thomas Kim,West,Consumer,Priority
+CUST-01034,Robert Garcia,Midwest,Consumer,Priority
+CUST-01035,Priya Garcia,South,Home Office,Priority
+CUST-01036,Elena Ali,Midwest,Consumer,Standard
+CUST-01037,Grace Rossi,South,Consumer,Priority
+CUST-01038,Elena Martinez,Midwest,Consumer,Standard
+CUST-01039,Thomas Garcia,South,Consumer,Standard
+CUST-01040,John Davis,South,Home Office,Standard
+CUST-01041,Carlos Smith,South,Consumer,Priority
+CUST-01042,John Wilson,Northeast,Corporate,Standard
+CUST-01043,Maria Khan,West,Consumer,Standard
+CUST-01044,Daniel Hassan,West,Corporate,Standard
+CUST-01045,Khan Enterprises,South,Corporate,VIP
+CUST-01046,Robert Chen,South,Consumer,Priority
+CUST-01047,Smith Group,Northeast,Consumer,Priority
+CUST-01048,Sharma Holdings,South,Consumer,Priority
+CUST-01049,Clark Enterprises,Northeast,Consumer,Standard
+CUST-01050,Mohammed Chen,Midwest,Consumer,Priority
+CUST-01051,James Wilson,Midwest,Corporate,Standard
+CUST-01052,Wei Anderson,Midwest,Corporate,Priority
+CUST-01053,Fatima Martinez,Northeast,Consumer,Standard
+CUST-01054,Aisha Smith,Midwest,Consumer,Standard
+CUST-01055,Ali Solutions,West,Consumer,Standard
+CUST-01056,Elena Rossi,South,Consumer,VIP
+CUST-01057,Sharma Holdings,South,Corporate,Standard
+CUST-01058,Thomas Kim,South,Home Office,VIP
+CUST-01059,Yuki Silva,Northeast,Corporate,Standard
+CUST-01060,Martinez Partners,West,Corporate,Standard
+CUST-01061,Brown Holdings,Northeast,Consumer,Standard
+CUST-01062,Robert Ali,South,Home Office,Priority
+CUST-01063,Silva Solutions,West,Corporate,Standard
+CUST-01064,Tanaka Partners,Midwest,Home Office,Standard
+CUST-01065,Tanaka Solutions,Northeast,Consumer,Priority
+CUST-01066,Chen Group,West,Home Office,Priority
+CUST-01067,Sharma Group,South,Home Office,Standard
+CUST-01068,Khan Solutions,South,Corporate,Standard
+CUST-01069,Daniel Rossi,South,Corporate,Standard
+CUST-01070,Ali Enterprises,South,Consumer,Priority
+CUST-01071,Ana Silva,South,Consumer,Standard
+CUST-01072,James Anderson,West,Consumer,Standard
+CUST-01073,David Garcia,West,Corporate,Standard
+CUST-01074,Yuki Nguyen,South,Consumer,Standard
+CUST-01075,Anderson Enterprises,South,Home Office,Priority
+CUST-01076,Priya Kowalski,South,Home Office,Standard
+CUST-01077,Mohammed Chen,South,Corporate,VIP
+CUST-01078,Clark Solutions,Midwest,Home Office,Priority
+CUST-01079,James Nguyen,West,Consumer,Standard
+CUST-01080,Ana Khan,West,Consumer,Priority
+CUST-01081,James Nguyen,West,Consumer,Priority
+CUST-01082,Tanaka Enterprises,South,Corporate,Priority
+CUST-01083,Sharma Solutions,West,Consumer,VIP
+CUST-01084,Linh Kim,West,Home Office,Standard
+CUST-01085,Priya Silva,Northeast,Consumer,Standard
+CUST-01086,Martinez Holdings,South,Consumer,Standard
+CUST-01087,Daniel Garcia,West,Corporate,Standard
+CUST-01088,James Tanaka,South,Consumer,Standard
+CUST-01089,Aisha Wilson,Northeast,Consumer,Standard
+CUST-01090,Daniel Anderson,Northeast,Consumer,Standard
+CUST-01091,Brown Enterprises,West,Consumer,Standard
+CUST-01092,Aisha Silva,Northeast,Home Office,Priority
+CUST-01093,Ali Enterprises,South,Consumer,Priority
+CUST-01094,Khan Group,West,Consumer,Priority
+CUST-01095,Maria Ali,West,Home Office,VIP
+CUST-01096,Fatima Nguyen,West,Corporate,Priority
+CUST-01097,Mohammed Wilson,South,Consumer,VIP
+CUST-01098,Johnson Holdings,South,Corporate,Standard
+CUST-01099,Mohammed Nguyen,South,Consumer,Standard
+CUST-01100,Grace Chen,Midwest,Corporate,Priority
+CUST-01101,Sharma Group,West,Home Office,Standard
+CUST-01102,Linh Martinez,Northeast,Corporate,Standard
+CUST-01103,Aisha Martinez,South,Corporate,Standard
+CUST-01104,Fatima Johnson,West,Home Office,VIP
+CUST-01105,Linh Smith,South,Home Office,Standard
+CUST-01106,Daniel Kowalski,Midwest,Consumer,Standard
+CUST-01107,Maria Anderson,West,Consumer,Standard
+CUST-01108,David Rossi,Midwest,Consumer,Standard
+CUST-01109,Smith Solutions,West,Consumer,Standard
+CUST-01110,Yuki Khan,West,Home Office,Standard
+CUST-01111,Khan Group,Midwest,Corporate,Standard
+CUST-01112,Sofia Rossi,South,Consumer,Standard
+CUST-01113,David Martinez,South,Home Office,Standard
+CUST-01114,Khan Partners,West,Corporate,VIP
+CUST-01115,Wei Silva,South,Corporate,VIP
+CUST-01116,Carlos Silva,West,Consumer,Standard
+CUST-01117,David Silva,West,Consumer,Priority
+CUST-01118,Linh Chen,South,Home Office,Standard
+CUST-01119,James Ali,West,Consumer,VIP
+CUST-01120,Maria Martinez,South,Consumer,Standard
+CUST-01121,Chen Holdings,South,Corporate,Standard
+CUST-01122,Brown Group,South,Corporate,Standard
+CUST-01123,James Anderson,South,Consumer,Priority
+CUST-01124,Elena Brown,South,Consumer,Standard
+CUST-01125,Elena Garcia,West,Home Office,Standard
+CUST-01126,Maria Sharma,West,Consumer,Standard
+CUST-01127,Sofia Tanaka,Midwest,Consumer,Priority
+CUST-01128,Ana Brown,Northeast,Home Office,Standard
+CUST-01129,Maria Smith,Midwest,Corporate,Standard
+CUST-01130,David Smith,South,Consumer,Priority
+CUST-01131,Robert Brown,West,Corporate,Priority
+CUST-01132,Hassan Holdings,South,Consumer,Standard
+CUST-01133,Rossi Enterprises,South,Consumer,Standard
+CUST-01134,Aisha Martinez,South,Corporate,Standard
+CUST-01135,Aisha Ali,West,Consumer,Standard
+CUST-01136,Linh Sharma,South,Consumer,Standard
+CUST-01137,Tanaka Enterprises,South,Consumer,Standard
+CUST-01138,Johnson Group,West,Consumer,Standard
+CUST-01139,James Smith,Northeast,Consumer,Priority
+CUST-01140,Martinez Holdings,Midwest,Corporate,Standard
+CUST-01141,Johnson Holdings,West,Corporate,Standard
+CUST-01142,Maria Khan,Northeast,Consumer,Priority
+CUST-01143,John Smith,South,Consumer,Standard
+CUST-01144,Kowalski Enterprises,Northeast,Consumer,VIP
+CUST-01145,Priya Khan,South,Consumer,Standard
+CUST-01146,Fatima Rossi,South,Home Office,Standard
+CUST-01147,Aisha Nguyen,West,Consumer,Standard
+CUST-01148,Elena Tanaka,West,Home Office,Standard
+CUST-01149,Grace Rossi,South,Corporate,Priority
+CUST-01150,Johnson Enterprises,Midwest,Corporate,Priority
+CUST-01151,Chen Enterprises,West,Consumer,Standard
+CUST-01152,John Ali,West,Consumer,Standard
+CUST-01153,Linh Tanaka,Midwest,Consumer,VIP
+CUST-01154,Priya Wilson,West,Consumer,Standard
+CUST-01155,Ana Sharma,South,Corporate,Standard
+CUST-01156,Chen Group,West,Home Office,Standard
+CUST-01157,Ana Kim,Northeast,Consumer,Standard
+CUST-01158,John Kowalski,Midwest,Home Office,VIP
+CUST-01159,Priya Martinez,West,Corporate,Standard
+CUST-01160,John Wilson,Northeast,Consumer,Priority
+CUST-01161,Thomas Chen,West,Home Office,Standard
+CUST-01162,Johnson Group,South,Corporate,Priority
+CUST-01163,John Ali,West,Corporate,Priority
+CUST-01164,Elena Kim,Midwest,Consumer,Standard
+CUST-01165,Kowalski Group,West,Corporate,Standard
+CUST-01166,Aisha Smith,Northeast,Corporate,Priority
+CUST-01167,Ana Brown,South,Consumer,Standard
+CUST-01168,Aisha Brown,South,Consumer,VIP
+CUST-01169,Carlos Wilson,Midwest,Consumer,Priority
+CUST-01170,Ana Tanaka,Midwest,Consumer,Priority
+CUST-01171,Wilson Solutions,Northeast,Consumer,Standard
+CUST-01172,Wei Rossi,Midwest,Consumer,Standard
+CUST-01173,Khan Holdings,South,Corporate,Standard
+CUST-01174,Ana Martinez,West,Consumer,Standard
+CUST-01175,Clark Enterprises,West,Consumer,Standard
+CUST-01176,Elena Smith,South,Home Office,Standard
+CUST-01177,Mohammed Wilson,West,Corporate,Standard
+CUST-01178,Anderson Partners,South,Corporate,Standard
+CUST-01179,Garcia Partners,Midwest,Consumer,Standard
+CUST-01180,Priya Martinez,West,Corporate,Standard
+CUST-01181,Daniel Anderson,West,Corporate,VIP
+CUST-01182,Mohammed Davis,Midwest,Consumer,Standard
+CUST-01183,Linh Garcia,South,Consumer,VIP
+CUST-01184,Yuki Chen,South,Corporate,Standard
+CUST-01185,James Johnson,South,Consumer,VIP
+CUST-01186,Kim Solutions,South,Home Office,Standard
+CUST-01187,David Clark,South,Consumer,Priority
+CUST-01188,Michael Brown,West,Corporate,Standard
+CUST-01189,John Khan,West,Consumer,Priority
+CUST-01190,Robert Nguyen,West,Consumer,Standard
+CUST-01191,Yuki Hassan,Northeast,Consumer,Standard
+CUST-01192,Maria Tanaka,West,Corporate,Standard
+CUST-01193,Smith Group,South,Consumer,Standard
+CUST-01194,Wei Sharma,Midwest,Corporate,Standard
+CUST-01195,Michael Silva,Midwest,Consumer,Standard
+CUST-01196,Fatima Wilson,West,Consumer,Standard
+CUST-01197,Mohammed Tanaka,West,Consumer,Standard
+CUST-01198,Ana Johnson,West,Corporate,Standard
+CUST-01199,Maria Tanaka,West,Home Office,Standard
+CUST-01200,Kim Partners,South,Home Office,Priority
+CUST-01201,David Brown,South,Consumer,Standard
+CUST-01202,Wei Kowalski,Midwest,Home Office,Standard
+CUST-01203,David Ali,South,Home Office,Standard
+CUST-01204,Ali Enterprises,West,Consumer,Priority
+CUST-01205,Aisha Nguyen,South,Consumer,Standard
+CUST-01206,Martinez Holdings,West,Consumer,Priority
+CUST-01207,Smith Enterprises,West,Consumer,Standard
+CUST-01208,Linh Brown,South,Home Office,VIP
+CUST-01209,John Davis,South,Consumer,Standard
+CUST-01210,Carlos Nguyen,South,Corporate,Standard
+CUST-01211,Carlos Martinez,South,Home Office,Standard
+CUST-01212,Smith Solutions,South,Corporate,Standard
+CUST-01213,Grace Davis,West,Consumer,Standard
+CUST-01214,Hassan Partners,Midwest,Consumer,Standard
+CUST-01215,Yuki Ali,South,Consumer,Priority
+CUST-01216,Linh Kowalski,Northeast,Home Office,Priority
+CUST-01217,Fatima Chen,West,Home Office,Standard
+CUST-01218,Silva Enterprises,South,Corporate,Standard
+CUST-01219,Nguyen Enterprises,Midwest,Consumer,Standard
+CUST-01220,Grace Khan,Midwest,Consumer,Priority
+CUST-01221,Robert Smith,Midwest,Consumer,Standard
+CUST-01222,David Kowalski,Northeast,Corporate,Standard
+CUST-01223,Garcia Partners,West,Corporate,Standard
+CUST-01224,Hassan Holdings,Northeast,Consumer,VIP
+CUST-01225,Carlos Tanaka,West,Corporate,Standard
+CUST-01226,John Wilson,South,Consumer,Standard
+CUST-01227,Nguyen Partners,South,Consumer,Standard
+CUST-01228,Robert Brown,South,Home Office,Standard
+CUST-01229,Wei Smith,South,Consumer,Standard
+CUST-01230,Ana Chen,South,Corporate,Standard
+CUST-01231,Rossi Partners,South,Consumer,Priority
+CUST-01232,Robert Brown,West,Consumer,Standard
+CUST-01233,James Clark,Northeast,Consumer,Standard
+CUST-01234,Johnson Partners,South,Consumer,Priority
+CUST-01235,Wilson Group,Northeast,Consumer,VIP
+CUST-01236,Wei Martinez,South,Home Office,Standard
+CUST-01237,Ali Group,South,Corporate,Standard
+CUST-01238,Maria Khan,West,Consumer,Standard
+CUST-01239,Smith Solutions,Northeast,Consumer,Standard
+CUST-01240,James Anderson,West,Consumer,Standard
+CUST-01241,Smith Partners,South,Corporate,VIP
+CUST-01242,David Brown,South,Consumer,Standard
+CUST-01243,Elena Davis,West,Consumer,VIP
+CUST-01244,Brown Solutions,South,Consumer,Priority
+CUST-01245,Kowalski Partners,West,Consumer,Standard
+CUST-01246,Yuki Brown,West,Consumer,Standard
+CUST-01247,Carlos Clark,South,Consumer,Priority
+CUST-01248,Daniel Brown,South,Corporate,Priority
+CUST-01249,Daniel Rossi,Northeast,Consumer,Standard
+CUST-01250,Rossi Partners,West,Consumer,Priority
+CUST-01251,Smith Group,Midwest,Consumer,Standard
+CUST-01252,Mohammed Sharma,South,Consumer,Standard
+CUST-01253,Carlos Khan,West,Home Office,Priority
+CUST-01254,Wei Clark,Northeast,Corporate,Standard
+CUST-01255,Martinez Enterprises,West,Consumer,Standard
+CUST-01256,Fatima Khan,West,Consumer,Standard
+CUST-01257,Smith Holdings,South,Home Office,Standard
+CUST-01258,Robert Garcia,South,Consumer,Standard
+CUST-01259,Kim Enterprises,South,Consumer,Priority
+CUST-01260,Robert Chen,Midwest,Consumer,Standard
+CUST-01261,Elena Davis,Northeast,Corporate,VIP
+CUST-01262,Smith Group,West,Consumer,Standard
+CUST-01263,Sharma Partners,West,Corporate,Standard
+CUST-01264,Garcia Group,Northeast,Consumer,Standard
+CUST-01265,David Hassan,South,Consumer,Standard
+CUST-01266,John Clark,West,Consumer,Standard
+CUST-01267,Thomas Nguyen,Northeast,Consumer,Standard
+CUST-01268,Grace Kim,Midwest,Corporate,Standard
+CUST-01269,Wei Brown,South,Consumer,Priority
+CUST-01270,Priya Martinez,South,Home Office,Standard
+CUST-01271,James Martinez,South,Consumer,Standard
+CUST-01272,Carlos Clark,South,Home Office,Priority
+CUST-01273,Elena Davis,South,Consumer,Standard
+CUST-01274,Sofia Wilson,West,Consumer,Priority
+CUST-01275,Chen Partners,South,Home Office,Standard
+CUST-01276,Fatima Johnson,Northeast,Corporate,Standard
+CUST-01277,Ali Enterprises,South,Consumer,Standard
+CUST-01278,Ana Chen,West,Consumer,Standard
+CUST-01279,Hassan Solutions,West,Consumer,Standard
+CUST-01280,Martinez Enterprises,South,Corporate,Standard
+CUST-01281,Grace Anderson,West,Corporate,VIP
+CUST-01282,Khan Group,South,Consumer,Standard
+CUST-01283,Brown Holdings,South,Consumer,Standard
+CUST-01284,Kim Partners,West,Corporate,Priority
+CUST-01285,Smith Holdings,West,Consumer,Standard
+CUST-01286,Ali Group,South,Consumer,Priority
+CUST-01287,John Smith,Northeast,Consumer,Standard
+CUST-01288,Chen Group,West,Consumer,Standard
+CUST-01289,James Kim,West,Consumer,Priority
+CUST-01290,Thomas Kowalski,South,Consumer,Priority
+CUST-01291,Khan Solutions,Midwest,Consumer,Standard
+CUST-01292,Ana Brown,West,Consumer,Standard
+CUST-01293,Sofia Kowalski,South,Corporate,Priority
+CUST-01294,Kim Holdings,South,Consumer,Standard
+CUST-01295,Priya Johnson,South,Consumer,Priority
+CUST-01296,Rossi Group,West,Home Office,Standard
+CUST-01297,Fatima Brown,Midwest,Home Office,Standard
+CUST-01298,Ali Solutions,Midwest,Consumer,Standard
+CUST-01299,Kowalski Holdings,South,Corporate,Priority
+CUST-01300,Fatima Nguyen,South,Home Office,Priority
+CUST-01301,Elena Khan,West,Home Office,Standard
+CUST-01302,John Anderson,West,Corporate,Standard
+CUST-01303,Kowalski Solutions,South,Consumer,Standard
+CUST-01304,Khan Solutions,South,Consumer,Priority
+CUST-01305,Garcia Solutions,South,Corporate,Standard
+CUST-01306,Ana Johnson,West,Consumer,Priority
+CUST-01307,Linh Clark,South,Consumer,Standard
+CUST-01308,Sofia Sharma,South,Consumer,VIP
+CUST-01309,Fatima Brown,West,Consumer,Standard
+CUST-01310,Clark Partners,West,Consumer,Standard
+CUST-01311,Kowalski Holdings,Midwest,Consumer,Standard
+CUST-01312,Khan Enterprises,Midwest,Consumer,Priority
+CUST-01313,Sofia Davis,Midwest,Consumer,Standard
+CUST-01314,Silva Enterprises,South,Corporate,Standard
+CUST-01315,Elena Sharma,West,Consumer,Standard
+CUST-01316,Kowalski Enterprises,West,Consumer,Standard
+CUST-01317,Daniel Davis,South,Consumer,Priority
+CUST-01318,Fatima Hassan,South,Corporate,Priority
+CUST-01319,Maria Khan,South,Corporate,Standard
+CUST-01320,Anderson Enterprises,West,Consumer,Priority
+CUST-01321,John Kowalski,South,Corporate,Standard
+CUST-01322,Khan Partners,West,Home Office,Standard
+CUST-01323,Martinez Group,South,Consumer,Standard
+CUST-01324,Fatima Kowalski,South,Corporate,Priority
+CUST-01325,Ana Brown,Midwest,Home Office,Standard
+CUST-01326,Linh Johnson,South,Consumer,Priority
+CUST-01327,Priya Ali,Midwest,Consumer,Standard
+CUST-01328,Elena Khan,West,Consumer,Standard
+CUST-01329,Robert Khan,Northeast,Consumer,Standard
+CUST-01330,Fatima Clark,South,Consumer,Standard
+CUST-01331,Davis Solutions,West,Consumer,Priority
+CUST-01332,David Smith,West,Consumer,Priority
+CUST-01333,Carlos Rossi,South,Consumer,Standard
+CUST-01334,John Rossi,South,Consumer,Priority
+CUST-01335,John Brown,South,Home Office,Standard
+CUST-01336,Grace Wilson,West,Corporate,Standard
+CUST-01337,Anderson Solutions,South,Home Office,Standard
+CUST-01338,Wilson Group,South,Consumer,Priority
+CUST-01339,Kim Partners,Midwest,Consumer,Priority
+CUST-01340,Robert Nguyen,West,Corporate,Standard
+CUST-01341,Wei Davis,West,Corporate,Standard
+CUST-01342,Hassan Enterprises,South,Consumer,Standard
+CUST-01343,Martinez Enterprises,Midwest,Corporate,Standard
+CUST-01344,Aisha Nguyen,West,Consumer,Standard
+CUST-01345,Martinez Partners,South,Consumer,Standard
+CUST-01346,Chen Holdings,West,Consumer,Standard
+CUST-01347,Grace Anderson,West,Home Office,Priority
+CUST-01348,Wei Davis,South,Home Office,Standard
+CUST-01349,Anderson Group,West,Consumer,Standard
+CUST-01350,Smith Solutions,West,Consumer,Standard
+CUST-01351,Kowalski Holdings,Midwest,Home Office,VIP
+CUST-01352,Daniel Kowalski,West,Consumer,Priority
+CUST-01353,Thomas Kim,West,Corporate,Standard
+CUST-01354,Brown Group,West,Consumer,Priority
+CUST-01355,Garcia Group,South,Home Office,Priority
+CUST-01356,Maria Rossi,Northeast,Corporate,Standard
+CUST-01357,Wei Silva,West,Consumer,Standard
+CUST-01358,Maria Kim,West,Consumer,Standard
+CUST-01359,Priya Smith,South,Corporate,Priority
+CUST-01360,Ana Tanaka,South,Corporate,Standard
+CUST-01361,Robert Johnson,Northeast,Consumer,Standard
+CUST-01362,Fatima Tanaka,West,Consumer,Standard
+CUST-01363,Sharma Holdings,South,Consumer,Priority
+CUST-01364,Clark Group,Midwest,Corporate,Standard
+CUST-01365,Davis Group,Midwest,Consumer,Priority
+CUST-01366,Kowalski Enterprises,West,Corporate,Priority
+CUST-01367,Wei Brown,West,Consumer,Priority
+CUST-01368,Sofia Sharma,South,Home Office,Priority
+CUST-01369,Elena Sharma,West,Consumer,Standard
+CUST-01370,Garcia Enterprises,West,Consumer,Standard
+CUST-01371,Anderson Holdings,West,Consumer,Priority
+CUST-01372,John Garcia,Midwest,Corporate,Standard
+CUST-01373,Fatima Smith,West,Consumer,Standard
+CUST-01374,Chen Holdings,South,Consumer,Priority
+CUST-01375,Davis Partners,South,Consumer,Standard
+CUST-01376,Kowalski Solutions,South,Home Office,Priority
+CUST-01377,Mohammed Brown,South,Consumer,Standard
+CUST-01378,Yuki Nguyen,West,Corporate,Standard
+CUST-01379,Elena Silva,South,Corporate,Priority
+CUST-01380,David Ali,Midwest,Corporate,VIP
+CUST-01381,Smith Solutions,South,Home Office,Priority
+CUST-01382,Elena Hassan,West,Corporate,Standard
+CUST-01383,Tanaka Solutions,South,Corporate,Priority
+CUST-01384,Aisha Davis,Midwest,Consumer,Standard
+CUST-01385,Sofia Kim,Midwest,Consumer,Standard
+CUST-01386,Wei Brown,Midwest,Consumer,Standard
+CUST-01387,Aisha Brown,West,Consumer,Standard
+CUST-01388,Ali Holdings,West,Consumer,Priority
+CUST-01389,Aisha Anderson,South,Consumer,Standard
+CUST-01390,Priya Garcia,West,Home Office,Standard
+CUST-01391,Sofia Silva,West,Consumer,Standard
+CUST-01392,Davis Group,Midwest,Consumer,Standard
+CUST-01393,Linh Chen,South,Consumer,Standard
+CUST-01394,Sofia Hassan,West,Consumer,VIP
+CUST-01395,Smith Group,South,Home Office,VIP
+CUST-01396,James Khan,Midwest,Consumer,Priority
+CUST-01397,Daniel Clark,West,Consumer,Standard
+CUST-01398,John Wilson,South,Home Office,VIP
+CUST-01399,Priya Clark,South,Corporate,Priority
+CUST-01400,Ana Khan,South,Corporate,Standard
+CUST-01401,Daniel Anderson,West,Consumer,Standard
+CUST-01402,Hassan Solutions,Midwest,Consumer,Priority
+CUST-01403,Fatima Sharma,Northeast,Consumer,Standard
+CUST-01404,Daniel Chen,West,Corporate,Standard
+CUST-01405,Linh Sharma,West,Home Office,Standard
+CUST-01406,Linh Clark,West,Consumer,Standard
+CUST-01407,Khan Enterprises,South,Home Office,Standard
+CUST-01408,Carlos Ali,South,Consumer,Standard
+CUST-01409,Ana Kim,West,Home Office,Priority
+CUST-01410,James Ali,West,Consumer,Standard
+CUST-01411,Robert Nguyen,South,Corporate,Standard
+CUST-01412,Khan Solutions,South,Corporate,Standard
+CUST-01413,Maria Chen,West,Home Office,VIP
+CUST-01414,Nguyen Enterprises,West,Corporate,Priority
+CUST-01415,Anderson Group,South,Corporate,Priority
+CUST-01416,Wilson Partners,South,Corporate,Standard
+CUST-01417,Sharma Solutions,West,Corporate,Priority
+CUST-01418,Thomas Anderson,Northeast,Consumer,Standard
+CUST-01419,Johnson Partners,Northeast,Consumer,Standard
+CUST-01420,Hassan Solutions,South,Consumer,Standard
+CUST-01421,Michael Sharma,South,Home Office,Standard
+CUST-01422,Yuki Khan,West,Consumer,Standard
+CUST-01423,Ali Group,Midwest,Consumer,Standard
+CUST-01424,Grace Smith,South,Home Office,Standard
+CUST-01425,Anderson Enterprises,South,Home Office,Priority
+CUST-01426,Fatima Davis,West,Consumer,Priority
+CUST-01427,David Khan,South,Corporate,Standard
+CUST-01428,Hassan Solutions,West,Consumer,Priority
+CUST-01429,Wei Hassan,West,Consumer,VIP
+CUST-01430,Hassan Holdings,West,Home Office,Standard
+CUST-01431,Priya Johnson,Midwest,Corporate,Standard
+CUST-01432,John Kim,West,Consumer,Standard
+CUST-01433,Wei Anderson,West,Consumer,Standard
+CUST-01434,Tanaka Partners,West,Consumer,Standard
+CUST-01435,Clark Solutions,West,Consumer,VIP
+CUST-01436,Elena Sharma,West,Consumer,Standard
+CUST-01437,Yuki Rossi,South,Consumer,Standard
+CUST-01438,Elena Nguyen,Midwest,Consumer,Standard
+CUST-01439,Aisha Davis,Northeast,Consumer,Standard
+CUST-01440,John Kim,West,Corporate,Priority
+CUST-01441,Kowalski Partners,Northeast,Consumer,Priority
+CUST-01442,David Hassan,Midwest,Consumer,Standard
+CUST-01443,Maria Brown,Midwest,Consumer,Priority
+CUST-01444,Elena Davis,South,Home Office,Standard
+CUST-01445,Fatima Tanaka,West,Corporate,Standard
+CUST-01446,Wilson Solutions,West,Corporate,Standard
+CUST-01447,Anderson Holdings,West,Home Office,Priority
+CUST-01448,Sharma Partners,West,Consumer,Standard
+CUST-01449,Smith Group,South,Consumer,Standard
+CUST-01450,Garcia Solutions,South,Consumer,Priority
+CUST-01451,Garcia Group,South,Corporate,Standard
+CUST-01452,Chen Holdings,Northeast,Consumer,Priority
+CUST-01453,Ana Tanaka,Northeast,Corporate,Priority
+CUST-01454,Carlos Tanaka,Midwest,Consumer,Priority
+CUST-01455,Elena Brown,Northeast,Consumer,Priority
+CUST-01456,Wilson Group,Midwest,Home Office,Standard
+CUST-01457,Grace Kowalski,Midwest,Consumer,Standard
+CUST-01458,Grace Wilson,Midwest,Corporate,Standard
+CUST-01459,Thomas Smith,Midwest,Consumer,Standard
+CUST-01460,Kowalski Group,Northeast,Corporate,Standard
+CUST-01461,Clark Partners,South,Corporate,Standard
+CUST-01462,Sharma Enterprises,West,Consumer,Priority
+CUST-01463,Garcia Holdings,West,Consumer,Standard
+CUST-01464,Carlos Silva,Midwest,Consumer,VIP
+CUST-01465,Priya Hassan,West,Consumer,Priority
+CUST-01466,Wei Khan,South,Consumer,Priority
+CUST-01467,Aisha Anderson,South,Consumer,Priority
+CUST-01468,Fatima Garcia,West,Consumer,Priority
+CUST-01469,Grace Johnson,Midwest,Consumer,Standard
+CUST-01470,Fatima Nguyen,West,Consumer,Standard
+CUST-01471,Sofia Clark,West,Consumer,Priority
+CUST-01472,Yuki Rossi,West,Consumer,Standard
+CUST-01473,Johnson Enterprises,South,Consumer,Standard
+CUST-01474,Grace Chen,South,Consumer,Standard
+CUST-01475,Fatima Silva,Northeast,Consumer,Standard
+CUST-01476,Aisha Chen,Midwest,Home Office,Standard
+CUST-01477,Martinez Enterprises,South,Corporate,Standard
+CUST-01478,Robert Brown,West,Consumer,Standard
+CUST-01479,Brown Holdings,Northeast,Consumer,Standard
+CUST-01480,Robert Hassan,South,Corporate,VIP
+CUST-01481,Kim Group,Midwest,Home Office,Standard
+CUST-01482,Johnson Enterprises,South,Consumer,Priority
+CUST-01483,Maria Johnson,Midwest,Consumer,Standard
+CUST-01484,Elena Anderson,Midwest,Corporate,Standard
+CUST-01485,Robert Kim,South,Consumer,Standard
+CUST-01486,Yuki Martinez,West,Corporate,Priority
+CUST-01487,Ana Davis,West,Corporate,Standard
+CUST-01488,Rossi Solutions,Midwest,Corporate,Standard
+CUST-01489,Linh Martinez,West,Consumer,Standard
+CUST-01490,James Martinez,South,Consumer,Standard
+CUST-01491,Mohammed Khan,West,Consumer,Standard
+CUST-01492,David Garcia,West,Consumer,VIP
+CUST-01493,David Brown,South,Corporate,Priority
+CUST-01494,Grace Tanaka,West,Consumer,Priority
+CUST-01495,Khan Group,West,Home Office,Standard
+CUST-01496,Johnson Group,West,Consumer,Priority
+CUST-01497,Mohammed Khan,West,Home Office,Standard
+CUST-01498,Smith Solutions,South,Home Office,Standard
+CUST-01499,Anderson Enterprises,Northeast,Corporate,Priority
+CUST-01500,Wei Martinez,South,Consumer,Standard
+CUST-01501,Davis Holdings,West,Corporate,Standard
+CUST-01502,Kowalski Solutions,Northeast,Consumer,Standard
+CUST-01503,Wei Clark,South,Consumer,Standard
+CUST-01504,Ali Group,South,Corporate,Standard
+CUST-01505,Davis Partners,South,Corporate,Standard
+CUST-01506,Johnson Enterprises,South,Consumer,Standard
+CUST-01507,Nguyen Partners,West,Home Office,Standard
+CUST-01508,Elena Brown,West,Consumer,Standard
+CUST-01509,Sofia Rossi,South,Consumer,Standard
+CUST-01510,Aisha Garcia,South,Consumer,Standard
+CUST-01511,Nguyen Solutions,West,Consumer,VIP
+CUST-01512,Brown Partners,West,Consumer,Standard
+CUST-01513,Fatima Anderson,South,Consumer,Standard
+CUST-01514,Mohammed Rossi,South,Home Office,Standard
+CUST-01515,Fatima Rossi,South,Consumer,Standard
+CUST-01516,Khan Solutions,South,Consumer,Standard
+CUST-01517,James Davis,Midwest,Corporate,Priority
+CUST-01518,Robert Kim,West,Corporate,Standard
+CUST-01519,Wilson Partners,South,Consumer,Standard
+CUST-01520,David Clark,South,Consumer,Standard
+CUST-01521,Elena Tanaka,South,Consumer,VIP
+CUST-01522,John Johnson,West,Home Office,Standard
+CUST-01523,John Rossi,South,Consumer,Priority
+CUST-01524,Ali Group,South,Consumer,Standard
+CUST-01525,Sharma Holdings,West,Consumer,Standard
+CUST-01526,Fatima Kim,South,Corporate,VIP
+CUST-01527,Robert Davis,Northeast,Consumer,Standard
+CUST-01528,John Wilson,South,Corporate,Priority
+CUST-01529,Linh Tanaka,South,Consumer,Priority
+CUST-01530,Smith Holdings,South,Corporate,Standard
+CUST-01531,Mohammed Anderson,West,Corporate,Standard
+CUST-01532,Sharma Partners,West,Consumer,Standard
+CUST-01533,Mohammed Wilson,Northeast,Consumer,Standard
+CUST-01534,Garcia Enterprises,South,Consumer,Priority
+CUST-01535,Fatima Davis,West,Corporate,Standard
+CUST-01536,Smith Partners,South,Consumer,Priority
+CUST-01537,James Kim,South,Consumer,Standard
+CUST-01538,Linh Brown,Northeast,Corporate,Priority
+CUST-01539,Michael Anderson,West,Corporate,Priority
+CUST-01540,Sofia Khan,Northeast,Consumer,Standard
+CUST-01541,Johnson Holdings,West,Consumer,Priority
+CUST-01542,Nguyen Solutions,West,Consumer,Standard
+CUST-01543,Sofia Garcia,West,Consumer,Standard
+CUST-01544,Elena Smith,South,Consumer,Standard
+CUST-01545,Hassan Group,West,Consumer,Priority
+CUST-01546,Wilson Group,Midwest,Consumer,Priority
+CUST-01547,Grace Nguyen,West,Home Office,Priority
+CUST-01548,Priya Anderson,West,Consumer,Standard
+CUST-01549,John Tanaka,Northeast,Consumer,VIP
+CUST-01550,Wei Hassan,South,Consumer,Standard
+CUST-01551,David Chen,Northeast,Home Office,Priority
+CUST-01552,Thomas Brown,West,Consumer,Priority
+CUST-01553,Priya Garcia,West,Consumer,VIP
+CUST-01554,Ali Group,West,Consumer,Standard
+CUST-01555,Brown Partners,South,Corporate,Priority
+CUST-01556,David Brown,Midwest,Consumer,Standard
+CUST-01557,Sharma Solutions,West,Corporate,Standard
+CUST-01558,Yuki Hassan,West,Home Office,Standard
+CUST-01559,Hassan Enterprises,West,Consumer,Priority
+CUST-01560,Carlos Silva,South,Consumer,Standard
+CUST-01561,Thomas Chen,Midwest,Home Office,Standard
+CUST-01562,Rossi Solutions,Midwest,Corporate,Standard
+CUST-01563,Clark Solutions,South,Consumer,VIP
+CUST-01564,James Kowalski,West,Home Office,Standard
+CUST-01565,Ana Johnson,Northeast,Consumer,Standard
+CUST-01566,Clark Partners,South,Corporate,Standard
+CUST-01567,Carlos Nguyen,West,Consumer,Standard
+CUST-01568,Fatima Hassan,Midwest,Consumer,Priority
+CUST-01569,Davis Enterprises,South,Home Office,Standard
+CUST-01570,Elena Smith,Midwest,Corporate,Priority
+CUST-01571,Fatima Wilson,Northeast,Home Office,Standard
+CUST-01572,Tanaka Holdings,West,Consumer,Standard
+CUST-01573,Thomas Nguyen,Midwest,Corporate,Standard
+CUST-01574,Grace Chen,South,Corporate,Priority
+CUST-01575,Robert Silva,West,Home Office,Standard
+CUST-01576,Sharma Partners,Midwest,Consumer,Standard
+CUST-01577,James Martinez,Midwest,Consumer,Standard
+CUST-01578,Priya Ali,South,Corporate,Priority
+CUST-01579,Ali Group,South,Corporate,Priority
+CUST-01580,Linh Anderson,South,Consumer,Standard
+CUST-01581,Silva Holdings,Midwest,Corporate,Standard
+CUST-01582,Maria Kowalski,West,Consumer,Priority
+CUST-01583,Daniel Davis,Northeast,Consumer,Priority
+CUST-01584,Thomas Khan,West,Consumer,Standard
+CUST-01585,Kim Group,Midwest,Corporate,Standard
+CUST-01586,Grace Sharma,Midwest,Consumer,Standard
+CUST-01587,Michael Brown,West,Consumer,Standard
+CUST-01588,Kowalski Solutions,South,Consumer,Standard
+CUST-01589,Aisha Clark,West,Corporate,Priority
+CUST-01590,Johnson Solutions,South,Consumer,Standard
+CUST-01591,Clark Holdings,South,Consumer,Priority
+CUST-01592,Daniel Wilson,South,Home Office,Standard
+CUST-01593,Anderson Solutions,South,Home Office,Standard
+CUST-01594,Aisha Anderson,West,Home Office,Standard
+CUST-01595,Hassan Partners,Midwest,Consumer,Standard
+CUST-01596,Fatima Martinez,Midwest,Corporate,Standard
+CUST-01597,James Anderson,West,Consumer,Standard
+CUST-01598,Fatima Hassan,West,Corporate,Standard
+CUST-01599,Ana Chen,West,Consumer,Standard
+CUST-01600,Priya Brown,South,Corporate,Priority
+CUST-01601,Priya Sharma,Midwest,Consumer,VIP
+CUST-01602,Silva Partners,South,Home Office,Standard
+CUST-01603,Garcia Partners,South,Corporate,Standard
+CUST-01604,Fatima Silva,West,Consumer,Standard
+CUST-01605,Kim Group,West,Consumer,Standard
+CUST-01606,Carlos Tanaka,South,Consumer,Standard
+CUST-01607,Fatima Davis,West,Corporate,Standard
+CUST-01608,Smith Enterprises,West,Consumer,Standard
+CUST-01609,Mohammed Anderson,South,Home Office,Standard
+CUST-01610,Sharma Holdings,South,Consumer,Standard
+CUST-01611,Kim Holdings,West,Consumer,Standard
+CUST-01612,Kowalski Enterprises,Midwest,Corporate,Standard
+CUST-01613,Aisha Martinez,Midwest,Consumer,Standard
+CUST-01614,Mohammed Anderson,South,Home Office,Standard
+CUST-01615,Hassan Enterprises,South,Home Office,Standard
+CUST-01616,Aisha Hassan,West,Corporate,Priority
+CUST-01617,David Sharma,West,Home Office,Priority
+CUST-01618,Johnson Solutions,Midwest,Consumer,Standard
+CUST-01619,Nguyen Enterprises,West,Home Office,Standard
+CUST-01620,John Davis,South,Corporate,Standard
+CUST-01621,David Kowalski,South,Consumer,Priority
+CUST-01622,Mohammed Silva,West,Corporate,Standard
+CUST-01623,Brown Partners,South,Consumer,Standard
+CUST-01624,Thomas Kim,West,Corporate,Standard
+CUST-01625,Sharma Holdings,South,Consumer,Standard
+CUST-01626,Mohammed Brown,Midwest,Home Office,Standard
+CUST-01627,Chen Enterprises,West,Home Office,Standard
+CUST-01628,Thomas Martinez,Midwest,Consumer,Standard
+CUST-01629,David Silva,South,Corporate,Standard
+CUST-01630,Wei Hassan,West,Home Office,Standard
+CUST-01631,Ali Partners,Midwest,Consumer,Standard
+CUST-01632,David Brown,South,Consumer,Standard
+CUST-01633,Linh Wilson,West,Corporate,Standard
+CUST-01634,Rossi Enterprises,West,Home Office,Priority
+CUST-01635,Mohammed Silva,South,Consumer,Standard
+CUST-01636,Clark Holdings,Northeast,Consumer,Priority
+CUST-01637,Wei Clark,West,Corporate,Standard
+CUST-01638,Wei Nguyen,Midwest,Consumer,Priority
+CUST-01639,Hassan Holdings,Midwest,Consumer,Priority
+CUST-01640,Linh Smith,South,Consumer,Priority
+CUST-01641,Smith Enterprises,West,Consumer,Standard
+CUST-01642,Mohammed Silva,West,Corporate,Standard
+CUST-01643,Clark Partners,West,Consumer,Standard
+CUST-01644,Ana Tanaka,West,Corporate,Standard
+CUST-01645,Wei Hassan,Midwest,Corporate,Standard
+CUST-01646,Aisha Nguyen,Midwest,Home Office,Standard
+CUST-01647,Smith Enterprises,Northeast,Corporate,Standard
+CUST-01648,Michael Martinez,Midwest,Consumer,Standard
+CUST-01649,Robert Clark,South,Home Office,Standard
+CUST-01650,Anderson Partners,Northeast,Home Office,Priority
+CUST-01651,Sofia Hassan,West,Home Office,Priority
+CUST-01652,Kim Group,Midwest,Consumer,Standard
+CUST-01653,Linh Wilson,Northeast,Consumer,VIP
+CUST-01654,Wei Nguyen,South,Consumer,Priority
+CUST-01655,Kim Solutions,Midwest,Consumer,Priority
+CUST-01656,Clark Holdings,West,Consumer,Standard
+CUST-01657,Maria Garcia,West,Home Office,Priority
+CUST-01658,Sofia Tanaka,South,Consumer,Standard
+CUST-01659,Daniel Johnson,South,Consumer,VIP
+CUST-01660,Aisha Smith,South,Consumer,Standard
+CUST-01661,Tanaka Group,Midwest,Consumer,Standard
+CUST-01662,Nguyen Enterprises,West,Corporate,Standard
+CUST-01663,Smith Partners,South,Consumer,Standard
+CUST-01664,Grace Davis,Midwest,Consumer,Priority
+CUST-01665,James Kowalski,West,Consumer,Priority
+CUST-01666,Sofia Tanaka,Northeast,Consumer,Priority
+CUST-01667,Martinez Holdings,West,Corporate,Standard
+CUST-01668,Wei Khan,South,Home Office,Standard
+CUST-01669,Brown Solutions,Midwest,Corporate,Standard
+CUST-01670,Thomas Anderson,West,Corporate,Standard
+CUST-01671,Linh Rossi,South,Corporate,Priority
+CUST-01672,Robert Garcia,South,Consumer,Standard
+CUST-01673,Priya Ali,South,Corporate,Standard
+CUST-01674,Sofia Martinez,South,Consumer,VIP
+CUST-01675,Tanaka Enterprises,Northeast,Corporate,Priority
+CUST-01676,Hassan Partners,West,Consumer,Priority
+CUST-01677,Ana Davis,Midwest,Corporate,Standard
+CUST-01678,Sofia Nguyen,Midwest,Consumer,Standard
+CUST-01679,Khan Solutions,West,Home Office,Standard
+CUST-01680,Linh Silva,South,Home Office,VIP
+CUST-01681,Aisha Wilson,South,Consumer,Priority
+CUST-01682,Smith Solutions,South,Corporate,Standard
+CUST-01683,Anderson Holdings,West,Consumer,Priority
+CUST-01684,Daniel Ali,Northeast,Corporate,Standard
+CUST-01685,Yuki Sharma,West,Consumer,VIP
+CUST-01686,Martinez Enterprises,South,Consumer,Standard
+CUST-01687,Linh Kim,West,Corporate,Standard
+CUST-01688,Wei Brown,South,Consumer,Priority
+CUST-01689,Chen Enterprises,West,Consumer,Priority
+CUST-01690,Priya Wilson,Northeast,Consumer,Standard
+CUST-01691,Chen Solutions,West,Home Office,Standard
+CUST-01692,Johnson Partners,West,Corporate,Standard
+CUST-01693,Anderson Group,West,Consumer,Priority
+CUST-01694,Elena Khan,West,Consumer,Standard
+CUST-01695,Mohammed Brown,West,Consumer,Priority
+CUST-01696,Fatima Davis,South,Home Office,Priority
+CUST-01697,Kowalski Group,South,Home Office,Standard
+CUST-01698,Rossi Enterprises,Northeast,Consumer,Standard
+CUST-01699,David Brown,South,Consumer,Priority
+CUST-01700,Rossi Group,West,Consumer,Standard
+CUST-01701,Thomas Nguyen,Northeast,Home Office,Priority
+CUST-01702,Grace Silva,South,Consumer,Standard
+CUST-01703,Robert Garcia,South,Corporate,Standard
+CUST-01704,Clark Partners,West,Corporate,Priority
+CUST-01705,Yuki Nguyen,West,Consumer,Priority
+CUST-01706,Michael Clark,West,Home Office,Priority
+CUST-01707,Smith Partners,South,Corporate,Standard
+CUST-01708,Elena Nguyen,Midwest,Corporate,Standard
+CUST-01709,Sofia Rossi,Midwest,Consumer,Priority
+CUST-01710,Mohammed Davis,West,Corporate,Standard
+CUST-01711,Ana Silva,South,Corporate,Priority
+CUST-01712,Aisha Kim,Midwest,Consumer,Standard
+CUST-01713,Priya Hassan,Northeast,Home Office,Standard
+CUST-01714,Robert Hassan,South,Corporate,Standard
+CUST-01715,Rossi Enterprises,West,Corporate,VIP
+CUST-01716,Smith Holdings,South,Home Office,Priority
+CUST-01717,Ana Kowalski,Midwest,Consumer,Standard
+CUST-01718,Martinez Holdings,South,Home Office,Standard
+CUST-01719,Mohammed Silva,West,Home Office,Standard
+CUST-01720,Elena Tanaka,South,Consumer,Standard
+CUST-01721,Maria Sharma,West,Consumer,Standard
+CUST-01722,Priya Sharma,Midwest,Corporate,Standard
+CUST-01723,Kowalski Group,West,Consumer,Standard
+CUST-01724,Ana Silva,West,Consumer,Priority
+CUST-01725,Thomas Wilson,South,Corporate,Priority
+CUST-01726,Sofia Brown,West,Home Office,VIP
+CUST-01727,Mohammed Silva,West,Consumer,Priority
+CUST-01728,Priya Silva,Northeast,Home Office,Priority
+CUST-01729,Daniel Kim,Northeast,Corporate,Standard
+CUST-01730,Sofia Silva,Midwest,Consumer,Standard
+CUST-01731,Maria Davis,West,Corporate,Standard
+CUST-01732,Aisha Smith,Midwest,Corporate,Priority
+CUST-01733,Johnson Solutions,South,Home Office,Standard
+CUST-01734,David Smith,West,Consumer,Priority
+CUST-01735,Wilson Enterprises,South,Consumer,Priority
+CUST-01736,Mohammed Sharma,South,Home Office,Standard
+CUST-01737,Clark Group,West,Consumer,Priority
+CUST-01738,Thomas Khan,South,Corporate,Standard
+CUST-01739,Martinez Holdings,South,Corporate,Standard
+CUST-01740,Khan Group,South,Corporate,VIP
+CUST-01741,Robert Nguyen,West,Consumer,Standard
+CUST-01742,Fatima Kowalski,Northeast,Home Office,Standard
+CUST-01743,Aisha Brown,Midwest,Consumer,Standard
+CUST-01744,Wei Hassan,Northeast,Consumer,Standard
+CUST-01745,Yuki Garcia,West,Corporate,Standard
+CUST-01746,Anderson Solutions,South,Consumer,Priority
+CUST-01747,Thomas Clark,South,Home Office,Standard
+CUST-01748,Kim Partners,West,Consumer,Priority
+CUST-01749,John Tanaka,South,Home Office,Priority
+CUST-01750,Anderson Enterprises,South,Corporate,VIP
+CUST-01751,Fatima Kowalski,Northeast,Consumer,Standard
+CUST-01752,Daniel Ali,West,Consumer,Standard
+CUST-01753,Yuki Hassan,Midwest,Corporate,Priority
+CUST-01754,Silva Partners,West,Consumer,VIP
+CUST-01755,Grace Martinez,West,Consumer,VIP
+CUST-01756,Clark Holdings,South,Corporate,Standard
+CUST-01757,Daniel Clark,Midwest,Consumer,Priority
+CUST-01758,Kowalski Enterprises,West,Consumer,Standard
+CUST-01759,Robert Nguyen,West,Consumer,Standard
+CUST-01760,Ana Kim,South,Consumer,Priority
+CUST-01761,Elena Garcia,West,Consumer,Standard
+CUST-01762,Thomas Clark,Midwest,Corporate,Standard
+CUST-01763,Maria Kowalski,West,Home Office,Standard
+CUST-01764,Linh Anderson,South,Consumer,Priority
+CUST-01765,Martinez Partners,Midwest,Corporate,Standard
+CUST-01766,Kim Holdings,South,Consumer,Standard
+CUST-01767,Kowalski Partners,Midwest,Home Office,VIP
+CUST-01768,Priya Rossi,South,Consumer,Standard
+CUST-01769,Priya Tanaka,Northeast,Corporate,Priority
+CUST-01770,Elena Martinez,West,Consumer,Standard
+CUST-01771,Wilson Partners,West,Consumer,Standard
+CUST-01772,Robert Garcia,Midwest,Consumer,Priority
+CUST-01773,Khan Enterprises,South,Consumer,Standard
+CUST-01774,Wilson Solutions,South,Home Office,Standard
+CUST-01775,Fatima Wilson,West,Home Office,Standard
+CUST-01776,Martinez Group,West,Consumer,Standard
+CUST-01777,Wilson Group,Midwest,Consumer,Standard
+CUST-01778,John Davis,West,Corporate,Standard
+CUST-01779,Carlos Martinez,West,Corporate,VIP
+CUST-01780,Mohammed Brown,West,Consumer,VIP
+CUST-01781,Maria Wilson,South,Consumer,Standard
+CUST-01782,Carlos Hassan,Midwest,Consumer,Standard
+CUST-01783,Priya Tanaka,Midwest,Consumer,Standard
+CUST-01784,Garcia Group,Northeast,Consumer,Standard
+CUST-01785,Aisha Hassan,West,Home Office,Priority
+CUST-01786,Wilson Group,South,Corporate,Standard
+CUST-01787,Priya Garcia,South,Consumer,Priority
+CUST-01788,Grace Clark,South,Corporate,Standard
+CUST-01789,Priya Kim,West,Home Office,Standard
+CUST-01790,Grace Johnson,West,Consumer,Standard
+CUST-01791,Aisha Wilson,South,Consumer,Standard
+CUST-01792,Johnson Enterprises,Midwest,Home Office,VIP
+CUST-01793,Rossi Enterprises,Northeast,Home Office,Standard
+CUST-01794,Michael Davis,Midwest,Consumer,Standard
+CUST-01795,Robert Johnson,West,Consumer,Priority
+CUST-01796,Thomas Martinez,West,Consumer,Standard
+CUST-01797,Linh Rossi,West,Consumer,Standard
+CUST-01798,Davis Holdings,Northeast,Consumer,Standard
+CUST-01799,Ana Ali,South,Consumer,VIP
+CUST-01800,James Martinez,South,Consumer,Priority
+CUST-01801,Thomas Johnson,South,Corporate,Standard
+CUST-01802,Linh Hassan,West,Corporate,Standard
+CUST-01803,Yuki Tanaka,West,Corporate,Priority
+CUST-01804,Smith Group,Midwest,Home Office,Standard
+CUST-01805,Sofia Martinez,West,Consumer,Standard
+CUST-01806,Yuki Hassan,Midwest,Consumer,Priority
+CUST-01807,Kowalski Holdings,South,Home Office,Standard
+CUST-01808,Linh Khan,West,Consumer,Standard
+CUST-01809,Grace Brown,Midwest,Home Office,Priority
+CUST-01810,Davis Group,West,Home Office,Standard
+CUST-01811,Grace Ali,South,Corporate,Priority
+CUST-01812,Michael Clark,Midwest,Home Office,VIP
+CUST-01813,Thomas Rossi,South,Home Office,Standard
+CUST-01814,Tanaka Enterprises,West,Consumer,VIP
+CUST-01815,Hassan Group,West,Corporate,Priority
+CUST-01816,James Tanaka,Northeast,Home Office,Standard
+CUST-01817,David Martinez,South,Home Office,Standard
+CUST-01818,Ali Partners,South,Consumer,VIP
+CUST-01819,Garcia Enterprises,South,Consumer,Standard
+CUST-01820,Yuki Smith,South,Consumer,Standard
+CUST-01821,Grace Wilson,West,Corporate,Standard
+CUST-01822,Daniel Nguyen,Midwest,Consumer,Standard
+CUST-01823,Silva Solutions,West,Consumer,Standard
+CUST-01824,Wei Hassan,Northeast,Consumer,Standard
+CUST-01825,Sharma Solutions,South,Consumer,Priority
+CUST-01826,Chen Group,Midwest,Home Office,Standard
+CUST-01827,John Clark,Midwest,Corporate,Standard
+CUST-01828,Tanaka Partners,West,Home Office,VIP
+CUST-01829,Aisha Chen,South,Consumer,Priority
+CUST-01830,Martinez Group,South,Consumer,Standard
+CUST-01831,Grace Martinez,West,Corporate,Standard
+CUST-01832,Elena Clark,West,Consumer,Standard
+CUST-01833,Wei Ali,West,Consumer,Standard
+CUST-01834,Carlos Khan,South,Consumer,Priority
+CUST-01835,Priya Ali,South,Consumer,Standard
+CUST-01836,Elena Martinez,West,Corporate,Standard
+CUST-01837,David Kowalski,South,Consumer,Standard
+CUST-01838,Maria Tanaka,Northeast,Consumer,Priority
+CUST-01839,Michael Smith,South,Consumer,Priority
+CUST-01840,Sofia Tanaka,South,Corporate,Priority
+CUST-01841,Mohammed Davis,West,Consumer,Standard
+CUST-01842,Grace Hassan,West,Consumer,Standard
+CUST-01843,Sofia Nguyen,Midwest,Consumer,Priority
+CUST-01844,Robert Davis,Midwest,Consumer,Standard
+CUST-01845,Robert Nguyen,West,Corporate,Standard
+CUST-01846,John Wilson,Northeast,Corporate,Priority
+CUST-01847,Aisha Johnson,South,Consumer,Standard
+CUST-01848,Johnson Partners,South,Consumer,Standard
+CUST-01849,Brown Enterprises,West,Corporate,Standard
+CUST-01850,Aisha Kim,West,Consumer,Standard
+CUST-01851,Mohammed Kim,West,Consumer,VIP
+CUST-01852,Carlos Nguyen,South,Corporate,Standard
+CUST-01853,Elena Tanaka,Northeast,Corporate,Standard
+CUST-01854,Mohammed Rossi,West,Consumer,VIP
+CUST-01855,Wei Smith,Northeast,Consumer,VIP
+CUST-01856,Priya Hassan,West,Corporate,Standard
+CUST-01857,Thomas Hassan,West,Home Office,Priority
+CUST-01858,Thomas Sharma,West,Consumer,Priority
+CUST-01859,Grace Clark,South,Consumer,Priority
+CUST-01860,Robert Johnson,South,Consumer,Standard
+CUST-01861,David Chen,West,Corporate,Standard
+CUST-01862,John Rossi,West,Consumer,Standard
+CUST-01863,James Hassan,West,Consumer,Standard
+CUST-01864,David Hassan,Midwest,Corporate,Standard
+CUST-01865,Carlos Tanaka,South,Corporate,Priority
+CUST-01866,Carlos Anderson,South,Consumer,Standard
+CUST-01867,Kowalski Partners,South,Consumer,Priority
+CUST-01868,Linh Chen,West,Consumer,Standard
+CUST-01869,Aisha Tanaka,Midwest,Consumer,Standard
+CUST-01870,David Martinez,Midwest,Consumer,Standard
+CUST-01871,Smith Solutions,Midwest,Consumer,Standard
+CUST-01872,Silva Enterprises,Midwest,Consumer,Standard
+CUST-01873,Kowalski Holdings,West,Home Office,Standard
+CUST-01874,Kim Group,West,Consumer,Standard
+CUST-01875,Priya Chen,West,Consumer,Standard
+CUST-01876,Wei Kim,West,Consumer,Standard
+CUST-01877,Robert Johnson,South,Corporate,Standard
+CUST-01878,Brown Group,Midwest,Consumer,Standard
+CUST-01879,Kim Partners,Midwest,Home Office,VIP
+CUST-01880,Anderson Enterprises,South,Consumer,Priority
+CUST-01881,Grace Smith,Northeast,Corporate,Standard
+CUST-01882,Garcia Holdings,West,Consumer,Priority
+CUST-01883,Thomas Rossi,South,Consumer,Standard
+CUST-01884,Tanaka Holdings,West,Consumer,Standard
+CUST-01885,Tanaka Partners,Midwest,Home Office,Standard
+CUST-01886,Davis Holdings,South,Corporate,Standard
+CUST-01887,Fatima Garcia,Northeast,Corporate,Priority
+CUST-01888,Carlos Clark,South,Corporate,Priority
+CUST-01889,Thomas Kowalski,West,Corporate,Standard
+CUST-01890,David Martinez,South,Consumer,Priority
+CUST-01891,Mohammed Martinez,South,Corporate,Standard
+CUST-01892,Robert Tanaka,West,Consumer,Standard
+CUST-01893,Priya Chen,South,Home Office,Standard
+CUST-01894,James Brown,South,Consumer,Priority
+CUST-01895,Khan Partners,West,Home Office,Priority
+CUST-01896,Chen Group,South,Corporate,Priority
+CUST-01897,Johnson Partners,Northeast,Home Office,Priority
+CUST-01898,Kim Group,South,Corporate,Standard
+CUST-01899,Silva Group,South,Consumer,Priority
+CUST-01900,Martinez Enterprises,South,Consumer,Standard
+CUST-01901,Nguyen Group,South,Home Office,Priority
+CUST-01902,David Kowalski,West,Corporate,Standard
+CUST-01903,Martinez Enterprises,South,Home Office,Standard
+CUST-01904,Thomas Nguyen,West,Corporate,Priority
+CUST-01905,Maria Kowalski,West,Consumer,Priority
+CUST-01906,Ana Ali,West,Corporate,Standard
+CUST-01907,Mohammed Rossi,South,Consumer,Standard
+CUST-01908,Kowalski Enterprises,Midwest,Consumer,VIP
+CUST-01909,Tanaka Partners,Midwest,Home Office,Standard
+CUST-01910,Michael Silva,South,Home Office,Standard
+CUST-01911,Tanaka Partners,South,Consumer,Priority
+CUST-01912,Wilson Enterprises,Northeast,Home Office,Standard
+CUST-01913,Daniel Khan,West,Home Office,Priority
+CUST-01914,Aisha Sharma,Midwest,Consumer,Standard
+CUST-01915,Sofia Silva,South,Corporate,Standard
+CUST-01916,Thomas Rossi,Northeast,Consumer,Standard
+CUST-01917,John Martinez,South,Corporate,Standard
+CUST-01918,Kowalski Enterprises,South,Corporate,Standard
+CUST-01919,Martinez Group,South,Consumer,Standard
+CUST-01920,Chen Group,Northeast,Home Office,Priority
+CUST-01921,Tanaka Enterprises,West,Consumer,Standard
+CUST-01922,Thomas Kim,South,Consumer,Standard
+CUST-01923,Kim Group,West,Corporate,Priority
+CUST-01924,Robert Silva,Northeast,Corporate,Standard
+CUST-01925,Sofia Kim,South,Consumer,Standard
+CUST-01926,Kim Group,South,Consumer,Priority
+CUST-01927,Fatima Davis,Midwest,Consumer,VIP
+CUST-01928,Hassan Enterprises,West,Corporate,Standard
+CUST-01929,John Clark,South,Home Office,Standard
+CUST-01930,Daniel Ali,South,Consumer,VIP
+CUST-01931,Maria Brown,South,Consumer,VIP
+CUST-01932,Ali Holdings,Midwest,Consumer,Priority
+CUST-01933,Wei Martinez,Midwest,Consumer,Priority
+CUST-01934,Wilson Partners,Midwest,Consumer,Priority
+CUST-01935,Grace Sharma,Northeast,Consumer,Standard
+CUST-01936,Clark Enterprises,West,Corporate,Standard
+CUST-01937,Daniel Rossi,Northeast,Consumer,Standard
+CUST-01938,Linh Silva,South,Consumer,Standard
+CUST-01939,Sofia Kim,Midwest,Home Office,Priority
+CUST-01940,Smith Holdings,South,Corporate,Standard
+CUST-01941,Ana Rossi,West,Consumer,Priority
+CUST-01942,Aisha Clark,Midwest,Consumer,Standard
+CUST-01943,Elena Johnson,South,Consumer,Standard
+CUST-01944,James Khan,West,Corporate,Standard
+CUST-01945,John Hassan,West,Corporate,Standard
+CUST-01946,Grace Kim,Northeast,Consumer,Standard
+CUST-01947,Chen Partners,South,Consumer,Priority
+CUST-01948,Grace Anderson,South,Corporate,Standard
+CUST-01949,Linh Rossi,West,Consumer,Priority
+CUST-01950,Maria Hassan,South,Consumer,Priority
+CUST-01951,Sofia Wilson,Midwest,Corporate,Standard
+CUST-01952,Yuki Anderson,South,Consumer,Standard
+CUST-01953,Grace Chen,South,Consumer,Standard
+CUST-01954,John Garcia,South,Consumer,Priority
+CUST-01955,Mohammed Kowalski,West,Consumer,Standard
+CUST-01956,Grace Anderson,South,Corporate,VIP
+CUST-01957,Yuki Tanaka,South,Consumer,Standard
+CUST-01958,Grace Hassan,West,Corporate,Standard
+CUST-01959,David Brown,West,Consumer,Standard
+CUST-01960,Mohammed Sharma,West,Home Office,Standard
+CUST-01961,Mohammed Anderson,West,Consumer,Standard
+CUST-01962,Carlos Tanaka,West,Corporate,Priority
+CUST-01963,Carlos Rossi,Midwest,Consumer,Priority
+CUST-01964,Anderson Solutions,Midwest,Consumer,Priority
+CUST-01965,Mohammed Ali,West,Consumer,Standard
+CUST-01966,David Clark,Midwest,Consumer,Standard
+CUST-01967,David Khan,Midwest,Home Office,Standard
+CUST-01968,Carlos Brown,Midwest,Home Office,Standard
+CUST-01969,David Anderson,West,Consumer,VIP
+CUST-01970,Tanaka Enterprises,South,Consumer,Standard
+CUST-01971,Fatima Rossi,West,Consumer,Standard
+CUST-01972,Fatima Silva,West,Corporate,VIP
+CUST-01973,Martinez Holdings,West,Consumer,Standard
+CUST-01974,Brown Partners,Midwest,Consumer,Standard
+CUST-01975,David Silva,Midwest,Consumer,Standard
+CUST-01976,Sharma Enterprises,West,Consumer,Standard
+CUST-01977,Aisha Chen,West,Home Office,Standard
+CUST-01978,Khan Enterprises,Midwest,Consumer,Standard
+CUST-01979,Sharma Group,Midwest,Corporate,Standard
+CUST-01980,Yuki Wilson,Midwest,Consumer,Standard
+CUST-01981,Davis Enterprises,West,Corporate,Standard
+CUST-01982,David Martinez,West,Consumer,Priority
+CUST-01983,Hassan Holdings,West,Consumer,Standard
+CUST-01984,Rossi Group,West,Corporate,Priority
+CUST-01985,Wilson Solutions,West,Consumer,Standard
+CUST-01986,Elena Sharma,West,Home Office,Priority
+CUST-01987,Thomas Sharma,South,Consumer,Priority
+CUST-01988,Clark Enterprises,South,Consumer,Priority
+CUST-01989,Linh Chen,West,Consumer,Standard
+CUST-01990,Kim Partners,South,Corporate,Standard
+CUST-01991,Carlos Garcia,West,Consumer,Standard
+CUST-01992,Aisha Chen,Midwest,Consumer,Standard
+CUST-01993,Davis Partners,Northeast,Consumer,VIP
+CUST-01994,Nguyen Holdings,South,Consumer,Standard
+CUST-01995,Maria Clark,South,Consumer,Standard
+CUST-01996,Ali Partners,West,Corporate,Standard
+CUST-01997,Fatima Brown,South,Consumer,Priority
+CUST-01998,Ana Rossi,West,Consumer,Standard
+CUST-01999,James Hassan,West,Consumer,Standard
+CUST-02000,Daniel Garcia,South,Consumer,Standard

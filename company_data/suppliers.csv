@@ -1,0 +1,51 @@
+supplier_id,supplier_name,category,region,country,lead_time_days,reliability_score,contractual_sla,payment_terms,status
+SUP-001,Summit Components,Automotive Parts,Asia,Vietnam,24,0.525,"Net 15, 52% on-time delivery target",Net 45,active
+SUP-002,Granite Manufacturing,Office Supplies,North America,Mexico,13,0.784,"Net 15, 78% on-time delivery target",Net 30,active
+SUP-003,Crestview Enterprises,Office Supplies,Asia,China,29,0.683,"Net 45, 68% on-time delivery target",Net 45,active
+SUP-004,Granite Trading Co.,Packaging,North America,Mexico,16,0.682,"Net 45, 68% on-time delivery target",Net 60,under_review
+SUP-005,Apex Industries,Food & Beverage,Asia,China,20,0.74,"Net 30, 74% on-time delivery target",Net 45,active
+SUP-006,Redstone Manufacturing,Textiles,North America,Mexico,19,0.757,"Net 15, 76% on-time delivery target",Net 60,under_review
+SUP-007,Sterling Materials,Electronics,North America,USA,21,0.853,"Net 30, 85% on-time delivery target",2/10 Net 30,active
+SUP-008,Horizon Manufacturing,Sporting Goods,Asia,India,32,0.869,"Net 45, 87% on-time delivery target",2/10 Net 30,under_review
+SUP-009,Silverline Holdings,Packaging,North America,USA,12,0.781,"Net 15, 78% on-time delivery target",Net 30,active
+SUP-010,Bluewater Manufacturing,Packaging,Asia,China,23,0.747,"Net 30, 75% on-time delivery target",Net 60,active
+SUP-011,Silverline Industries,Chemicals,Asia,China,24,0.85,"Net 15, 85% on-time delivery target",Net 60,active
+SUP-012,Northline Holdings,Hardware,Europe,Germany,17,0.866,"Net 45, 87% on-time delivery target",Net 45,active
+SUP-013,Horizon Materials,Sporting Goods,Asia,Vietnam,12,0.659,"Net 45, 66% on-time delivery target",Net 60,under_review
+SUP-014,Meridian Supply Co.,Electronics,North America,USA,13,0.616,"Net 30, 62% on-time delivery target",Net 15,active
+SUP-015,Anchor Holdings,Chemicals,Asia,Vietnam,14,0.585,"Net 45, 58% on-time delivery target",Net 15,active
+SUP-016,Vantage Industries,Automotive Parts,Asia,Vietnam,28,0.643,"Net 15, 64% on-time delivery target",2/10 Net 30,active
+SUP-017,Pinnacle Trading Co.,Office Supplies,North America,Mexico,25,0.776,"Net 30, 78% on-time delivery target",Net 45,under_review
+SUP-018,Vertex Enterprises,Furniture,Asia,China,26,0.661,"Net 15, 66% on-time delivery target",Net 30,active
+SUP-019,Pioneer Trading Co.,Office Supplies,Asia,China,27,0.776,"Net 30, 78% on-time delivery target",Net 15,active
+SUP-020,Vantage Enterprises,Automotive Parts,Europe,Germany,13,0.578,"Net 15, 58% on-time delivery target",Net 30,active
+SUP-021,Granite Materials,Chemicals,Asia,China,19,0.769,"Net 30, 77% on-time delivery target",Net 15,active
+SUP-022,Apex Materials,Sporting Goods,North America,USA,9,0.551,"Net 15, 55% on-time delivery target",2/10 Net 30,under_review
+SUP-023,Bluewater Enterprises,Office Supplies,Asia,Vietnam,25,0.938,"Net 15, 94% on-time delivery target",Net 60,active
+SUP-024,Granite Enterprises,Electronics,Europe,Poland,18,0.57,"Net 30, 57% on-time delivery target",Net 15,active
+SUP-025,Silverline Materials,Packaging,Asia,China,15,0.598,"Net 15, 60% on-time delivery target",2/10 Net 30,under_review
+SUP-026,Northline Fabrication,Textiles,North America,USA,11,0.911,"Net 45, 91% on-time delivery target",Net 45,active
+SUP-027,Keystone Enterprises,Hardware,Asia,India,19,0.681,"Net 45, 68% on-time delivery target",2/10 Net 30,active
+SUP-028,Anchor Enterprises,Packaging,North America,USA,7,0.526,"Net 30, 53% on-time delivery target",Net 15,under_review
+SUP-029,Silverline Fabrication,Sporting Goods,North America,Mexico,25,0.64,"Net 15, 64% on-time delivery target",Net 45,active
+SUP-030,Redstone Components,Office Supplies,Europe,Germany,19,0.556,"Net 15, 56% on-time delivery target",2/10 Net 30,active
+SUP-031,Northline Components,Packaging,Asia,China,20,0.761,"Net 15, 76% on-time delivery target",Net 60,active
+SUP-032,Crestview Materials,Furniture,Asia,Vietnam,24,0.77,"Net 45, 77% on-time delivery target",Net 45,active
+SUP-033,Pinnacle Holdings,Furniture,Asia,Vietnam,14,0.372,"Net 30, 37% on-time delivery target",Net 15,active
+SUP-034,Summit Trading Co.,Chemicals,North America,Mexico,29,0.63,"Net 30, 63% on-time delivery target",Net 15,under_review
+SUP-035,Meridian Manufacturing,Electronics,North America,Mexico,21,0.788,"Net 45, 79% on-time delivery target",Net 60,under_review
+SUP-036,Summit Supply Co.,Packaging,Asia,Vietnam,14,0.764,"Net 45, 76% on-time delivery target",Net 15,active
+SUP-037,Pioneer Materials,Furniture,Asia,Vietnam,24,0.887,"Net 15, 89% on-time delivery target",Net 15,under_review
+SUP-038,Meridian Enterprises,Electronics,Asia,China,25,0.95,"Net 15, 95% on-time delivery target",Net 45,active
+SUP-039,Keystone Supply Co.,Food & Beverage,Asia,China,39,0.899,"Net 15, 90% on-time delivery target",Net 15,active
+SUP-040,Vantage Materials,Food & Beverage,North America,USA,6,0.759,"Net 45, 76% on-time delivery target",2/10 Net 30,active
+SUP-041,Keystone Industries,Packaging,Asia,India,20,0.785,"Net 15, 78% on-time delivery target",Net 30,active
+SUP-042,Granite Components,Chemicals,Asia,China,10,0.912,"Net 15, 91% on-time delivery target",2/10 Net 30,active
+SUP-043,Falcon Industries,Electronics,Europe,Germany,19,0.827,"Net 15, 83% on-time delivery target",Net 45,active
+SUP-044,Northline Supply Co.,Food & Beverage,Asia,China,26,0.58,"Net 45, 58% on-time delivery target",Net 45,active
+SUP-045,Meridian Holdings,Textiles,North America,Mexico,35,0.792,"Net 45, 79% on-time delivery target",2/10 Net 30,active
+SUP-046,Redstone Materials,Packaging,Europe,Turkey,23,0.636,"Net 45, 64% on-time delivery target",Net 60,active
+SUP-047,Horizon Industries,Automotive Parts,North America,Mexico,42,0.906,"Net 30, 91% on-time delivery target",Net 30,active
+SUP-048,Sterling Holdings,Textiles,Asia,China,24,0.904,"Net 45, 90% on-time delivery target",Net 45,active
+SUP-049,Vertex Logistics Group,Textiles,Asia,Vietnam,20,0.351,"Net 30, 35% on-time delivery target",Net 60,active
+SUP-050,Sterling Enterprises,Electronics,Europe,Turkey,16,0.932,"Net 45, 93% on-time delivery target",Net 60,under_review

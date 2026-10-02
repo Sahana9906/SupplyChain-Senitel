@@ -1,0 +1,16 @@
+carrier_id,carrier_name,service_type,region,on_time_rate,avg_transit_days
+CAR-01,Global Freight Lines,Ground,Europe,0.875,14.0
+CAR-02,OceanBridge Logistics,Ocean,North America,0.893,7.8
+CAR-03,SkyCargo Express,Rail,North America,0.759,14.0
+CAR-04,TransContinental Shipping,Rail,Asia,0.883,6.8
+CAR-05,RapidTrans Carriers,Air,Europe,0.582,10.0
+CAR-06,BlueHarbor Freight,Ground,Global,0.921,16.2
+CAR-07,IronRail Logistics,Ocean,Global,0.64,2.3
+CAR-08,Coastal Express Lines,Ocean,Global,0.504,10.8
+CAR-09,Continental Trucking Co.,Ocean,Global,0.852,15.6
+CAR-10,AeroCargo Solutions,Parcel,North America,0.771,8.4
+CAR-11,Prime Route Logistics,Ocean,Europe,0.823,10.9
+CAR-12,Northern Star Freight,Parcel,North America,0.959,17.2
+CAR-13,Pacific Gateway Shipping,Rail,Europe,0.855,4.8
+CAR-14,Metro Express Delivery,Air,Global,0.881,12.8
+CAR-15,Summit Transport Group,Ocean,Europe,0.809,6.2

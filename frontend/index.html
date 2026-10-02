@@ -1,0 +1,1648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SupplyChain Sentinel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sidebar-bg:#0F1B33; --sidebar-hover:#182545; --sidebar-active:#1E2E56;
+    --sidebar-text:#9AA6C7; --sidebar-text-active:#FFFFFF; --sidebar-border:#1C2947;
+    --page-bg:#F4F6F9; --card-bg:#FFFFFF; --border:#E4E7EF;
+    --text:#131A2C; --text-dim:#667085; --text-faint:#98A2B3;
+    --brand:#3B5FE3; --brand-dark:#2E4BC2; --brand-dim:#EEF1FE;
+    --low:#12A150; --low-bg:#E8F8EF; --medium:#D68A0C; --medium-bg:#FDF3E1;
+    --high:#E0432E; --high-bg:#FCEAE8; --critical:#B42318; --critical-bg:#FBE7E5;
+    --good:#12A150; --bad:#E0432E;
+    --sans:'Inter',-apple-system,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{ margin:0; font-family:var(--sans); background:var(--page-bg); color:var(--text); -webkit-font-smoothing:antialiased; }
+  a{ text-decoration:none; color:inherit; }
+  button{ font-family:var(--sans); }
+
+  .app{ display:flex; min-height:100vh; }
+
+  /* ---------------- sidebar ---------------- */
+  .sidebar{ width:236px; background:var(--sidebar-bg); flex-shrink:0; display:flex; flex-direction:column; position:sticky; top:0; height:100vh; overflow-y:auto; }
+  .brand-row{ display:flex; align-items:center; gap:10px; padding:20px 18px 16px; border-bottom:1px solid var(--sidebar-border); }
+  .brand-mark{ width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#3B5FE3,#6C3BE3); flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:14px; }
+  .brand-name{ color:#fff; font-weight:700; font-size:13.5px; line-height:1.3; letter-spacing:.01em; }
+  .brand-sub{ color:var(--sidebar-text); font-size:9.5px; line-height:1.3; margin-top:1px; }
+
+  .nav{ list-style:none; margin:0; padding:14px 10px; flex:1; }
+  .nav-label{ font-size:9.5px; font-weight:700; letter-spacing:.08em; color:#5C6893; text-transform:uppercase; padding:14px 10px 6px; }
+  .nav li a{ display:flex; align-items:center; gap:11px; padding:8.5px 12px; margin-bottom:1px; border-radius:7px; color:var(--sidebar-text); font-size:13px; font-weight:500; cursor:pointer; }
+  .nav li a .ic{ width:16px; text-align:center; font-size:13px; flex-shrink:0; }
+  .nav li a:hover{ background:var(--sidebar-hover); color:#fff; }
+  .nav li a.active{ background:var(--sidebar-active); color:var(--sidebar-text-active); font-weight:600; }
+  .nav li a.empty{ opacity:.55; }
+  .nav li a.empty:hover{ background:var(--sidebar-hover); opacity:.85; }
+
+  .sidebar-bottom{ padding:10px; border-top:1px solid var(--sidebar-border); }
+  .sidebar-bottom a{ display:flex; align-items:center; gap:11px; padding:8.5px 12px; border-radius:7px; color:var(--sidebar-text); font-size:13px; font-weight:500; }
+  .sidebar-bottom a:hover{ background:var(--sidebar-hover); color:#fff; }
+
+  /* ---------------- topbar ---------------- */
+  .topbar{ height:60px; background:var(--card-bg); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; padding:0 22px; gap:16px; position:sticky; top:0; z-index:5; }
+  .search-box{ flex:1; max-width:420px; position:relative; }
+  .search-box input{ width:100%; padding:8px 12px 8px 34px; border:1px solid var(--border); border-radius:8px; font-size:13px; background:#FAFBFC; color:var(--text); outline:none; }
+  .search-box input:focus{ border-color:var(--brand); background:#fff; }
+  .search-box .sic{ position:absolute; left:11px; top:50%; transform:translateY(-50%); color:var(--text-faint); font-size:13px; }
+  .top-right{ display:flex; align-items:center; gap:16px; flex-shrink:0; }
+  .bell{ position:relative; font-size:16px; color:var(--text-dim); cursor:pointer; }
+  .bell .dot{ position:absolute; top:-3px; right:-5px; width:14px; height:14px; border-radius:50%; background:var(--high); color:#fff; font-size:9px; font-weight:700; display:flex; align-items:center; justify-content:center; border:2px solid #fff; }
+  .user-chip{ display:flex; align-items:center; gap:9px; cursor:pointer; }
+  .user-chip .avatar{ width:30px; height:30px; border-radius:50%; background:var(--brand); color:#fff; display:flex; align-items:center; justify-content:center; font-size:11.5px; font-weight:700; }
+  .user-chip .who{ font-size:12.5px; font-weight:600; color:var(--text); line-height:1.3; }
+  .user-chip .role{ font-size:10.5px; color:var(--text-faint); line-height:1.3; }
+
+  /* ---------------- main ---------------- */
+  .main-scroll{ flex:1; min-width:0; display:flex; flex-direction:column; }
+  .main{ padding:22px 28px 60px; flex:1; }
+  .crumb{ font-size:12px; color:var(--text-faint); margin-bottom:10px; }
+  .crumb b{ color:var(--text); font-weight:600; }
+  .page-head{ margin-bottom:18px; }
+  .page-title{ font-size:22px; font-weight:700; margin:0 0 4px; }
+  .page-subtitle{ font-size:13px; color:var(--text-dim); margin:0; }
+
+  .toolbar{ display:flex; gap:10px; align-items:center; justify-content:space-between; margin-bottom:16px; flex-wrap:wrap; }
+  .toolbar .search-box{ max-width:340px; }
+  .btn{ font-size:12.5px; font-weight:600; padding:8px 15px; border-radius:7px; cursor:pointer; border:1px solid transparent; display:inline-flex; align-items:center; gap:7px; white-space:nowrap; }
+  .btn-primary{ background:var(--brand); color:#fff; }
+  .btn-primary:hover{ background:var(--brand-dark); }
+  .btn-primary:disabled{ opacity:.5; cursor:not-allowed; }
+  .btn-outline{ background:#fff; border-color:var(--border); color:var(--text); }
+  .btn-outline:hover{ background:#F8F9FC; }
+  .btn-sm{ padding:6px 12px; font-size:12px; }
+
+  .card{ background:var(--card-bg); border:1px solid var(--border); border-radius:10px; }
+
+  /* ---------------- incidents table ---------------- */
+  .table-wrap{ overflow-x:auto; }
+  table{ width:100%; border-collapse:collapse; font-size:13px; min-width:760px; }
+  th{ text-align:left; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-faint); font-weight:700; padding:11px 16px; border-bottom:1px solid var(--border); background:#FAFBFC; white-space:nowrap; }
+  td{ padding:12px 16px; border-bottom:1px solid var(--border); color:var(--text); white-space:nowrap; }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody tr:hover td{ background:#FAFBFF; }
+  .id-link{ color:var(--brand); font-weight:600; cursor:pointer; }
+  .id-link:hover{ text-decoration:underline; }
+  .row-actions{ display:flex; gap:8px; }
+  .empty-cell{ padding:44px 20px; text-align:center; color:var(--text-faint); font-size:13px; }
+
+  .pill{ display:inline-block; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; padding:3px 10px; border-radius:20px; }
+  .pill.low{ background:var(--low-bg); color:var(--low); }
+  .pill.medium{ background:var(--medium-bg); color:var(--medium); }
+  .pill.high{ background:var(--high-bg); color:var(--high); }
+  .pill.critical{ background:var(--critical-bg); color:var(--critical); }
+  .pill.pending{ background:#EEF0F4; color:var(--text-faint); }
+  .status-text{ font-size:12.5px; }
+  .status-text.pending{ color:var(--text-faint); }
+  .status-text.failed{ color:var(--high); cursor:pointer; }
+  .status-text.running{ color:var(--brand); }
+
+  .pagination{ display:flex; align-items:center; justify-content:space-between; padding:14px 16px; font-size:12.5px; color:var(--text-dim); }
+  .page-btns{ display:flex; gap:6px; }
+  .page-btns button{ border:1px solid var(--border); background:#fff; border-radius:6px; padding:5px 10px; font-size:12px; cursor:pointer; color:var(--text-dim); }
+  .page-btns button.on{ background:var(--brand); border-color:var(--brand); color:#fff; }
+
+  /* ---------------- incident detail ---------------- */
+  .detail-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom:20px; }
+  .detail-head .inc-title{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .detail-head h1{ font-size:22px; font-weight:700; margin:0; }
+  .detail-head .sub{ font-size:12.5px; color:var(--text-dim); margin-top:5px; }
+  .detail-actions{ display:flex; gap:8px; flex-shrink:0; }
+
+  .grid-3{ display:grid; grid-template-columns: 1.1fr 1.1fr 1.3fr; gap:16px; align-items:start; }
+  @media (max-width:1000px){ .grid-3{ grid-template-columns:1fr; } }
+  .info-card .card-title{ font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--text-dim); padding:14px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:8px; }
+  .kv-list{ padding:14px 16px; display:flex; flex-direction:column; gap:11px; }
+  .kv-list .kv-row{ display:flex; justify-content:space-between; gap:10px; font-size:12.5px; }
+  .kv-list .kv-row .k{ color:var(--text-dim); }
+  .kv-list .kv-row .v{ font-weight:600; text-align:right; }
+  .kv-list .kv-row .v.bad{ color:var(--high); }
+
+  .quick-actions-body{ padding:16px; }
+  .quick-actions-body p{ font-size:12px; color:var(--text-dim); margin:8px 0 14px; line-height:1.5; }
+  .steps-label{ font-size:11px; font-weight:700; color:var(--text-dim); margin:14px 0 8px; }
+  .steps{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; }
+  .steps li{ display:flex; align-items:flex-start; gap:9px; font-size:12px; color:var(--text); }
+  .steps .num{ width:18px; height:18px; border-radius:50%; background:var(--brand-dim); color:var(--brand); font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+
+  /* ---------------- processing state ---------------- */
+  .processing-card{ max-width:560px; margin:40px auto; text-align:center; padding:40px 32px; }
+  .processing-spinner{ width:44px; height:44px; border-radius:50%; border:3px solid var(--brand-dim); border-top-color:var(--brand); margin:0 auto 22px; animation:spin 0.9s linear infinite; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .processing-card h2{ font-size:17px; margin:0 0 4px; }
+  .processing-card .p-sub{ font-size:13px; color:var(--text-dim); margin-bottom:26px; }
+  .p-steps{ list-style:none; margin:0; padding:0; text-align:left; display:inline-flex; flex-direction:column; gap:11px; }
+  .p-steps li{ font-size:13px; color:var(--text-faint); display:flex; align-items:center; gap:10px; }
+  .p-steps li.on{ color:var(--text); font-weight:600; }
+  .p-steps .dot{ width:7px; height:7px; border-radius:50%; background:var(--border); flex-shrink:0; }
+  .p-steps li.on .dot{ background:var(--brand); }
+  .please-wait{ margin-top:24px; font-size:12px; color:var(--text-faint); }
+
+  /* ---------------- investigation result ---------------- */
+  .tabs{ display:flex; gap:2px; border-bottom:1px solid var(--border); margin-bottom:20px; }
+  .tabs button{ background:none; border:none; padding:11px 16px; font-size:13px; font-weight:600; color:var(--text-faint); cursor:pointer; border-bottom:2px solid transparent; }
+  .tabs button.active{ color:var(--brand); border-bottom-color:var(--brand); }
+  .tabs button.empty-tab{ color:var(--text-faint); opacity:.6; cursor:not-allowed; }
+
+  .kpi-row{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:20px; }
+  @media (max-width:1100px){ .kpi-row{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:640px){ .kpi-row{ grid-template-columns:repeat(2,1fr); } }
+  .kpi-tile{ padding:14px 15px; }
+  .kpi-tile .k-label{ font-size:10.5px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.04em; font-weight:700; margin-bottom:7px; }
+  .kpi-tile .k-value{ font-size:18px; font-weight:700; }
+  .kpi-tile .k-value.bad{ color:var(--high); }
+  .kpi-tile .k-sub{ font-size:11px; color:var(--text-dim); margin-top:4px; }
+
+  .result-grid{ display:grid; grid-template-columns:2fr 1fr; gap:16px; align-items:start; }
+  @media (max-width:980px){ .result-grid{ grid-template-columns:1fr; } }
+  .section-card{ margin-bottom:16px; }
+  .section-card .card-title{ font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--text-dim); padding:14px 16px; border-bottom:1px solid var(--border); }
+  .section-card .card-body{ padding:15px 16px 17px; font-size:13px; line-height:1.65; color:var(--text); }
+  .section-card .card-body ol,.section-card .card-body ul{ margin:0; padding-left:19px; }
+  .section-card .card-body li{ margin-bottom:6px; }
+  .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:760px){ .two-col{ grid-template-columns:1fr; } }
+  .severity-strip{ display:inline-flex; align-items:center; gap:8px; margin-top:2px; }
+
+  .signal-rows{ display:flex; flex-direction:column; }
+  .signal-row{ display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border); font-size:12.5px; }
+  .signal-row:last-child{ border-bottom:none; }
+  .signal-row .lbl{ color:var(--text-dim); }
+  .signal-row .val{ font-weight:600; font-family:var(--mono); }
+
+  .empty-tab-body{ padding:60px 20px; text-align:center; color:var(--text-faint); font-size:13.5px; }
+  .empty-tab-body .big-ic{ font-size:30px; margin-bottom:10px; opacity:.5; }
+
+  .error-card{ max-width:460px; margin:60px auto; text-align:center; padding:36px 30px; }
+  .error-card .e-ic{ font-size:30px; margin-bottom:14px; }
+  .error-card h2{ font-size:16px; margin:0 0 8px; color:var(--high); }
+  .error-card p{ font-size:13px; color:var(--text-dim); margin:0 0 20px; }
+
+  .empty-state{ padding:60px 20px; text-align:center; color:var(--text-faint); }
+
+  /* ---------------- investigation shell: info bar + stepper ---------------- */
+  .inv-info-bar{ display:flex; flex-wrap:wrap; gap:28px; align-items:flex-start; padding:16px 20px; margin-bottom:18px; }
+  .inv-info-bar .field{ min-width:90px; }
+  .inv-info-bar .field .f-label{ font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--text-faint); margin-bottom:4px; }
+  .inv-info-bar .field .f-value{ font-size:13.5px; font-weight:700; color:var(--text); display:flex; align-items:center; gap:6px; }
+  .inv-info-bar .field .f-value.mono{ font-family:var(--mono); font-size:12px; font-weight:600; }
+  .copy-btn{ background:none; border:none; cursor:pointer; color:var(--text-faint); font-size:12px; padding:2px; }
+  .copy-btn:hover{ color:var(--brand); }
+  .inv-info-bar .spacer{ flex:1; }
+
+  .stepper{ display:flex; align-items:center; gap:0; margin-bottom:20px; overflow-x:auto; padding:2px; }
+  .step-item{ display:flex; align-items:center; gap:9px; font-size:12.5px; font-weight:600; color:var(--text-faint); white-space:nowrap; cursor:pointer; padding:6px 4px; }
+  .step-item.linkable:hover{ color:var(--brand); }
+  .step-item .s-dot{ width:22px; height:22px; border-radius:50%; background:#EEF0F4; color:var(--text-faint); font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; border:2px solid transparent; }
+  .step-item.done .s-dot{ background:var(--low); color:#fff; }
+  .step-item.current{ color:var(--brand); }
+  .step-item.current .s-dot{ background:#fff; border-color:var(--brand); color:var(--brand); }
+  .step-connector{ width:30px; height:1px; background:var(--border); margin:0 4px; flex-shrink:0; }
+
+  /* ---------------- action bar (Generate / Evaluate) ---------------- */
+  .action-bar{ display:flex; align-items:center; gap:16px; padding:18px 20px; margin-bottom:18px; flex-wrap:wrap; }
+  .action-bar .desc{ font-size:12.5px; color:var(--text-dim); flex:1; min-width:220px; }
+  .action-bar .meta-right{ font-size:11.5px; color:var(--text-faint); text-align:right; }
+  .chk-row{ display:flex; align-items:center; gap:7px; font-size:12.5px; color:var(--text-dim); white-space:nowrap; }
+
+  .section-head-row{ display:flex; justify-content:space-between; align-items:center; margin:22px 0 14px; flex-wrap:wrap; gap:10px; }
+  .section-head-row h2{ font-size:16px; margin:0; display:flex; align-items:center; gap:9px; }
+  .count-chip{ font-size:11px; font-weight:700; background:var(--brand-dim); color:var(--brand); padding:2px 10px; border-radius:20px; }
+
+  .badge-status{ display:inline-flex; align-items:center; gap:5px; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; padding:4px 11px; border-radius:20px; white-space:nowrap; }
+  .badge-status.supported{ background:var(--low-bg); color:var(--low); }
+  .badge-status.partially_supported{ background:var(--medium-bg); color:var(--medium); }
+  .badge-status.insufficient_evidence{ background:var(--medium-bg); color:var(--medium); }
+  .badge-status.unsupported{ background:var(--high-bg); color:var(--high); }
+  .badge-status.prio-low{ background:var(--low-bg); color:var(--low); }
+  .badge-status.prio-medium{ background:var(--medium-bg); color:var(--medium); }
+  .badge-status.prio-high{ background:var(--high-bg); color:var(--high); }
+  .badge-status.prio-critical{ background:var(--critical-bg); color:var(--critical); }
+  .badge-status.valstat-valid{ background:var(--low-bg); color:var(--low); }
+  .badge-status.valstat-flagged{ background:var(--medium-bg); color:var(--medium); }
+  .badge-status.valstat-rejected{ background:var(--high-bg); color:var(--high); }
+  .mit-card{ border-left:3px solid var(--border); }
+  .mit-card.confirmed{ border-left-color:var(--brand); }
+  .mit-tag{ display:inline-flex; align-items:center; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; padding:3px 9px; border-radius:20px; background:#EEF0F4; color:var(--text-dim); margin-right:6px; }
+  .mit-meta-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:6px; }
+  .mit-steps{ margin:0; padding-left:18px; }
+  .mit-steps li{ margin-bottom:5px; font-size:12.5px; }
+  .mit-flag-note{ font-size:11.5px; color:var(--medium); background:var(--medium-bg); border-radius:8px; padding:8px 10px; margin-top:8px; }
+  .tc-title{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:var(--text-dim); margin:0 0 8px; }
+  .tc-body{ font-size:12.5px; color:var(--text); line-height:1.6; }
+
+  .confidence-inline{ display:flex; align-items:center; gap:10px; min-width:160px; }
+  .confidence-track{ flex:1; height:7px; border-radius:4px; background:#EEF0F4; overflow:hidden; }
+  .confidence-fill{ height:100%; background:var(--brand); border-radius:4px; }
+  .confidence-fill.low{ background:var(--high); }
+  .confidence-fill.medium{ background:var(--medium); }
+  .confidence-fill.high{ background:var(--low); }
+  .confidence-pct{ font-size:13px; font-weight:700; color:var(--text); white-space:nowrap; }
+
+  /* ---------------- hypothesis / validation cards ---------------- */
+  .hyp-card2{ padding:0; margin-bottom:14px; overflow:hidden; }
+  .hyp-card2-head{ display:flex; align-items:flex-start; gap:14px; padding:16px 18px; cursor:pointer; }
+  .hyp-rank-sq{ width:26px; height:26px; border-radius:7px; background:var(--brand-dim); color:var(--brand); font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .hyp-rank-sq.supported{ background:var(--low-bg); color:var(--low); }
+  .hyp-rank-sq.unsupported{ background:var(--high-bg); color:var(--high); }
+  .hyp-rank-sq.insufficient_evidence, .hyp-rank-sq.partially_supported{ background:var(--medium-bg); color:var(--medium); }
+  .hyp-card2-title-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:4px; }
+  .hyp-card2-title{ font-size:14px; font-weight:700; color:var(--text); }
+  .hyp-card2-desc{ font-size:12.5px; color:var(--text-dim); line-height:1.5; }
+  .hyp-card2-right{ display:flex; align-items:center; gap:14px; flex-shrink:0; }
+  .hyp-chevron{ color:var(--text-faint); font-size:13px; transition:transform .15s; }
+  .hyp-chevron.open{ transform:rotate(90deg); }
+  .hyp-card2-body{ border-top:1px solid var(--border); padding:16px 18px 18px; background:#FBFCFD; }
+
+  .three-col{ display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:18px; }
+  @media (max-width:900px){ .three-col{ grid-template-columns:1fr; } }
+  .three-col h4{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:var(--text-dim); margin:0 0 8px; display:flex; align-items:center; gap:6px; }
+  .three-col .col-body{ font-size:12.5px; color:var(--text); line-height:1.6; }
+  .mini-evidence-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px; }
+  .mini-evidence-list li{ font-size:12px; color:var(--text); padding:7px 10px; background:#fff; border:1px solid var(--border); border-radius:6px; }
+
+  .source-tag{ display:inline-flex; align-items:center; font-size:9.5px; font-weight:800; text-transform:uppercase; letter-spacing:.02em; padding:2px 7px; border-radius:5px; margin-right:6px; flex-shrink:0; }
+  .source-tag.database{ background:var(--brand-dim); color:var(--brand); }
+  .source-tag.document{ background:var(--medium-bg); color:var(--medium); }
+  .source-tag.external{ background:#F0EAFB; color:#6C3BE3; }
+  .citation-chip{ display:flex; align-items:flex-start; gap:0; font-size:11.5px; color:var(--text); padding:7px 9px; background:#fff; border:1px solid var(--border); border-radius:6px; margin-bottom:7px; }
+  .citation-chip .cc-ref{ font-family:var(--mono); font-size:10.5px; color:var(--text-dim); word-break:break-word; }
+
+  /* ---------------- sub-tabs inside a validation card ---------------- */
+  .subtabs{ display:flex; gap:4px; margin-bottom:14px; border-bottom:1px solid var(--border); }
+  .subtabs button{ background:none; border:none; padding:7px 4px; margin-right:16px; font-size:12px; font-weight:600; color:var(--text-faint); cursor:pointer; border-bottom:2px solid transparent; }
+  .subtabs button.active{ color:var(--brand); border-bottom-color:var(--brand); }
+
+  .ev-two-col{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:860px){ .ev-two-col{ grid-template-columns:1fr; } }
+  .ev-col-title{ display:flex; justify-content:space-between; align-items:center; font-size:11.5px; font-weight:700; color:var(--text-dim); margin-bottom:8px; }
+  .ev-item{ padding:10px 12px; background:#fff; border:1px solid var(--border); border-radius:8px; margin-bottom:8px; }
+  .ev-item .ev-item-title{ font-size:12.5px; font-weight:700; color:var(--text); margin-bottom:3px; }
+  .ev-item .ev-item-meta{ font-size:10.5px; color:var(--text-faint); margin-top:5px; }
+  .ev-item .ev-item-text{ font-size:12px; color:var(--text-dim); line-height:1.5; margin-top:4px; }
+
+  /* ---------------- summary stat tiles ---------------- */
+  .stat-row{ display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-bottom:20px; }
+  @media (max-width:1100px){ .stat-row{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:640px){ .stat-row{ grid-template-columns:repeat(2,1fr); } }
+  .stat-tile{ padding:14px 14px; text-align:left; }
+  .stat-tile .st-label{ font-size:10px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.03em; font-weight:700; margin-bottom:7px; }
+  .stat-tile .st-value{ font-size:20px; font-weight:800; }
+  .stat-tile .st-value.good{ color:var(--low); }
+  .stat-tile .st-value.warn{ color:var(--medium); }
+  .stat-tile .st-value.bad{ color:var(--high); }
+
+  .ask-box{ display:flex; gap:10px; margin-bottom:18px; }
+  .ask-box input{ flex:1; padding:10px 14px; border:1px solid var(--border); border-radius:8px; font-size:13px; outline:none; }
+  .ask-box input:focus{ border-color:var(--brand); }
+  .source-status-row{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+  .source-status-tag{ font-size:11px; font-weight:600; padding:4px 10px; border-radius:20px; background:#EEF0F4; color:var(--text-dim); }
+  .source-status-tag.ok{ background:var(--low-bg); color:var(--low); }
+  .source-status-tag.unavailable{ background:var(--high-bg); color:var(--high); }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand-row">
+      <div class="brand-mark">SS</div>
+      <div>
+        <div class="brand-name">SupplyChain<br/>Sentinel</div>
+      </div>
+    </div>
+    <ul class="nav" id="nav-list">
+      <li><a data-nav="dashboard" class="empty"><span class="ic">&#9632;</span>Dashboard</a></li>
+      <li><a data-nav="incidents" class="active"><span class="ic">&#9888;</span>Incidents</a></li>
+      <li><a data-nav="investigations" class="wired" data-sub="overview"><span class="ic">&#128269;</span>Investigations</a></li>
+      <li><a data-nav="hypotheses" class="wired" data-sub="hypotheses"><span class="ic">&#128161;</span>Hypotheses</a></li>
+      <li><a data-nav="validation" class="wired" data-sub="validation"><span class="ic">&#10003;</span>Validation</a></li>
+      <li><a data-nav="evidence" class="wired" data-sub="evidence"><span class="ic">&#128196;</span>Evidence</a></li>
+      <li><a data-nav="rag" class="wired" data-sub="analysis"><span class="ic">&#128172;</span>RAG Explorer</a></li>
+      <div class="nav-label">Operations</div>
+      <li><a data-nav="shipments" class="empty"><span class="ic">&#128666;</span>Shipments</a></li>
+      <li><a data-nav="suppliers" class="empty"><span class="ic">&#127970;</span>Suppliers</a></li>
+      <li><a data-nav="reports" class="empty"><span class="ic">&#128202;</span>Reports</a></li>
+    </ul>
+    <div class="sidebar-bottom">
+      <a data-nav="settings" class="empty"><span class="ic">&#9881;</span>Settings</a>
+    </div>
+  </aside>
+
+  <div class="main-scroll">
+    <div class="topbar">
+      <div class="search-box">
+        <span class="sic">&#128269;</span>
+        <input type="text" id="global-search" placeholder="Search incidents, shipments, suppliers..." />
+      </div>
+      <div class="top-right">
+        <div class="bell">&#128276;<span class="dot">1</span></div>
+        <div class="user-chip">
+          <div class="avatar">SB</div>
+          <div><div class="who">Sahana B</div><div class="role">Analyst</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main" id="main-content"></div>
+  </div>
+</div>
+
+<script>
+const API_BASE = (localStorage.getItem('logisense_api_base') || 'http://127.0.0.1:8000').replace(/\/+$/, '');
+const $main = document.getElementById('main-content');
+
+const titleCase = (s) => s ? String(s).replaceAll('_',' ').replace(/\b\w/g, c => c.toUpperCase()) : s;
+const fmtDate = (iso) => iso ? String(iso).slice(0,10) : '—';
+const esc = (s) => (s == null ? '' : String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+async function api(path, opts){
+  const res = await fetch(`${API_BASE}${path}`, opts);
+  let body = null;
+  try { body = await res.json(); } catch(_e) {}
+  if (!res.ok) {
+    const msg = (body && body.detail) ? body.detail : `HTTP ${res.status}`;
+    const err = new Error(msg);
+    err.status = res.status;
+    throw err;
+  }
+  return body;
+}
+
+/* ================= ROUTER =================
+   Hash routes:
+   #/incidents                              -> incidents list
+   #/incidents/{id}                         -> incident detail
+   #/investigations/{run_id}                -> investigation overview
+   #/investigations/{run_id}/hypotheses     -> hypothesis generation page
+   #/investigations/{run_id}/validation     -> evidence evaluation page
+   #/investigations/{run_id}/evidence       -> retrieved evidence / RAG page
+   #/investigations/{run_id}/analysis       -> free-text analysis page
+   Every one of these fetches straight from the backend using the REAL
+   run_id in the URL -- nothing here is ever hard-coded, and a page
+   refresh re-reads the hash and re-fetches, so the URL is always the
+   single source of truth for which run/sub-page is showing.
+   Sidebar items other than Incidents are non-functional placeholders
+   for this phase -- clicking them shows an explicit "not built yet"
+   empty state rather than pretending to navigate somewhere real. */
+function parseHash(){
+  const h = (location.hash || '#/incidents').replace(/^#\/?/, '');
+  const parts = h.split('/').filter(Boolean);
+  return parts;
+}
+
+function setActiveNav(name){
+  document.querySelectorAll('#nav-list a').forEach(a => a.classList.toggle('active', a.dataset.nav === name));
+}
+
+// Tracks the run_id of whichever investigation was last opened, so the
+// global sidebar links (Investigations/Hypotheses/Validation/Evidence) can
+// jump straight back into it. Never invented -- only ever set from a real
+// run_id the backend returned for a real investigation the user opened.
+let lastRunId = null;
+const NAV_BY_SUBPAGE = { overview: 'investigations', hypotheses: 'hypotheses', validation: 'validation', evidence: 'evidence', analysis: 'rag', mitigation: 'investigations' };
+
+function render(){
+  const parts = parseHash();
+  if (parts[0] === 'incidents' && parts[1]) { setActiveNav('incidents'); renderIncidentDetail(parts[1]); return; }
+  if (parts[0] === 'investigations' && parts[1]) {
+    const runId = parts[1];
+    const subPage = parts[2] || 'overview';
+    lastRunId = runId;
+    setActiveNav(NAV_BY_SUBPAGE[subPage] || 'investigations');
+    renderInvestigationShell(runId, subPage);
+    return;
+  }
+  setActiveNav('incidents');
+  renderIncidentsList();
+}
+window.addEventListener('hashchange', render);
+
+// Sidebar items that ARE wired to the real backend, but need a specific
+// run_id to be meaningful (Hypotheses/Validation/Evidence/RAG only make
+// sense for a particular investigation). If one is already open, jump
+// straight into that investigation's real sub-page; otherwise send the
+// user to Incidents to open/start one first -- never a fake result.
+document.querySelectorAll('#nav-list a.wired').forEach(a => {
+  a.addEventListener('click', () => {
+    const sub = a.dataset.sub;
+    if (lastRunId){
+      location.hash = sub === 'overview' ? `#/investigations/${lastRunId}` : `#/investigations/${lastRunId}/${sub}`;
+    } else {
+      location.hash = '#/incidents';
+      setActiveNav('incidents');
+      $main.innerHTML = `
+        <div class="crumb">${esc(a.textContent.trim())}</div>
+        <div class="page-head"><h1 class="page-title">${esc(a.textContent.trim())}</h1></div>
+        <div class="card"><div class="empty-tab-body">
+          <div class="big-ic">&#128269;</div>
+          <div>No investigation is open yet.</div>
+          <div style="margin-top:4px;font-size:12px;">Open an incident and start (or view) its investigation first -- ${esc(a.textContent.trim())} is scoped to a specific investigation run.</div>
+        </div></div>`;
+    }
+  });
+});
+
+document.querySelectorAll('#nav-list a.empty, .sidebar-bottom a.empty').forEach(a => {
+  a.addEventListener('click', () => renderEmptyModule(a.textContent.trim(), a.dataset.nav));
+});
+
+function renderEmptyModule(label, key){
+  setActiveNav(key);
+  $main.innerHTML = `
+    <div class="crumb">${esc(label)}</div>
+    <div class="page-head"><h1 class="page-title">${esc(label)}</h1></div>
+    <div class="card">
+      <div class="empty-tab-body">
+        <div class="big-ic">&#128736;</div>
+        <div>${esc(label)} hasn't been wired up to the backend yet.</div>
+        <div style="margin-top:4px;font-size:12px;">This phase only implements Incidents → Investigation. This module will connect to the real API next.</div>
+      </div>
+    </div>
+  `;
+}
+
+/* ================= INCIDENTS LIST ================= */
+let allIncidents = [];
+let currentPage = 1;
+const PAGE_SIZE = 9;
+
+function severityPill(row){
+  if (row.latest_status === 'completed' && row.latest_severity){
+    return `<span class="pill ${row.latest_severity}">${esc(row.latest_severity)}</span>`;
+  }
+  return `<span class="pill pending">Pending</span>`;
+}
+function statusCell(row){
+  if (!row.latest_run_id) return `<span class="status-text pending">Not investigated</span>`;
+  if (row.latest_status === 'completed') return `<span class="status-text" style="color:var(--good);">Investigated</span>`;
+  if (row.latest_status === 'failed') return `<span class="status-text failed" data-retry="${row.incident_id}">Failed — click to retry</span>`;
+  return `<span class="status-text running">In progress…</span>`;
+}
+
+async function renderIncidentsList(){
+  $main.innerHTML = `
+    <div class="crumb">Incidents &nbsp;&rsaquo;&nbsp; <b>All incidents</b></div>
+    <div class="page-head">
+      <h1 class="page-title">Incidents</h1>
+      <p class="page-subtitle">Detected shipment anomalies requiring investigation</p>
+    </div>
+    <div class="toolbar">
+      <div class="search-box"><span class="sic">&#128269;</span><input type="text" id="incidents-search" placeholder="Search by ID, type, supplier..." /></div>
+      <div style="display:flex;gap:8px;">
+        <button class="btn btn-outline" id="filters-btn">&#9776; Filters</button>
+        <button class="btn btn-outline" id="refresh-btn">&#8635; Refresh</button>
+      </div>
+    </div>
+    <div id="incidents-status" style="font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-bottom:10px;">Loading incidents…</div>
+    <div class="card">
+      <div class="table-wrap" id="incidents-table-wrap"></div>
+      <div class="pagination" id="incidents-pagination" style="display:none;"></div>
+    </div>
+  `;
+  document.getElementById('refresh-btn').addEventListener('click', loadIncidents);
+  document.getElementById('incidents-search').addEventListener('input', (e) => { currentPage = 1; drawIncidentsTable(e.target.value.trim().toLowerCase()); });
+  await loadIncidents();
+}
+
+async function loadIncidents(){
+  const statusEl = document.getElementById('incidents-status');
+  statusEl.textContent = 'Loading incidents…';
+  try{
+    allIncidents = await api('/incidents?limit=100');
+    statusEl.textContent = '';
+    currentPage = 1;
+    drawIncidentsTable('');
+  } catch(err){
+    statusEl.textContent = '';
+    document.getElementById('incidents-table-wrap').innerHTML = `
+      <div class="empty-cell">
+        <div style="font-weight:600;color:var(--high);margin-bottom:6px;">Backend unavailable</div>
+        <div>Unable to connect to SupplyChain Sentinel API at ${esc(API_BASE)}.</div>
+        <div style="margin-top:12px;"><button class="btn btn-outline btn-sm" onclick="loadIncidents()">Retry</button></div>
+      </div>`;
+  }
+}
+
+function drawIncidentsTable(filterText){
+  const wrap = document.getElementById('incidents-table-wrap');
+  const rows = filterText
+    ? allIncidents.filter(r =>
+        String(r.incident_id).includes(filterText) ||
+        (r.incident_type||'').toLowerCase().includes(filterText) ||
+        (r.supplier||'').toLowerCase().includes(filterText))
+    : allIncidents;
+
+  if (!rows.length){
+    wrap.innerHTML = `<div class="empty-cell">No incidents found. Run <code>detect-incidents</code> on the backend after loading data.</div>`;
+    document.getElementById('incidents-pagination').style.display = 'none';
+    return;
+  }
+
+  const totalPages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+  currentPage = Math.min(currentPage, totalPages);
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageRows = rows.slice(start, start + PAGE_SIZE);
+
+  wrap.innerHTML = `
+    <table>
+      <thead><tr><th>ID</th><th>Type</th><th>Severity</th><th>Shipment</th><th>Deviation</th><th>Detected</th><th>Status</th><th>Actions</th></tr></thead>
+      <tbody>
+        ${pageRows.map(r => `
+          <tr>
+            <td><span class="id-link" data-open="${r.incident_id}">INC-${r.incident_id}</span></td>
+            <td>${esc(titleCase(r.incident_type))}</td>
+            <td>${severityPill(r)}</td>
+            <td>${r.shipment_id}</td>
+            <td>${r.deviation_value != null ? r.deviation_value + ' days' : '—'}</td>
+            <td>${fmtDate(r.detected_at)}</td>
+            <td>${statusCell(r)}</td>
+            <td class="row-actions">
+              <button class="btn btn-outline btn-sm" data-open="${r.incident_id}">View</button>
+              ${!r.latest_run_id ? `<button class="btn btn-primary btn-sm" data-start="${r.incident_id}">Start Investigation</button>` : ''}
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+  wrap.querySelectorAll('[data-open]').forEach(el => el.addEventListener('click', () => { location.hash = `#/incidents/${el.dataset.open}`; }));
+  wrap.querySelectorAll('[data-start]').forEach(el => el.addEventListener('click', () => { location.hash = `#/incidents/${el.dataset.start}`; setTimeout(() => window.__autoStart && window.__autoStart(), 50); }));
+  wrap.querySelectorAll('[data-retry]').forEach(el => el.addEventListener('click', () => { location.hash = `#/incidents/${el.dataset.retry}`; }));
+
+  const pag = document.getElementById('incidents-pagination');
+  pag.style.display = 'flex';
+  let btns = '';
+  for (let p = 1; p <= totalPages; p++){
+    btns += `<button class="${p === currentPage ? 'on' : ''}" data-page="${p}">${p}</button>`;
+  }
+  pag.innerHTML = `
+    <div>Showing ${start+1}-${Math.min(start+PAGE_SIZE, rows.length)} of ${rows.length} incidents</div>
+    <div class="page-btns">${btns}</div>
+  `;
+  pag.querySelectorAll('[data-page]').forEach(b => b.addEventListener('click', () => { currentPage = Number(b.dataset.page); drawIncidentsTable(filterText); }));
+}
+
+/* ================= INCIDENT DETAIL ================= */
+async function renderIncidentDetail(incidentId){
+  $main.innerHTML = `<div class="empty-state">Loading incident INC-${esc(incidentId)}…</div>`;
+  let incident;
+  try{
+    incident = await api(`/incidents/${incidentId}`);
+  } catch(err){
+    renderBackendError(() => renderIncidentDetail(incidentId));
+    return;
+  }
+
+  const op = incident.operational_details || {};
+  const biz = incident.business_context || {};
+  const hasRun = !!incident.latest_run_id;
+  const isCompleted = hasRun && incident.latest_status === 'completed';
+  const isFailed = hasRun && incident.latest_status === 'failed';
+  const severity = isCompleted ? incident.latest_severity : null;
+
+  $main.innerHTML = `
+    <div class="crumb"><a href="#/incidents">Incidents</a> &nbsp;&rsaquo;&nbsp; <b>INC-${incident.incident_id}</b></div>
+    <div class="detail-head">
+      <div>
+        <div class="inc-title">
+          <h1>Incident INC-${incident.incident_id}</h1>
+          ${severity ? `<span class="pill ${severity}">${esc(severity)} Severity</span>` : `<span class="pill pending">Not yet assessed</span>`}
+        </div>
+        <div class="sub">${esc(titleCase(incident.incident_type))} &nbsp;|&nbsp; Detected on ${fmtDate(incident.detected_at)}</div>
+      </div>
+      <div class="detail-actions">
+        <button class="btn btn-outline" onclick="location.hash='#/incidents'">&larr; Back to Incidents</button>
+        ${isCompleted
+          ? `<button class="btn btn-primary" onclick="location.hash='#/investigations/${incident.latest_run_id}'">View Investigation &rarr;</button>`
+          : `<button class="btn btn-primary" id="start-inv-btn">${isFailed ? 'Retry Investigation' : 'Start Investigation'}</button>`}
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card info-card">
+        <div class="card-title">&#128203; Incident Information</div>
+        <div class="kv-list">
+          <div class="kv-row"><span class="k">Incident ID</span><span class="v">INC-${incident.incident_id}</span></div>
+          <div class="kv-row"><span class="k">Type</span><span class="v">${esc(titleCase(incident.incident_type))}</span></div>
+          <div class="kv-row"><span class="k">Shipment ID</span><span class="v">${op.shipment_id ?? incident.shipment_id ?? '—'}</span></div>
+          <div class="kv-row"><span class="k">Detected Date</span><span class="v">${fmtDate(incident.detected_at)}</span></div>
+          <div class="kv-row"><span class="k">Deviation</span><span class="v bad">${incident.deviation_value != null ? incident.deviation_value + ' days' : '—'}</span></div>
+          <div class="kv-row"><span class="k">Carrier</span><span class="v">${esc(op.carrier || '—')}</span></div>
+          <div class="kv-row"><span class="k">Supplier</span><span class="v">${esc(biz.supplier || '—')}</span></div>
+          <div class="kv-row"><span class="k">Destination</span><span class="v">${esc(biz.region || '—')}</span></div>
+          <div class="kv-row"><span class="k">Shipping Mode</span><span class="v">${esc(op.shipping_mode || '—')}</span></div>
+        </div>
+      </div>
+
+      <div class="card info-card">
+        <div class="card-title">&#128202; Status</div>
+        <div class="kv-list">
+          <div class="kv-row"><span class="k">Current Status</span><span class="v">${hasRun ? titleCase(incident.latest_status) : 'Not Investigated'}</span></div>
+          <div class="kv-row"><span class="k">Severity</span><span class="v">${severity ? esc(severity) : 'Pending investigation'}</span></div>
+          <div class="kv-row"><span class="k">Scheduled Arrival</span><span class="v">${fmtDate(op.expected_delivery_date)}</span></div>
+          <div class="kv-row"><span class="k">Actual Delivery</span><span class="v">${fmtDate(op.actual_delivery_date)}</span></div>
+          <div class="kv-row"><span class="k">Delay Duration</span><span class="v bad">${op.delay_days != null ? op.delay_days + ' days' : '—'}</span></div>
+        </div>
+      </div>
+
+      <div class="card info-card">
+        <div class="card-title">&#9889; Quick Actions</div>
+        <div class="quick-actions-body">
+          ${isCompleted
+            ? `<button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="location.hash='#/investigations/${incident.latest_run_id}'">View Investigation Result</button>
+               <p>This incident has already been investigated. Open the result to see the full analysis.</p>`
+            : `<button class="btn btn-primary" style="width:100%;justify-content:center;" id="start-inv-btn-2">${isFailed ? 'Retry Investigation' : 'Start Investigation'}</button>
+               <p>This will send incident_id=${incident.incident_id} to the backend, which runs the existing LogiSense investigation service and returns a real result.</p>`}
+          <div class="steps-label">WHAT HAPPENS NEXT</div>
+          <ul class="steps">
+            <li><span class="num">1</span>Analyze incident details</li>
+            <li><span class="num">2</span>Retrieve relevant company data</li>
+            <li><span class="num">3</span>Classify severity and business impact</li>
+            <li><span class="num">4</span>Return the investigation result</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const startBtn = document.getElementById('start-inv-btn');
+  const startBtn2 = document.getElementById('start-inv-btn-2');
+  window.__autoStart = () => startInvestigation(incident.incident_id, incident);
+  if (startBtn) startBtn.addEventListener('click', () => startInvestigation(incident.incident_id, incident));
+  if (startBtn2) startBtn2.addEventListener('click', () => startInvestigation(incident.incident_id, incident));
+}
+
+/* ================= START INVESTIGATION -> PROCESSING -> RESULT ================= */
+async function startInvestigation(incidentId, incident){
+  renderProcessing(incidentId, incident);
+  try{
+    const created = await api('/investigations', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({incident_id: incidentId}),
+    });
+    // Backend returns run_id automatically -- never typed/copied by the user.
+    location.hash = `#/investigations/${created.run_id}`;
+  } catch(err){
+    renderInvestigationFailed(incidentId, incident, err.message);
+  }
+}
+
+function renderProcessing(incidentId, incident){
+  $main.innerHTML = `
+    <div class="card processing-card">
+      <div class="processing-spinner"></div>
+      <h2>Starting Investigation</h2>
+      <div class="p-sub">Incident #${incidentId} &middot; ${esc(titleCase(incident.incident_type))}</div>
+      <ul class="p-steps" id="p-steps">
+        <li class="on"><span class="dot"></span>Analyzing incident...</li>
+        <li><span class="dot"></span>Retrieving relevant records...</li>
+        <li><span class="dot"></span>Preparing investigation result...</li>
+      </ul>
+      <div class="please-wait">Please wait — this calls the real backend, not a simulation.</div>
+    </div>
+  `;
+  // Purely cosmetic step-cycling while we wait for the one real network
+  // call to resolve -- not a fake progress percentage, no invented
+  // backend messages, and it stops the moment the real response arrives.
+  const items = document.querySelectorAll('#p-steps li');
+  let i = 0;
+  const timer = setInterval(() => {
+    i = (i + 1) % items.length;
+    items.forEach((li, idx) => li.classList.toggle('on', idx <= i));
+  }, 1400);
+  window.__stopProcessingAnim = () => clearInterval(timer);
+  const origHashChange = () => { clearInterval(timer); window.removeEventListener('hashchange', origHashChange); };
+  window.addEventListener('hashchange', origHashChange);
+}
+
+function renderInvestigationFailed(incidentId, incident, message){
+  if (window.__stopProcessingAnim) window.__stopProcessingAnim();
+  $main.innerHTML = `
+    <div class="card error-card">
+      <div class="e-ic">&#9888;</div>
+      <h2>Investigation Failed</h2>
+      <p>${esc(message || 'Unable to retrieve the investigation result.')}</p>
+      <button class="btn btn-primary" id="retry-btn">Retry</button>
+    </div>
+  `;
+  document.getElementById('retry-btn').addEventListener('click', () => startInvestigation(incidentId, incident));
+}
+
+function renderBackendError(retryFn){
+  $main.innerHTML = `
+    <div class="card error-card">
+      <div class="e-ic">&#128268;</div>
+      <h2>Backend unavailable</h2>
+      <p>Unable to connect to SupplyChain Sentinel API at ${esc(API_BASE)}.</p>
+      <button class="btn btn-primary" id="retry-btn">Retry</button>
+    </div>
+  `;
+  document.getElementById('retry-btn').addEventListener('click', retryFn);
+}
+
+/* ================= INVESTIGATION RESULT ================= */
+// The backend's triage_assessment is one verbatim text block with the
+// LLM's own section headers (WHAT HAPPENED / WHY THIS SEVERITY / ...).
+// This splits on those headers to lay them out as cards -- the text
+// itself is never rewritten, paraphrased, or invented.
+function parseTriageAssessment(text){
+  if (!text) return {};
+  const knownHeaders = ['WHAT HAPPENED','WHY THIS SEVERITY','POTENTIAL BUSINESS IMPACT','IMPORTANT SIGNALS','INVESTIGATION PRIORITIES','INITIAL ASSESSMENT'];
+  const sections = {};
+  const lines = text.split('\n');
+  let current = null, buf = [];
+  const flush = () => { if (current) sections[current] = buf.join('\n').trim(); buf = []; };
+  for (const line of lines){
+    const clean = line.trim().replace(/:$/, '');
+    const match = knownHeaders.find(h => clean.toUpperCase() === h);
+    if (match){ flush(); current = match; }
+    else if (current) buf.push(line);
+  }
+  flush();
+  return sections;
+}
+
+/* ================= INVESTIGATION SHELL =================
+   One shell fetches the investigation + hypotheses + verdict (all real
+   GETs -- verdict 404 just means "not evaluated yet", not an error) and
+   then renders whichever real sub-route is active. Every sub-route is a
+   genuine URL (#/investigations/{runId}/hypotheses, /validation, etc.),
+   so a page refresh re-reads the run_id from the URL and re-fetches
+   everything from the backend rather than relying on JS memory. */
+const STEPS = [
+  { key: 'overview',    label: 'Investigation' },
+  { key: 'hypotheses',  label: 'Hypotheses' },
+  { key: 'validation',  label: 'Evidence Evaluation' },
+  { key: 'mitigation',  label: 'Mitigation' },
+  { key: 'evidence',    label: 'Evidence / RAG' },
+  { key: 'analysis',    label: 'Analysis' },
+];
+
+function copyToClipboard(text){
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).catch(() => {});
+}
+
+async function renderInvestigationShell(runId, subPage){
+  $main.innerHTML = `<div class="empty-state">Loading investigation ${esc(runId)}…</div>`;
+  let data;
+  try{
+    data = await api(`/investigations/${runId}`);
+  } catch(err){
+    renderBackendError(() => renderInvestigationShell(runId, subPage));
+    return;
+  }
+
+  if (data.status === 'failed'){
+    $main.innerHTML = `
+      <div class="crumb"><a href="#/incidents">Incidents</a> &nbsp;&rsaquo;&nbsp; <b>INC-${data.incident_id}</b></div>
+      <div class="card error-card">
+        <div class="e-ic">&#9888;</div>
+        <h2>Investigation Failed</h2>
+        <p>${esc(data.error_message || 'Unable to retrieve the investigation result.')}</p>
+        <button class="btn btn-primary" onclick="location.hash='#/incidents/${data.incident_id}'">Back to Incident</button>
+      </div>`;
+    return;
+  }
+  if (data.status !== 'completed'){
+    $main.innerHTML = `
+      <div class="crumb"><a href="#/incidents">Incidents</a> &nbsp;&rsaquo;&nbsp; <b>INC-${data.incident_id}</b></div>
+      <div class="card"><div class="empty-tab-body"><div class="big-ic">&#8987;</div>Investigation is still ${esc(data.status)}. Refresh in a moment.</div></div>`;
+    return;
+  }
+
+  // Real status checks -- drives both the stepper's checkmarks and each
+  // sub-page's empty/populated state. A 404 on verdict just means no
+  // evaluation has run yet; that's not an error condition here.
+  let hypData = { hypotheses: [], ruled_out: [] };
+  let verdictData = null;
+  let mitigationData = null;
+  try{ hypData = await api(`/investigations/${runId}/hypotheses`); } catch(err){ /* leave empty */ }
+  try{ verdictData = await api(`/investigations/${runId}/verdict`); } catch(err){ /* 404 => not evaluated yet */ }
+  try{ mitigationData = await api(`/investigations/${runId}/mitigations`); } catch(err){ /* 404 => not generated yet */ }
+
+  const op = data.operational_details || {};
+  const biz = data.business_context || {};
+
+  $main.innerHTML = `
+    <div class="crumb"><a href="#/incidents">Incidents</a> &nbsp;&rsaquo;&nbsp; <a href="#/incidents/${data.incident_id}">INC-${data.incident_id}</a> &nbsp;&rsaquo;&nbsp; <b>Investigation</b></div>
+
+    <div class="card inv-info-bar">
+      <div class="field"><div class="f-label">Incident ID</div><div class="f-value">INC-${data.incident_id} ${data.severity ? `<span class="pill ${esc(data.severity)}" style="margin-left:2px;">${esc(data.severity)}</span>` : ''}</div></div>
+      <div class="field"><div class="f-label">Incident Type</div><div class="f-value">${esc(titleCase(data.incident_type || ''))}</div></div>
+      <div class="field"><div class="f-label">Shipment</div><div class="f-value">${op.shipment_id ?? '—'}</div></div>
+      <div class="field"><div class="f-label">Destination</div><div class="f-value">${esc(biz.region || '—')}</div></div>
+      <div class="field"><div class="f-label">Investigation Run ID</div><div class="f-value mono">${data.run_id}<button class="copy-btn" id="copy-run-id" title="Copy run ID">&#128203;</button></div></div>
+      <div class="field"><div class="f-label">Status</div><div class="f-value"><span class="badge-status supported" style="background:var(--low-bg);color:var(--low);">${esc((data.status||'').replace(/_/g,' ').toUpperCase())}</span></div></div>
+      <div class="spacer"></div>
+      <div class="field"><a href="#/incidents/${data.incident_id}" class="btn btn-outline btn-sm">&larr; Back to Incident</a></div>
+    </div>
+
+    <div class="card stepper" id="stepper" style="padding:14px 20px;"></div>
+
+    <div id="sub-page-body"></div>
+  `;
+
+  document.getElementById('copy-run-id').addEventListener('click', () => copyToClipboard(data.run_id));
+
+  const doneFlags = {
+    hypotheses: hypData.hypotheses && hypData.hypotheses.length > 0,
+    validation: !!verdictData,
+    mitigation: !!mitigationData,
+  };
+  document.getElementById('stepper').innerHTML = STEPS.map((s, i) => {
+    const isCurrent = s.key === subPage;
+    const isDone = (s.key === 'overview') || (s.key === 'hypotheses' && doneFlags.hypotheses) || (s.key === 'validation' && doneFlags.validation) || (s.key === 'mitigation' && doneFlags.mitigation);
+    const cls = ['step-item', 'linkable', isCurrent ? 'current' : '', (isDone && !isCurrent) ? 'done' : ''].filter(Boolean).join(' ');
+    const dot = isDone ? '&#10003;' : String(i + 1);
+    const href = s.key === 'overview' ? `#/investigations/${data.run_id}` : `#/investigations/${data.run_id}/${s.key}`;
+    return `${i > 0 ? '<span class="step-connector"></span>' : ''}<a href="${href}" class="${cls}"><span class="s-dot">${dot}</span>${esc(s.label)}</a>`;
+  }).join('');
+
+  const body = document.getElementById('sub-page-body');
+  if (subPage === 'hypotheses') renderHypothesesPage(data, hypData, verdictData, body);
+  else if (subPage === 'validation') renderValidationPage(data, hypData, verdictData, body);
+  else if (subPage === 'mitigation') renderMitigationPage(data, verdictData, mitigationData, body);
+  else if (subPage === 'evidence') renderEvidencePage(data, verdictData, body);
+  else if (subPage === 'analysis') renderAnalysisPage(data, body);
+  else renderOverviewPage(data, body);
+}
+
+/* ---- Overview ---- */
+function renderOverviewPage(data, body){
+  const cm = data.contextual_metrics || {};
+  const overall = cm.overall || {};
+  const signals = cm.signals || {};
+  const op = data.operational_details || {};
+  const sections = parseTriageAssessment(data.triage_assessment || '');
+
+  body.innerHTML = `
+    <div class="kpi-row">
+      <div class="card kpi-tile"><div class="k-label">Shipment</div><div class="k-value">${op.shipment_id ?? '—'}</div></div>
+      <div class="card kpi-tile"><div class="k-label">Scheduled Arrival</div><div class="k-value">${fmtDate(op.expected_delivery_date)}</div></div>
+      <div class="card kpi-tile"><div class="k-label">Actual Delivery</div><div class="k-value">${fmtDate(op.actual_delivery_date)}</div></div>
+      <div class="card kpi-tile"><div class="k-label">Delay</div><div class="k-value bad">${op.delay_days != null ? op.delay_days + ' days' : '—'}</div></div>
+      <div class="card kpi-tile"><div class="k-label">Delay vs Average</div><div class="k-value">${signals.delay_vs_average != null ? signals.delay_vs_average.toFixed(2) + 'x' : '—'}</div></div>
+    </div>
+
+    <div class="result-grid">
+      <div>
+        <div class="two-col">
+          <div class="card section-card">
+            <div class="card-title">What Happened</div>
+            <div class="card-body">${esc(sections['WHAT HAPPENED'] || data.normalized_summary || '—').replace(/\n/g,'<br/>')}</div>
+          </div>
+          <div class="card section-card">
+            <div class="card-title">Severity Assessment</div>
+            <div class="card-body">
+              ${data.severity ? `<div class="severity-strip"><span class="pill ${data.severity}">${esc(data.severity)}</span></div><br/>` : ''}
+              ${esc(sections['WHY THIS SEVERITY'] || data.rationale || '—').replace(/\n/g,'<br/>')}
+            </div>
+          </div>
+        </div>
+
+        <div class="card section-card">
+          <div class="card-title">Key Metrics</div>
+          <div class="card-body">
+            <div class="signal-rows">
+              <div class="signal-row"><span class="lbl">Delay Duration</span><span class="val">${op.delay_days != null ? op.delay_days + ' days' : '—'}</span></div>
+              <div class="signal-row"><span class="lbl">Overall Average Delay</span><span class="val">${overall.average_delay_days != null ? overall.average_delay_days + ' days' : '—'}</span></div>
+              <div class="signal-row"><span class="lbl">Delay vs Average</span><span class="val">${signals.delay_vs_average != null ? signals.delay_vs_average.toFixed(2) + 'x' : '—'}</span></div>
+              <div class="signal-row"><span class="lbl">Delay Percentile</span><span class="val">${overall.delay_percentile != null ? overall.delay_percentile : '—'}</span></div>
+              <div class="signal-row"><span class="lbl">Overall Late-Shipment Rate</span><span class="val">${overall.late_rate != null ? (overall.late_rate*100).toFixed(1) + '%' : '—'}</span></div>
+            </div>
+          </div>
+        </div>
+
+        ${sections['POTENTIAL BUSINESS IMPACT'] ? `
+        <div class="card section-card">
+          <div class="card-title">Potential Business Impact</div>
+          <div class="card-body">${formatAsList(sections['POTENTIAL BUSINESS IMPACT'])}</div>
+        </div>` : ''}
+
+        ${sections['INVESTIGATION PRIORITIES'] ? `
+        <div class="card section-card">
+          <div class="card-title">Investigation Priorities</div>
+          <div class="card-body">${formatAsList(sections['INVESTIGATION PRIORITIES'], true)}</div>
+        </div>` : ''}
+
+        ${sections['INITIAL ASSESSMENT'] ? `
+        <div class="card section-card">
+          <div class="card-title">Initial Assessment</div>
+          <div class="card-body">${esc(sections['INITIAL ASSESSMENT']).replace(/\n/g,'<br/>')}</div>
+        </div>` : ''}
+      </div>
+
+      <div>
+        <div class="card section-card">
+          <div class="card-title">Shipment Details</div>
+          <div class="kv-list">
+            <div class="kv-row"><span class="k">Shipment ID</span><span class="v">${op.shipment_id ?? '—'}</span></div>
+            <div class="kv-row"><span class="k">Carrier</span><span class="v">${esc(op.carrier || '—')}</span></div>
+            <div class="kv-row"><span class="k">Supplier</span><span class="v">${esc((data.business_context||{}).supplier || '—')}</span></div>
+            <div class="kv-row"><span class="k">Destination</span><span class="v">${esc((data.business_context||{}).region || '—')}</span></div>
+            <div class="kv-row"><span class="k">Shipping Mode</span><span class="v">${esc(op.shipping_mode || '—')}</span></div>
+          </div>
+        </div>
+        <div class="card section-card">
+          <div class="card-title">Investigation Metadata</div>
+          <div class="kv-list">
+            <div class="kv-row"><span class="k">Run ID</span><span class="v" style="font-family:var(--mono);font-size:11px;">${data.run_id}</span></div>
+            <div class="kv-row"><span class="k">Status</span><span class="v">${esc(data.status)}</span></div>
+            <div class="kv-row"><span class="k">Current Stage</span><span class="v">${esc(titleCase(data.current_stage))}</span></div>
+            <div class="kv-row"><span class="k">Priority</span><span class="v">${esc(data.priority || 'Not set')}</span></div>
+          </div>
+        </div>
+        ${sections['IMPORTANT SIGNALS'] ? `
+        <div class="card section-card">
+          <div class="card-title">Important Signals</div>
+          <div class="card-body">${formatAsList(sections['IMPORTANT SIGNALS'])}</div>
+        </div>` : ''}
+      </div>
+    </div>
+  `;
+}
+
+/* ================= HYPOTHESES PAGE (route: /investigations/{runId}/hypotheses) =================
+   Calls the SAME backend endpoint as:
+     python -m logisense.cli generate-hypotheses --run-id <RUN_ID>
+   Every statement/confidence/rationale below is the backend's own
+   response -- nothing here is written into the frontend. If this run
+   has already been evaluated (a verdict exists), the real validation
+   status/confidence/evidence for each hypothesis is layered in too,
+   since that's still real backend data, just from a second endpoint. */
+function findVerdictFor(hypId, verdictData){
+  if (!verdictData) return null;
+  return verdictData.hypothesis_validations.find(v => v.hypothesis_id === hypId) || null;
+}
+
+function renderHypothesesPage(data, hypData, verdictData, body){
+  const hyps = hypData.hypotheses || [];
+  const ruledOut = hypData.ruled_out || [];
+  const latestCreated = hyps.reduce((max, h) => (h.created_at && (!max || h.created_at > max)) ? h.created_at : max, null);
+
+  body.innerHTML = `
+    <div class="card action-bar">
+      <div>
+        <h2 style="font-size:16px;margin:0 0 4px;">&#128161; Hypothesis Generation</h2>
+        <div class="desc">AI-generated hypotheses explaining the root cause of this incident, based on the investigation context${verdictData ? ' and retrieved evidence' : ''}.</div>
+      </div>
+      <div class="spacer"></div>
+      ${latestCreated ? `<div class="meta-right">Generated on ${fmtDate(latestCreated)}</div>` : ''}
+      <button class="btn btn-primary" id="gen-hyp-btn">${hyps.length ? 'Regenerate' : 'Generate Hypotheses'}</button>
+    </div>
+    <div id="hyp-body"></div>
+  `;
+  document.getElementById('gen-hyp-btn').addEventListener('click', () => generateHypotheses(data, body));
+  drawHypothesesList(data, hyps, ruledOut, verdictData, body);
+}
+
+function drawHypothesesList(data, hyps, ruledOut, verdictData, body){
+  const listEl = document.getElementById('hyp-body');
+  if (!hyps.length){
+    listEl.innerHTML = `
+      <div class="card"><div class="empty-tab-body">
+        <div class="big-ic">&#128161;</div>
+        <div>No hypotheses generated yet.</div>
+        <div style="margin-top:4px;font-size:12px;">Use the investigation context to generate candidate hypotheses.</div>
+      </div></div>`;
+    return;
+  }
+
+  listEl.innerHTML = `
+    <div class="section-head-row">
+      <h2>Generated Hypotheses <span class="count-chip">${hyps.length} hypothes${hyps.length === 1 ? 'is' : 'es'}</span></h2>
+    </div>
+    <div id="hyp-cards"></div>
+    ${ruledOut.length ? `
+    <div class="card section-card" style="margin-top:6px;">
+      <div class="card-title">Ruled Out</div>
+      <div class="card-body"><ul>${ruledOut.map(r => `<li><b>${esc(r.statement)}</b> — ${esc(r.reason_ruled_out)}</li>`).join('')}</ul></div>
+    </div>` : ''}
+  `;
+
+  const cardsEl = document.getElementById('hyp-cards');
+  cardsEl.innerHTML = hyps.map((h, i) => {
+    const v = findVerdictFor(h.id, verdictData);
+    const rankCls = v ? `hyp-rank-sq ${esc(v.status)}` : 'hyp-rank-sq';
+    return `
+    <div class="card hyp-card2" data-idx="${i}">
+      <div class="hyp-card2-head">
+        <div class="${rankCls}">${h.rank}</div>
+        <div style="flex:1;min-width:0;">
+          <div class="hyp-card2-title-row">
+            <span class="hyp-card2-title">${esc(h.statement)}</span>
+            ${v ? `<span class="badge-status ${esc(v.status)}">${esc(titleCase(v.status))}</span>` : `<span class="badge-status" style="background:#EEF0F4;color:var(--text-faint);">${esc(titleCase(h.confidence))} confidence</span>`}
+          </div>
+          <div class="hyp-card2-desc">${esc(h.rationale)}</div>
+        </div>
+        <div class="hyp-card2-right">
+          ${v ? `<div class="confidence-inline"><div class="confidence-track"><div class="confidence-fill ${v.confidence >= 66 ? 'high' : (v.confidence >= 33 ? 'medium' : 'low')}" style="width:${v.confidence}%;"></div></div><span class="confidence-pct">${v.confidence}%</span></div>` : ''}
+          <span class="hyp-chevron">&#10095;</span>
+        </div>
+      </div>
+      <div class="hyp-card2-body" style="display:none;"></div>
+    </div>`;
+  }).join('');
+
+  cardsEl.querySelectorAll('.hyp-card2').forEach(card => {
+    const head = card.querySelector('.hyp-card2-head');
+    const chevron = card.querySelector('.hyp-chevron');
+    const bodyEl = card.querySelector('.hyp-card2-body');
+    head.addEventListener('click', () => {
+      const open = bodyEl.style.display !== 'none';
+      bodyEl.style.display = open ? 'none' : 'block';
+      chevron.classList.toggle('open', !open);
+      if (!open && !bodyEl.dataset.filled){
+        bodyEl.dataset.filled = '1';
+        const h = hyps[Number(card.dataset.idx)];
+        const v = findVerdictFor(h.id, verdictData);
+        bodyEl.innerHTML = renderHypothesisDetailBody(h, v);
+      }
+    });
+  });
+}
+
+function renderHypothesisDetailBody(h, v){
+  if (v){
+    const keyEvidence = v.citations.slice(0, 6);
+    return `
+      <div class="three-col">
+        <div>
+          <h4>&#128203; Reasoning</h4>
+          <div class="col-body">${esc(v.reasoning)}</div>
+          ${v.contradicting_evidence_summary ? `<h4 style="margin-top:14px;">Contradicting Summary</h4><div class="col-body">${esc(v.contradicting_evidence_summary)}</div>` : ''}
+        </div>
+        <div>
+          <h4>&#128269; Key Evidence (${v.evidence_item_count})</h4>
+          <ul class="mini-evidence-list">
+            ${keyEvidence.length ? keyEvidence.map(c => `<li>${esc(c.text || c.reference)}</li>`).join('') : '<li>No evidence items.</li>'}
+          </ul>
+        </div>
+        <div>
+          <h4>&#128279; Citations (${v.citations.length})</h4>
+          ${v.citations.length ? v.citations.map(c => `
+            <div class="citation-chip">
+              <span class="source-tag ${esc(c.kind)}">${esc({database:'ERP',document:'DOC',external:'EXT'}[c.kind] || c.kind)}</span>
+              <span class="cc-ref">${esc(c.reference)}</span>
+            </div>`).join('') : '<div class="col-body">No citations.</div>'}
+        </div>
+      </div>
+    `;
+  }
+  return `
+    <div class="two-col">
+      <div>
+        <h4 style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-dim);margin:0 0 8px;">Why Ranked Here</h4>
+        <div style="font-size:12.5px;color:var(--text);line-height:1.6;">${esc(h.why_ranked_here)}</div>
+        <h4 style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-dim);margin:14px 0 8px;">Supporting Signals</h4>
+        <div style="font-size:12.5px;color:var(--text);line-height:1.6;">${esc(h.supporting_signals)}</div>
+      </div>
+      <div>
+        <h4 style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-dim);margin:0 0 8px;">Would Confirm</h4>
+        <div style="font-size:12.5px;color:var(--text);line-height:1.6;">${esc(h.what_would_confirm)}</div>
+        <h4 style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-dim);margin:14px 0 8px;">Would Refute</h4>
+        <div style="font-size:12.5px;color:var(--text);line-height:1.6;">${esc(h.what_would_refute)}</div>
+      </div>
+    </div>
+    <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);font-size:12px;color:var(--text-faint);">
+      This hypothesis hasn't been evaluated against evidence yet. <a href="#/investigations/${location.hash.split('/')[2]}/validation" style="color:var(--brand);font-weight:600;">Run Evidence Evaluation &rarr;</a>
+    </div>
+  `;
+}
+
+async function generateHypotheses(data, body){
+  document.getElementById('gen-hyp-btn').setAttribute('disabled', 'true');
+  body.innerHTML = `
+    <div class="card processing-card">
+      <div class="processing-spinner"></div>
+      <h2>Generating hypotheses…</h2>
+      <ul class="p-steps" style="margin-top:10px;">
+        <li class="on"><span class="dot"></span>Retrieving relevant evidence</li>
+        <li class="on"><span class="dot"></span>Analyzing investigation context</li>
+        <li class="on"><span class="dot"></span>Generating candidate explanations</li>
+      </ul>
+      <div class="please-wait">This is a single real request to the backend hypothesis-generation service -- the steps above describe what that service does, not live progress.</div>
+    </div>`;
+  try{
+    await api(`/investigations/${data.run_id}/hypotheses`, { method: 'POST' });
+    renderInvestigationShell(data.run_id, 'hypotheses');
+  } catch(err){
+    body.innerHTML = `<div class="card error-card"><div class="e-ic">&#9888;</div><h2>Hypothesis generation failed</h2><p>${esc(err.message)}</p><button class="btn btn-primary" id="retry-gen-hyp">Try Again</button></div>`;
+    document.getElementById('retry-gen-hyp').addEventListener('click', () => generateHypotheses(data, body));
+  }
+}
+
+/* ================= VALIDATION / EVIDENCE EVALUATION PAGE
+   (route: /investigations/{runId}/validation) =================
+   Calls the SAME backend endpoint as:
+     python -m logisense.cli validate-hypotheses --run-id <RUN_ID> [--include-external]
+   Status/confidence/reasoning/evidence/citations below are entirely the
+   backend's grounded-validation output. */
+function renderValidationPage(data, hypData, verdictData, body){
+  const hyps = hypData.hypotheses || [];
+
+  if (!hyps.length){
+    body.innerHTML = `
+      <div class="card"><div class="empty-tab-body">
+        <div class="big-ic">&#9888;</div>
+        <div>No hypotheses available for evaluation.</div>
+        <div style="margin-top:4px;font-size:12px;">Generate hypotheses for this investigation before evaluating evidence.</div>
+        <div style="margin-top:14px;"><a href="#/investigations/${data.run_id}/hypotheses" class="btn btn-primary">Go to Hypotheses</a></div>
+      </div></div>`;
+    return;
+  }
+
+  drawValidationBody(data, hyps, verdictData, body);
+}
+
+function drawValidationBody(data, hyps, verdictData, body){
+  const actionBar = `
+    <div class="card action-bar">
+      <div>
+        <h2 style="font-size:16px;margin:0 0 4px;">&#9989; Evidence Evaluation</h2>
+        <div class="desc">Evaluating each hypothesis using internal data (ERP, shipment, supplier records) and, optionally, external sources (news, weather, port/carrier status) to determine support, contradictions and confidence.</div>
+      </div>
+      <div class="spacer"></div>
+      <label class="chk-row"><input type="checkbox" id="include-external-chk" /> Include external sources</label>
+      ${verdictData ? `<div class="meta-right">Last evaluated<br/>${fmtDate(verdictData.generated_at)}</div>` : ''}
+      <button class="btn btn-primary" id="run-val-btn">${verdictData ? 'Re-evaluate' : 'Evaluate Evidence'}</button>
+    </div>`;
+
+  if (!verdictData){
+    body.innerHTML = actionBar + `
+      <div class="card"><div class="empty-tab-body">
+        <div class="big-ic">&#10003;</div>
+        <div>No validation results yet.</div>
+        <div style="margin-top:4px;font-size:12px;">Click "Evaluate Evidence" to retrieve real evidence and evaluate each hypothesis against it.</div>
+      </div></div>`;
+    document.getElementById('run-val-btn').addEventListener('click', () => runValidation(data, body));
+    return;
+  }
+
+  const supported = verdictData.hypothesis_validations.filter(h => h.status === 'supported').length;
+  const insufficient = verdictData.hypothesis_validations.filter(h => h.status === 'insufficient_evidence').length;
+  const unsupported = verdictData.hypothesis_validations.filter(h => h.status === 'unsupported').length;
+  const allCitations = verdictData.hypothesis_validations.flatMap(h => h.citations);
+  const internalCount = allCitations.filter(c => c.kind === 'database' || c.kind === 'document').length;
+  const externalCount = allCitations.filter(c => c.kind === 'external').length;
+  const rootCause = verdictData.hypothesis_validations.find(h => h.hypothesis_id === verdictData.root_cause_hypothesis_id);
+
+  body.innerHTML = actionBar + `
+    <div class="section-head-row">
+      <h2>Evaluation Summary</h2>
+    </div>
+    <div class="stat-row">
+      <div class="card stat-tile"><div class="st-label">Hypotheses Evaluated</div><div class="st-value">${verdictData.hypothesis_validations.length}</div></div>
+      <div class="card stat-tile"><div class="st-label">Supported</div><div class="st-value good">${supported}</div></div>
+      <div class="card stat-tile"><div class="st-label">Insufficient Evidence</div><div class="st-value warn">${insufficient}</div></div>
+      <div class="card stat-tile"><div class="st-label">Unsupported</div><div class="st-value bad">${unsupported}</div></div>
+      <div class="card stat-tile"><div class="st-label">Evidence Items (Internal)</div><div class="st-value">${internalCount}</div></div>
+      <div class="card stat-tile"><div class="st-label">Evidence Items (External)</div><div class="st-value">${externalCount}</div></div>
+    </div>
+
+    <div id="val-cards"></div>
+
+    <div class="card section-card" style="margin-top:6px;border-left:3px solid var(--brand);">
+      <div class="card-title">Grounded Finding</div>
+      <div class="card-body">
+        ${rootCause ? `<div style="margin-bottom:8px;"><b>Root cause hypothesis:</b> [${rootCause.rank}] ${esc(rootCause.statement)}</div>` : ''}
+        <div style="margin-bottom:8px;"><b>Overall confidence:</b> ${verdictData.confidence}%</div>
+        <div style="margin-bottom:8px;">${esc(verdictData.explanation)}</div>
+        <div class="two-col" style="margin-top:10px;">
+          <div><b style="font-size:11.5px;color:var(--text-dim);">SUPPORTING EVIDENCE</b><div style="margin-top:4px;">${esc(verdictData.supporting_evidence_summary)}</div></div>
+          <div><b style="font-size:11.5px;color:var(--text-dim);">CONTRADICTING EVIDENCE</b><div style="margin-top:4px;">${esc(verdictData.contradicting_evidence_summary)}</div></div>
+        </div>
+        <div class="two-col" style="margin-top:10px;">
+          <div><b style="font-size:11.5px;color:var(--text-dim);">REMAINING UNCERTAINTY</b><div style="margin-top:4px;">${esc(verdictData.remaining_uncertainty)}</div></div>
+          <div><b style="font-size:11.5px;color:var(--text-dim);">EVIDENCE GAPS</b><div style="margin-top:4px;">${esc(verdictData.evidence_gaps)}</div></div>
+        </div>
+        <div style="margin-top:10px;"><b style="font-size:11.5px;color:var(--text-dim);">RECOMMENDED NEXT ACTION</b><div style="margin-top:4px;">${esc(verdictData.recommended_next_action)}</div></div>
+      </div>
+    </div>
+  `;
+  document.getElementById('run-val-btn').addEventListener('click', () => runValidation(data, body));
+  drawValidationCards(verdictData, document.getElementById('val-cards'));
+}
+
+function drawValidationCards(verdictData, container){
+  container.innerHTML = verdictData.hypothesis_validations.map((h, i) => `
+    <div class="card hyp-card2" data-idx="${i}">
+      <div class="hyp-card2-head">
+        <div class="hyp-rank-sq ${esc(h.status)}">${h.rank}</div>
+        <div style="flex:1;min-width:0;">
+          <div class="hyp-card2-title-row">
+            <span class="hyp-card2-title">${esc(h.statement)}</span>
+            <span class="badge-status ${esc(h.status)}">${esc(titleCase(h.status))}</span>
+          </div>
+        </div>
+        <div class="hyp-card2-right">
+          <div class="confidence-inline"><div class="confidence-track"><div class="confidence-fill ${h.confidence >= 66 ? 'high' : (h.confidence >= 33 ? 'medium' : 'low')}" style="width:${h.confidence}%;"></div></div><span class="confidence-pct">${h.confidence}%</span></div>
+          <span class="hyp-chevron">&#10095;</span>
+        </div>
+      </div>
+      <div class="hyp-card2-body" style="display:none;"></div>
+    </div>`).join('');
+
+  container.querySelectorAll('.hyp-card2').forEach(card => {
+    const head = card.querySelector('.hyp-card2-head');
+    const chevron = card.querySelector('.hyp-chevron');
+    const bodyEl = card.querySelector('.hyp-card2-body');
+    head.addEventListener('click', () => {
+      const open = bodyEl.style.display !== 'none';
+      bodyEl.style.display = open ? 'none' : 'block';
+      chevron.classList.toggle('open', !open);
+      if (!open && !bodyEl.dataset.filled){
+        bodyEl.dataset.filled = '1';
+        const h = verdictData.hypothesis_validations[Number(card.dataset.idx)];
+        bodyEl.innerHTML = renderValidationDetailBody(h);
+        wireSubtabs(bodyEl);
+      }
+    });
+  });
+}
+
+function wireSubtabs(scopeEl){
+  scopeEl.querySelectorAll('.subtabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      scopeEl.querySelectorAll('.subtabs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      scopeEl.querySelectorAll('.subtab-panel').forEach(p => p.style.display = 'none');
+      scopeEl.querySelector(`.subtab-panel[data-panel="${btn.dataset.subtab}"]`).style.display = 'block';
+    });
+  });
+}
+
+function renderValidationDetailBody(h){
+  const internal = h.citations.filter(c => c.kind === 'database' || c.kind === 'document');
+  const external = h.citations.filter(c => c.kind === 'external');
+  const kindLabel = { database: 'ERP', document: 'Document', external: 'External' };
+
+  const evidencePanel = `
+    ${h.status === 'insufficient_evidence' ? `
+      <div class="card" style="background:var(--medium-bg);border-color:var(--medium);padding:12px 14px;margin-bottom:12px;">
+        <b style="color:var(--medium);">Evidence insufficient</b> — confidence ${h.confidence}%. ${esc(h.reasoning)}
+      </div>` : ''}
+    <div class="ev-two-col">
+      <div>
+        <div class="ev-col-title"><span>Internal Evidence (${internal.length})</span></div>
+        ${internal.length ? internal.map(c => `
+          <div class="ev-item">
+            <span class="source-tag database">${esc(kindLabel[c.kind])}</span>
+            <span class="ev-item-title">${esc(c.reference)}</span>
+            ${c.text ? `<div class="ev-item-text">${esc(c.text)}</div>` : ''}
+            <div class="ev-item-meta">${c.supports ? 'Supports' : (c.contradicts ? 'Contradicts' : 'Neutral')} &middot; ${esc(titleCase(c.strength))} strength</div>
+          </div>`).join('') : `<div class="empty-cell">No internal evidence.</div>`}
+      </div>
+      <div>
+        <div class="ev-col-title"><span>External Evidence (${external.length})</span></div>
+        ${external.length ? external.map(c => `
+          <div class="ev-item">
+            <span class="source-tag external">EXT</span>
+            <span class="ev-item-title">${esc(c.reference)}</span>
+            ${c.text ? `<div class="ev-item-text">${esc(c.text)}</div>` : ''}
+            <div class="ev-item-meta">${c.supports ? 'Supports' : (c.contradicts ? 'Contradicts' : 'Neutral')} &middot; ${esc(titleCase(c.strength))} strength</div>
+          </div>`).join('') : `<div class="empty-cell">No external evidence identified.</div>`}
+      </div>
+    </div>
+  `;
+
+  const reasoningPanel = `
+    <div style="font-size:12.5px;color:var(--text);line-height:1.65;">${esc(h.reasoning)}</div>
+    ${h.contradicting_evidence_summary ? `
+      <h4 style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-dim);margin:14px 0 8px;">Contradicting Evidence</h4>
+      <div style="font-size:12.5px;color:var(--text);line-height:1.6;">${esc(h.contradicting_evidence_summary)}</div>
+    ` : `<div style="margin-top:14px;font-size:12px;color:var(--text-faint);">No contradicting evidence identified.</div>`}
+  `;
+
+  const citationsPanel = h.citations.length ? h.citations.map(c => `
+    <div class="citation-chip">
+      <span class="source-tag ${esc(c.kind)}">${esc(kindLabel[c.kind] || c.kind)}</span>
+      <span class="cc-ref">Evidence ${c.evidence_number} — ${esc(c.reference)}</span>
+    </div>`).join('') : `<div class="empty-cell">No citations.</div>`;
+
+  return `
+    <div class="subtabs">
+      <button class="active" data-subtab="evidence">Evidence (${h.citations.length})</button>
+      <button data-subtab="reasoning">Reasoning</button>
+      <button data-subtab="citations">Citations (${h.citations.length})</button>
+    </div>
+    <div class="subtab-panel" data-panel="evidence">${evidencePanel}</div>
+    <div class="subtab-panel" data-panel="reasoning" style="display:none;">${reasoningPanel}</div>
+    <div class="subtab-panel" data-panel="citations" style="display:none;">${citationsPanel}</div>
+  `;
+}
+
+async function runValidation(data, body){
+  const includeExternal = document.getElementById('include-external-chk') ? document.getElementById('include-external-chk').checked : false;
+  document.getElementById('run-val-btn') && document.getElementById('run-val-btn').setAttribute('disabled', 'true');
+  body.innerHTML = `
+    <div class="card processing-card">
+      <div class="processing-spinner"></div>
+      <h2>Evaluating Evidence</h2>
+      <ul class="p-steps" style="margin-top:10px;">
+        <li class="on"><span class="dot"></span>Loading investigation context</li>
+        <li class="on"><span class="dot"></span>Loading generated hypotheses</li>
+        <li class="on"><span class="dot"></span>Retrieving relevant evidence${includeExternal ? ' (internal + external)' : ' (internal)'}</li>
+        <li class="on"><span class="dot"></span>Evaluating evidence against hypotheses</li>
+        <li class="on"><span class="dot"></span>Calculating confidence &amp; preparing results</li>
+      </ul>
+      <div class="please-wait">This is one real request to the backend validation service -- the steps above describe what it does end-to-end, not live progress.</div>
+    </div>`;
+  try{
+    await api(`/investigations/${data.run_id}/verdict?include_external=${includeExternal}`, { method: 'POST' });
+    renderInvestigationShell(data.run_id, 'validation');
+  } catch(err){
+    body.innerHTML = `<div class="card error-card"><div class="e-ic">&#9888;</div><h2>Evidence evaluation failed</h2><p>${esc(err.message)}</p><button class="btn btn-primary" id="retry-run-val">Try Again</button></div>`;
+    document.getElementById('retry-run-val').addEventListener('click', () => runValidation(data, body));
+  }
+}
+
+/* ================= MITIGATION PAGE (route: /investigations/{runId}/mitigation) =================
+   Phase 4: mitigation strategy generation. Consumes ONLY the already-
+   persisted Verdict (Phase 3's grounded finding) -- it never re-runs the
+   investigation, never regenerates hypotheses, and never determines a
+   new root cause. Maps to:
+     python -m logisense.cli generate-mitigations --run-id <RUN_ID>
+   via POST/GET /investigations/{runId}/mitigations. Every strategy field
+   shown below comes from the real MitigationStrategy rows the backend
+   persisted -- category, priority, urgency and confidence are all
+   deterministic scoring done server-side, never computed here. */
+function renderMitigationPage(data, verdictData, mitigationData, body){
+  if (!verdictData){
+    body.innerHTML = `
+      <div class="card"><div class="empty-tab-body">
+        <div class="big-ic">&#128737;</div>
+        <div>No grounded finding yet.</div>
+        <div style="margin-top:4px;font-size:12px;">Mitigation strategies are generated from the investigation's own evidence evaluation. <a href="#/investigations/${data.run_id}/validation" style="color:var(--brand);font-weight:600;">Run Evidence Evaluation</a> first.</div>
+      </div></div>`;
+    return;
+  }
+  drawMitigationBody(data, verdictData, mitigationData, body);
+}
+
+function drawMitigationBody(data, verdictData, mitigationData, body){
+  const actionBar = `
+    <div class="card action-bar">
+      <div>
+        <h2 style="font-size:16px;margin:0 0 4px;">&#128737; Mitigation Strategies</h2>
+        <div class="desc">Generating evidence-grounded mitigation strategies from this run's confirmed finding -- categorized, validated and scored by the backend, never invented here.</div>
+      </div>
+      <div class="spacer"></div>
+      ${mitigationData ? `<div class="meta-right">Last generated<br/>${fmtDate(mitigationData.strategies[0] && mitigationData.strategies[0].generated_at)}</div>` : ''}
+      <button class="btn btn-primary" id="run-mit-btn">${mitigationData ? 'Regenerate' : 'Generate Mitigations'}</button>
+    </div>`;
+
+  if (!mitigationData){
+    body.innerHTML = actionBar + `
+      <div class="card"><div class="empty-tab-body">
+        <div class="big-ic">&#128737;</div>
+        <div>No mitigation strategies generated yet.</div>
+        <div style="margin-top:4px;font-size:12px;">Click "Generate Mitigations" to produce evidence-grounded strategies from this investigation's finding.</div>
+      </div></div>`;
+    document.getElementById('run-mit-btn').addEventListener('click', () => generateMitigations(data, body));
+    return;
+  }
+
+  const strategies = mitigationData.strategies || [];
+  const confirmedCount = strategies.filter(s => s.is_confirmed_corrective_action).length;
+  const preventiveCount = strategies.length - confirmedCount;
+  const flaggedCount = strategies.filter(s => s.validation_status === 'flagged').length;
+
+  body.innerHTML = actionBar + `
+    <div class="section-head-row"><h2>Mitigation Summary</h2></div>
+    <div class="stat-row">
+      <div class="card stat-tile"><div class="st-label">Root Cause Status</div><div class="st-value" style="font-size:14px;">${esc(titleCase(mitigationData.root_cause_status))}</div></div>
+      <div class="card stat-tile"><div class="st-label">Strategies</div><div class="st-value">${strategies.length}</div></div>
+      <div class="card stat-tile"><div class="st-label">Confirmed Corrective</div><div class="st-value good">${confirmedCount}</div></div>
+      <div class="card stat-tile"><div class="st-label">Preventive / Risk-Reduction</div><div class="st-value">${preventiveCount}</div></div>
+      <div class="card stat-tile"><div class="st-label">Flagged</div><div class="st-value ${flaggedCount ? 'warn' : ''}">${flaggedCount}</div></div>
+      <div class="card stat-tile"><div class="st-label">Rejected</div><div class="st-value ${mitigationData.rejected_count ? 'bad' : ''}">${mitigationData.rejected_count}</div></div>
+    </div>
+    ${mitigationData.categories_identified && mitigationData.categories_identified.length ? `
+      <div style="margin:4px 0 14px;">${mitigationData.categories_identified.map(c => `<span class="mit-tag">${esc(titleCase(c))}</span>`).join('')}</div>
+    ` : ''}
+    <div id="mit-cards"></div>
+    ${!strategies.length ? `<div class="card"><div class="empty-cell">No mitigation strategies survived validation for this run.</div></div>` : ''}
+  `;
+  document.getElementById('run-mit-btn').addEventListener('click', () => generateMitigations(data, body));
+  drawMitigationCards(strategies, document.getElementById('mit-cards'));
+}
+
+function drawMitigationCards(strategies, container){
+  container.innerHTML = strategies.map((s, i) => `
+    <div class="card hyp-card2 mit-card ${s.is_confirmed_corrective_action ? 'confirmed' : ''}" data-idx="${i}">
+      <div class="hyp-card2-head">
+        <div class="hyp-rank-sq ${s.priority === 'critical' || s.priority === 'high' ? 'unsupported' : (s.priority === 'medium' ? 'insufficient_evidence' : 'supported')}">${i + 1}</div>
+        <div style="flex:1;min-width:0;">
+          <div class="hyp-card2-title-row">
+            <span class="hyp-card2-title">${esc(s.title)}</span>
+            <span class="badge-status prio-${esc(s.priority)}">${esc(titleCase(s.priority))} priority</span>
+            ${s.validation_status !== 'valid' ? `<span class="badge-status valstat-${esc(s.validation_status)}">${esc(titleCase(s.validation_status))}</span>` : ''}
+          </div>
+          <div class="mit-meta-row">
+            <span class="mit-tag">${esc(titleCase(s.strategy_type))}</span>
+            <span class="mit-tag">${s.is_confirmed_corrective_action ? 'Confirmed Corrective Action' : 'Preventive / Risk-Reduction'}</span>
+            <span class="mit-tag">${esc(titleCase(s.urgency))}</span>
+          </div>
+        </div>
+        <div class="hyp-card2-right">
+          <div class="confidence-inline"><div class="confidence-track"><div class="confidence-fill ${s.confidence >= 66 ? 'high' : (s.confidence >= 33 ? 'medium' : 'low')}" style="width:${s.confidence}%;"></div></div><span class="confidence-pct">${Math.round(s.confidence)}%</span></div>
+          <span class="hyp-chevron">&#10095;</span>
+        </div>
+      </div>
+      <div class="hyp-card2-body" style="display:none;"></div>
+    </div>`).join('');
+
+  container.querySelectorAll('.hyp-card2').forEach(card => {
+    const head = card.querySelector('.hyp-card2-head');
+    const chevron = card.querySelector('.hyp-chevron');
+    const bodyEl = card.querySelector('.hyp-card2-body');
+    head.addEventListener('click', () => {
+      const open = bodyEl.style.display !== 'none';
+      bodyEl.style.display = open ? 'none' : 'block';
+      chevron.classList.toggle('open', !open);
+      if (!open && !bodyEl.dataset.filled){
+        bodyEl.dataset.filled = '1';
+        bodyEl.innerHTML = renderMitigationDetailBody(strategies[Number(card.dataset.idx)]);
+      }
+    });
+  });
+}
+
+function renderMitigationDetailBody(s){
+  return `
+    <div class="three-col">
+      <div>
+        <div class="tc-title">&#128203; Description</div>
+        <div class="tc-body">${esc(s.description)}</div>
+        <div class="tc-title" style="margin-top:12px;">Why This Mitigation</div>
+        <div class="tc-body">${esc(s.why_this_mitigation)}</div>
+        <div class="tc-title" style="margin-top:12px;">Risk Addressed</div>
+        <div class="tc-body">${esc(s.risk_addressed)}</div>
+      </div>
+      <div>
+        <div class="tc-title">&#9776; Implementation Steps</div>
+        <ol class="mit-steps">${s.implementation_steps.map(step => `<li>${esc(step)}</li>`).join('')}</ol>
+        <div class="tc-title" style="margin-top:12px;">Expected Impact</div>
+        <div class="tc-body">${esc(s.expected_impact)}</div>
+        ${s.limitations ? `<div class="tc-title" style="margin-top:12px;">Limitations</div><div class="tc-body">${esc(s.limitations)}</div>` : ''}
+      </div>
+      <div>
+        <div class="tc-title">&#128279; Investigation Basis</div>
+        <ul class="mini-evidence-list">${s.investigation_basis.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+        ${s.dependencies && s.dependencies.length ? `<div class="tc-title" style="margin-top:12px;">Dependencies</div><ul class="mini-evidence-list">${s.dependencies.map(d => `<li>${esc(d)}</li>`).join('')}</ul>` : ''}
+        ${s.success_metrics && s.success_metrics.length ? `<div class="tc-title" style="margin-top:12px;">Success Metrics</div><ul class="mini-evidence-list">${s.success_metrics.map(m => `<li>${esc(m)}</li>`).join('')}</ul>` : ''}
+      </div>
+    </div>
+    ${s.validation_status === 'flagged' && s.validation_notes ? `<div class="mit-flag-note"><b>Validation note:</b> ${esc(s.validation_notes)}</div>` : ''}
+  `;
+}
+
+async function generateMitigations(data, body){
+  document.getElementById('run-mit-btn') && document.getElementById('run-mit-btn').setAttribute('disabled', 'true');
+  body.innerHTML = `
+    <div class="card processing-card">
+      <div class="processing-spinner"></div>
+      <h2>Generating Mitigation Strategies</h2>
+      <ul class="p-steps" style="margin-top:10px;">
+        <li class="on"><span class="dot"></span>Loading the investigation's grounded finding</li>
+        <li class="on"><span class="dot"></span>Identifying applicable mitigation categories</li>
+        <li class="on"><span class="dot"></span>Generating evidence-grounded strategies</li>
+        <li class="on"><span class="dot"></span>Validating each strategy against the evidence</li>
+        <li class="on"><span class="dot"></span>Scoring priority, urgency and confidence</li>
+      </ul>
+      <div class="please-wait">This is one real request to the backend mitigation-generation service -- the steps above describe what it does end-to-end, not live progress.</div>
+    </div>`;
+  try{
+    await api(`/investigations/${data.run_id}/mitigations`, { method: 'POST' });
+    renderInvestigationShell(data.run_id, 'mitigation');
+  } catch(err){
+    body.innerHTML = `<div class="card error-card"><div class="e-ic">&#9888;</div><h2>Mitigation generation failed</h2><p>${esc(err.message)}</p><button class="btn btn-primary" id="retry-run-mit">Try Again</button></div>`;
+    document.getElementById('retry-run-mit').addEventListener('click', () => generateMitigations(data, body));
+  }
+}
+
+/* ================= EVIDENCE / RAG PAGE (route: /investigations/{runId}/evidence) =================
+   Flattens the real citations already returned by validation --
+   retrieval happens on the backend during evaluation, so this doesn't
+   call a separate, duplicate retrieval path. */
+function renderEvidencePage(data, verdictData, body){
+  if (!verdictData){
+    body.innerHTML = `
+      <div class="card"><div class="empty-tab-body">
+        <div class="big-ic">&#128196;</div>
+        <div>No evidence retrieved yet.</div>
+        <div style="margin-top:4px;font-size:12px;">Evidence is gathered during evaluation. <a href="#/investigations/${data.run_id}/validation" style="color:var(--brand);font-weight:600;">Run Evidence Evaluation</a> first.</div>
+      </div></div>`;
+    return;
+  }
+
+  body.innerHTML = `
+    <div class="toolbar">
+      <select id="ev-filter" class="btn btn-outline btn-sm" style="cursor:pointer;">
+        <option value="all">All Sources</option>
+        <option value="database">Database (ERP)</option>
+        <option value="document">Documents</option>
+        <option value="external">External</option>
+      </select>
+      <div style="font-size:12px;color:var(--text-dim);">From ${verdictData.hypothesis_validations.length} hypothesis evaluation(s)</div>
+    </div>
+    <div id="ev-list"></div>`;
+
+  const allCitations = [];
+  verdictData.hypothesis_validations.forEach(h => h.citations.forEach(c => allCitations.push({ ...c, hyp_rank: h.rank, hyp_statement: h.statement })));
+
+  function draw(filter){
+    const rows = filter === 'all' ? allCitations : allCitations.filter(c => c.kind === filter);
+    const list = document.getElementById('ev-list');
+    if (!rows.length){ list.innerHTML = `<div class="card"><div class="empty-cell">No evidence of this kind was retrieved.</div></div>`; return; }
+    const kindLabel = { database: 'ERP / Database', document: 'Document', external: 'External Source' };
+    list.innerHTML = rows.map(c => `
+      <div class="card" style="padding:14px 16px;margin-bottom:10px;">
+        <span class="source-tag ${esc(c.kind)}">${esc(kindLabel[c.kind] || c.kind)}</span>
+        ${c.supports ? '<span style="color:var(--good);font-weight:600;font-size:11px;">&#10003; Supports</span>' : (c.contradicts ? '<span style="color:var(--bad);font-weight:600;font-size:11px;">&#10007; Contradicts</span>' : '')}
+        <div style="font-family:var(--mono);font-size:11px;color:var(--text-faint);margin-top:6px;">${esc(c.reference)}</div>
+        ${c.text ? `<div style="font-size:12.5px;margin-top:6px;">${esc(c.text)}</div>` : ''}
+        <div style="margin-top:8px;font-size:11px;color:var(--text-faint);">For hypothesis [${c.hyp_rank}] ${esc(c.hyp_statement)} &nbsp;|&nbsp; Strength: ${esc(titleCase(c.strength))}</div>
+      </div>`).join('');
+  }
+  draw('all');
+  document.getElementById('ev-filter').addEventListener('change', (e) => draw(e.target.value));
+}
+
+/* ================= ANALYSIS PAGE (route: /investigations/{runId}/analysis) =================
+   Free-text question answered from the same multi-source backend as:
+     python -m logisense.cli analyze "<QUESTION>"
+   Not scoped to a single run_id (the endpoint is general-purpose), but
+   100% real -- internal DB + internal RAG + external sources. */
+function renderAnalysisPage(data, body){
+  body.innerHTML = `
+    <div class="card action-bar">
+      <div>
+        <h2 style="font-size:16px;margin:0 0 4px;">Ask a Question</h2>
+        <div class="desc">Answered from real internal data (database + company documents) and external sources (weather/maritime/news) where relevant. Not limited to this incident.</div>
+      </div>
+    </div>
+    <div class="ask-box">
+      <input type="text" id="analysis-question" placeholder="e.g. What is the status of Purchase Order PO-83921?" />
+      <button class="btn btn-primary" id="analysis-ask-btn">Ask</button>
+    </div>
+    <div id="analysis-result"></div>
+  `;
+  const ask = async () => {
+    const q = document.getElementById('analysis-question').value.trim();
+    if (!q) return;
+    const resultEl = document.getElementById('analysis-result');
+    resultEl.innerHTML = `<div class="empty-state">Analyzing…</div>`;
+    try{
+      const resp = await api('/analyze', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ question: q }) });
+      const statusTags = Object.entries(resp.source_status || {}).map(([src, st]) =>
+        `<span class="source-status-tag ${st === 'ok' ? 'ok' : (st === 'unavailable' ? 'unavailable' : '')}">${esc(titleCase(src))}: ${esc(st)}</span>`
+      ).join('');
+      resultEl.innerHTML = `
+        <div class="source-status-row">${statusTags}</div>
+        <div class="card section-card">
+          <div class="card-title">Answer ${resp.sufficient_evidence ? '' : '<span style="color:var(--medium);font-weight:600;">(insufficient evidence)</span>'}</div>
+          <div class="card-body">${esc(resp.answer).replace(/\n/g,'<br/>')}</div>
+        </div>
+        ${resp.citations && resp.citations.length ? `
+        <div class="card section-card">
+          <div class="card-title">Citations (${resp.citations.length})</div>
+          <div class="card-body">
+            ${resp.citations.map(c => `
+              <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">
+                <div style="font-family:var(--mono);font-size:11px;color:var(--text-faint);">${esc(c.citation_text)} &middot; ${esc(c.source_type)} / ${esc(c.source_name)}</div>
+                <div style="font-size:12.5px;margin-top:4px;">${esc(c.content)}</div>
+              </div>`).join('')}
+          </div>
+        </div>` : ''}
+      `;
+    } catch(err){
+      resultEl.innerHTML = `<div class="card error-card"><div class="e-ic">&#9888;</div><h2>Analysis failed</h2><p>${esc(err.message)}</p></div>`;
+    }
+  };
+  document.getElementById('analysis-ask-btn').addEventListener('click', ask);
+  document.getElementById('analysis-question').addEventListener('keydown', (e) => { if (e.key === 'Enter') ask(); });
+}
+
+function formatAsList(text, numbered){
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean).map(l => l.replace(/^[-*]\s*/, '').replace(/^\d+\.\s*/, ''));
+  if (!lines.length) return esc(text);
+  const tag = numbered ? 'ol' : 'ul';
+  return `<${tag}>${lines.map(l => `<li>${esc(l)}</li>`).join('')}</${tag}>`;
+}
+
+/* ---- boot ---- */
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+warehouse_id,warehouse_name,location,region,capacity,current_utilization
+WH-01,Columbus Distribution Center,"Columbus, Ohio, USA",Midwest,164437,0.936
+WH-02,Dallas Distribution Center,"Dallas, Texas, USA",South,47796,0.747
+WH-03,Atlanta Distribution Center,"Atlanta, Georgia, USA",South,79051,0.697
+WH-04,Los Angeles Distribution Center,"Los Angeles, California, USA",West,115290,0.729
+WH-05,Seattle Distribution Center,"Seattle, Washington, USA",West,50505,0.559
+WH-06,Newark Distribution Center,"Newark, New Jersey, USA",Northeast,147468,0.812
+WH-07,Chicago Distribution Center,"Chicago, Illinois, USA",Midwest,161764,0.729
+WH-08,Miami Distribution Center,"Miami, Florida, USA",South,106112,0.707
+WH-09,Denver Distribution Center,"Denver, Colorado, USA",West,64705,0.677
+WH-10,Toronto Distribution Center,"Toronto, Ontario, Canada",North America,75499,0.587

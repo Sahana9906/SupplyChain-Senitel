@@ -1,0 +1,15 @@
+# Local embedding generation (document indexing + semantic retrieval)
+# using Sentence Transformers -- replaces the Google Gemini embedding
+# API. No Google API key is required for embedding generation.
+#
+# rank_bm25: lexical/sparse retrieval for Phase 2 hybrid retrieval
+# (exact business identifiers like SUP-104, PO-83921).
+#
+# Everything else this project needs (chromadb, groq for LLM
+# generation, fastapi, sqlalchemy, etc.) is already declared in
+# pyproject.toml -- this file adds ONLY what's new for local embeddings
+# and hybrid retrieval.
+
+sentence-transformers>=3.0
+rank_bm25>=0.2.2
+websockets>=13.0

@@ -1,0 +1,501 @@
+sku_id,product_name,category,supplier_id,unit_cost,selling_price,lead_time,criticality
+SKU-00001,Synthetic Blend Sheet Model 1003,Textiles,SUP-006,4.2,7.29,21,High
+SKU-00002,Resistance Band Set Model 1006,Sporting Goods,SUP-022,85.48,110.55,11,Medium
+SKU-00003,Adhesive Compound Model 1012,Chemicals,SUP-021,12.48,16.79,17,Medium
+SKU-00004,Brake Pad Set Model 1013,Automotive Parts,SUP-047,18.32,24.61,44,High
+SKU-00005,Sensor Model 1016,Electronics,SUP-050,66.38,90.12,14,Low
+SKU-00006,Air Filter Model 1022,Automotive Parts,SUP-047,28.06,37.18,40,Medium
+SKU-00007,Frozen Food Case Model 1023,Food & Beverage,SUP-005,5.33,6.85,18,Low
+SKU-00008,Mounting Plate Model 1024,Hardware,SUP-027,3.03,4.95,17,Medium
+SKU-00009,Bolt Assembly Model 1026,Hardware,SUP-012,6.64,10.0,19,Low
+SKU-00010,Power Adapter Model 1028,Electronics,SUP-043,46.21,84.04,18,Low
+SKU-00011,Canvas Roll Model 1035,Textiles,SUP-049,5.58,7.13,20,High
+SKU-00012,Frozen Food Case Model 1041,Food & Beverage,SUP-039,24.5,34.6,37,Critical
+SKU-00013,Packaging Film Model 1048,Packaging,SUP-010,4.39,6.68,21,High
+SKU-00014,Circuit Board Model 1054,Electronics,SUP-024,25.8,46.23,15,High
+SKU-00015,Beverage Concentrate Model 1057,Food & Beverage,SUP-039,6.84,12.66,40,High
+SKU-00016,Denim Bolt Model 1064,Textiles,SUP-006,12.72,23.36,16,High
+SKU-00017,Packaging Film Model 1071,Packaging,SUP-041,1.15,2.04,21,Low
+SKU-00018,Packaging Film Model 1072,Packaging,SUP-025,2.05,3.6,17,Medium
+SKU-00019,Brake Pad Set Model 1079,Automotive Parts,SUP-020,28.49,45.54,12,Medium
+SKU-00020,Sports Bag Model 1085,Sporting Goods,SUP-022,41.74,64.73,9,Critical
+SKU-00021,Canvas Roll Model 1087,Textiles,SUP-049,7.11,11.84,18,Critical
+SKU-00022,Brake Pad Set Model 1088,Automotive Parts,SUP-047,24.91,38.88,40,Low
+SKU-00023,Cleaning Agent Model 1093,Chemicals,SUP-042,17.67,24.76,9,Low
+SKU-00024,Binder Set Model 1096,Office Supplies,SUP-002,7.7,11.26,12,High
+SKU-00025,Controller Unit Model 1103,Electronics,SUP-038,43.64,74.0,23,Medium
+SKU-00026,Bubble Wrap Roll Model 1107,Packaging,SUP-009,3.83,7.07,11,Critical
+SKU-00027,Lubricant Drum Model 1110,Chemicals,SUP-011,35.67,52.2,24,High
+SKU-00028,Timing Belt Model 1113,Automotive Parts,SUP-047,71.75,120.12,42,Low
+SKU-00029,Timing Belt Model 1115,Automotive Parts,SUP-016,45.39,72.45,30,Medium
+SKU-00030,Beverage Concentrate Model 1120,Food & Beverage,SUP-040,4.23,7.31,7,Medium
+SKU-00031,Power Adapter Model 1123,Electronics,SUP-014,24.97,42.49,13,Medium
+SKU-00032,Stapler Set Model 1129,Office Supplies,SUP-017,5.18,8.54,28,Medium
+SKU-00033,Desk Frame Model 1134,Furniture,SUP-037,131.01,225.56,25,High
+SKU-00034,Threaded Rod Model 1135,Hardware,SUP-027,1.82,2.44,16,Medium
+SKU-00035,Pen Box Model 1136,Office Supplies,SUP-003,2.78,4.92,28,Medium
+SKU-00036,Packaging Film Model 1138,Packaging,SUP-004,2.75,4.86,17,Low
+SKU-00037,Conference Table Model 1145,Furniture,SUP-018,54.21,76.69,28,Medium
+SKU-00038,Binder Set Model 1151,Office Supplies,SUP-030,3.57,5.89,20,Medium
+SKU-00039,Beverage Concentrate Model 1153,Food & Beverage,SUP-005,4.33,7.0,17,High
+SKU-00040,Denim Bolt Model 1155,Textiles,SUP-026,2.54,4.04,12,High
+SKU-00041,Sports Bag Model 1156,Sporting Goods,SUP-013,20.73,36.68,12,Critical
+SKU-00042,Denim Bolt Model 1158,Textiles,SUP-048,2.85,5.29,24,Medium
+SKU-00043,Bicycle Helmet Model 1161,Sporting Goods,SUP-029,26.87,35.63,27,Medium
+SKU-00044,Sports Bag Model 1168,Sporting Goods,SUP-029,24.04,36.59,22,High
+SKU-00045,Shelving Unit Model 1171,Furniture,SUP-032,67.65,114.08,26,High
+SKU-00046,Timing Belt Model 1175,Automotive Parts,SUP-016,33.7,58.83,27,Low
+SKU-00047,Woven Liner Model 1178,Textiles,SUP-026,9.16,13.62,11,Low
+SKU-00048,Lubricant Drum Model 1179,Chemicals,SUP-015,13.9,18.71,13,Low
+SKU-00049,Beverage Concentrate Model 1185,Food & Beverage,SUP-039,9.89,15.18,41,Low
+SKU-00050,Canned Goods Case Model 1190,Food & Beverage,SUP-044,12.58,20.25,25,Medium
+SKU-00051,Foam Insert Model 1194,Packaging,SUP-004,1.33,2.34,17,High
+SKU-00052,Notebook Pack Model 1198,Office Supplies,SUP-002,5.03,9.51,13,Critical
+SKU-00053,Suspension Bushing Model 1205,Automotive Parts,SUP-047,46.04,86.02,41,Medium
+SKU-00054,Bicycle Helmet Model 1207,Sporting Goods,SUP-029,64.04,106.57,22,Low
+SKU-00055,Bulk Grain Sack Model 1208,Food & Beverage,SUP-044,2.2,3.59,23,Low
+SKU-00056,Beverage Concentrate Model 1215,Food & Beverage,SUP-044,6.33,9.78,27,Critical
+SKU-00057,Stapler Set Model 1216,Office Supplies,SUP-019,2.24,3.23,30,Medium
+SKU-00058,Sensor Model 1222,Electronics,SUP-035,30.25,43.75,21,Low
+SKU-00059,Desk Frame Model 1223,Furniture,SUP-033,116.97,205.61,14,Medium
+SKU-00060,Foam Insert Model 1226,Packaging,SUP-031,0.63,1.15,17,High
+SKU-00061,Canned Goods Case Model 1233,Food & Beverage,SUP-044,4.74,8.5,23,Low
+SKU-00062,Denim Bolt Model 1234,Textiles,SUP-049,8.57,11.22,17,Low
+SKU-00063,Adhesive Compound Model 1240,Chemicals,SUP-011,16.82,21.34,22,High
+SKU-00064,Wiring Harness Model 1241,Electronics,SUP-014,41.13,72.18,11,Low
+SKU-00065,Controller Unit Model 1243,Electronics,SUP-014,67.82,124.92,12,Low
+SKU-00066,Fleece Roll Model 1245,Textiles,SUP-048,7.0,8.77,25,Medium
+SKU-00067,Adhesive Compound Model 1250,Chemicals,SUP-042,22.71,37.33,13,Critical
+SKU-00068,Synthetic Blend Sheet Model 1253,Textiles,SUP-006,3.81,6.87,21,Medium
+SKU-00069,Timing Belt Model 1259,Automotive Parts,SUP-047,21.37,37.84,45,Medium
+SKU-00070,Corrugated Box Model 1264,Packaging,SUP-025,2.21,3.77,18,Low
+SKU-00071,Radiator Hose Model 1269,Automotive Parts,SUP-001,58.27,74.36,24,High
+SKU-00072,Printer Paper Case Model 1272,Office Supplies,SUP-023,9.84,16.33,23,Medium
+SKU-00073,Industrial Solvent Model 1277,Chemicals,SUP-021,9.87,13.33,21,Low
+SKU-00074,Bulk Grain Sack Model 1278,Food & Beverage,SUP-044,3.85,5.49,28,Critical
+SKU-00075,Desk Frame Model 1282,Furniture,SUP-032,134.51,253.84,26,High
+SKU-00076,Timing Belt Model 1289,Automotive Parts,SUP-047,36.51,60.26,43,Medium
+SKU-00077,Pen Box Model 1292,Office Supplies,SUP-003,6.34,11.57,29,High
+SKU-00078,Canvas Roll Model 1296,Textiles,SUP-026,12.73,16.67,12,High
+SKU-00079,Stapler Set Model 1302,Office Supplies,SUP-019,3.83,7.23,28,Low
+SKU-00080,Storage Cabinet Model 1304,Furniture,SUP-037,111.47,185.45,24,Low
+SKU-00081,Spark Plug Model 1307,Automotive Parts,SUP-020,35.36,47.54,11,Medium
+SKU-00082,Resistance Band Set Model 1308,Sporting Goods,SUP-013,16.85,27.39,15,High
+SKU-00083,Conference Table Model 1315,Furniture,SUP-032,153.46,256.59,24,Medium
+SKU-00084,Shelving Unit Model 1322,Furniture,SUP-018,109.02,172.3,29,Low
+SKU-00085,Foam Insert Model 1328,Packaging,SUP-025,2.38,3.71,12,Low
+SKU-00086,Pen Box Model 1332,Office Supplies,SUP-023,5.18,7.41,22,Medium
+SKU-00087,Frozen Food Case Model 1335,Food & Beverage,SUP-040,10.28,15.71,8,High
+SKU-00088,Spark Plug Model 1338,Automotive Parts,SUP-016,29.61,44.94,29,Low
+SKU-00089,Bubble Wrap Roll Model 1339,Packaging,SUP-046,1.32,1.84,26,Critical
+SKU-00090,Aluminum Bracket Model 1341,Hardware,SUP-027,2.29,2.92,20,Low
+SKU-00091,Stapler Set Model 1346,Office Supplies,SUP-017,4.32,6.73,23,Critical
+SKU-00092,Bubble Wrap Roll Model 1348,Packaging,SUP-031,1.24,2.01,18,Low
+SKU-00093,Battery Pack Model 1353,Electronics,SUP-014,36.71,61.35,14,Low
+SKU-00094,Controller Unit Model 1356,Electronics,SUP-043,61.33,108.05,20,Critical
+SKU-00095,Office Chair Model 1363,Furniture,SUP-018,153.2,234.46,26,Medium
+SKU-00096,Shelving Unit Model 1367,Furniture,SUP-033,329.85,522.25,15,Low
+SKU-00097,Power Adapter Model 1374,Electronics,SUP-035,92.14,168.26,18,Low
+SKU-00098,Denim Bolt Model 1378,Textiles,SUP-006,7.78,12.36,22,Medium
+SKU-00099,Circuit Board Model 1380,Electronics,SUP-050,30.48,44.33,16,Medium
+SKU-00100,Brake Pad Set Model 1382,Automotive Parts,SUP-001,41.85,75.22,26,Medium
+SKU-00101,Frozen Food Case Model 1387,Food & Beverage,SUP-039,7.21,10.33,39,High
+SKU-00102,Bulk Grain Sack Model 1391,Food & Beverage,SUP-040,5.14,7.47,5,High
+SKU-00103,Canned Goods Case Model 1396,Food & Beverage,SUP-005,2.4,3.02,20,Medium
+SKU-00104,Synthetic Blend Sheet Model 1402,Textiles,SUP-026,3.79,5.65,13,Low
+SKU-00105,Synthetic Blend Sheet Model 1404,Textiles,SUP-026,12.52,20.54,12,Medium
+SKU-00106,Steel Fastener Kit Model 1408,Hardware,SUP-027,0.91,1.7,16,Medium
+SKU-00107,Storage Cabinet Model 1409,Furniture,SUP-032,301.88,528.85,23,Low
+SKU-00108,Radiator Hose Model 1416,Automotive Parts,SUP-047,37.85,64.67,41,Low
+SKU-00109,Bubble Wrap Roll Model 1423,Packaging,SUP-025,1.72,2.87,14,Medium
+SKU-00110,Resistance Band Set Model 1429,Sporting Goods,SUP-013,29.7,47.26,9,Critical
+SKU-00111,Steel Fastener Kit Model 1430,Hardware,SUP-012,5.59,7.59,16,High
+SKU-00112,Stapler Set Model 1433,Office Supplies,SUP-019,11.29,18.19,29,Low
+SKU-00113,Radiator Hose Model 1437,Automotive Parts,SUP-020,19.25,36.45,14,Medium
+SKU-00114,Shelving Unit Model 1438,Furniture,SUP-018,181.58,273.31,23,High
+SKU-00115,Lubricant Drum Model 1441,Chemicals,SUP-011,31.05,54.06,21,Low
+SKU-00116,Stapler Set Model 1442,Office Supplies,SUP-030,10.93,14.73,19,High
+SKU-00117,Printer Paper Case Model 1449,Office Supplies,SUP-003,3.12,5.74,32,Medium
+SKU-00118,Storage Cabinet Model 1451,Furniture,SUP-037,41.14,59.23,21,Medium
+SKU-00119,Office Chair Model 1455,Furniture,SUP-033,68.75,112.14,16,Medium
+SKU-00120,Sealant Cartridge Model 1456,Chemicals,SUP-015,10.12,14.25,14,Low
+SKU-00121,Storage Cabinet Model 1462,Furniture,SUP-037,59.54,99.1,24,High
+SKU-00122,Yoga Mat Model 1466,Sporting Goods,SUP-008,17.62,30.76,33,Low
+SKU-00123,Industrial Solvent Model 1473,Chemicals,SUP-034,16.61,24.72,31,High
+SKU-00124,Battery Pack Model 1480,Electronics,SUP-038,62.68,112.76,25,Medium
+SKU-00125,Circuit Board Model 1485,Electronics,SUP-024,59.44,104.0,19,Medium
+SKU-00126,Shelving Unit Model 1492,Furniture,SUP-018,86.16,158.64,28,Low
+SKU-00127,Resistance Band Set Model 1495,Sporting Goods,SUP-029,13.72,24.73,24,High
+SKU-00128,Office Chair Model 1496,Furniture,SUP-032,57.71,87.09,23,High
+SKU-00129,Timing Belt Model 1497,Automotive Parts,SUP-047,35.46,58.87,41,Low
+SKU-00130,Denim Bolt Model 1498,Textiles,SUP-026,12.55,17.25,9,Medium
+SKU-00131,Timing Belt Model 1504,Automotive Parts,SUP-020,27.7,51.32,14,Medium
+SKU-00132,Shelving Unit Model 1506,Furniture,SUP-037,98.87,162.05,24,Medium
+SKU-00133,Beverage Concentrate Model 1511,Food & Beverage,SUP-039,5.8,8.3,37,High
+SKU-00134,Suspension Bushing Model 1514,Automotive Parts,SUP-020,32.99,62.29,14,High
+SKU-00135,Radiator Hose Model 1517,Automotive Parts,SUP-047,58.52,91.31,45,High
+SKU-00136,Conference Table Model 1521,Furniture,SUP-033,107.94,185.49,16,Low
+SKU-00137,Sports Bag Model 1525,Sporting Goods,SUP-022,11.22,19.73,9,High
+SKU-00138,Shrink Wrap Roll Model 1529,Packaging,SUP-025,2.86,4.94,18,High
+SKU-00139,Packaged Snack Case Model 1532,Food & Beverage,SUP-044,3.33,5.36,29,High
+SKU-00140,Bulk Grain Sack Model 1538,Food & Beverage,SUP-039,13.43,25.38,40,Medium
+SKU-00141,Circuit Board Model 1543,Electronics,SUP-038,50.97,88.02,28,Low
+SKU-00142,Denim Bolt Model 1544,Textiles,SUP-049,6.47,8.61,22,Critical
+SKU-00143,Battery Pack Model 1546,Electronics,SUP-035,23.72,41.64,24,High
+SKU-00144,Steel Fastener Kit Model 1550,Hardware,SUP-027,6.01,9.33,19,Low
+SKU-00145,Packaged Snack Case Model 1557,Food & Beverage,SUP-040,2.47,3.75,3,High
+SKU-00146,Sports Bag Model 1560,Sporting Goods,SUP-029,37.82,60.93,27,High
+SKU-00147,Controller Unit Model 1561,Electronics,SUP-014,32.73,60.59,13,Medium
+SKU-00148,Air Filter Model 1567,Automotive Parts,SUP-001,37.53,56.0,26,Medium
+SKU-00149,Woven Liner Model 1573,Textiles,SUP-006,10.47,13.83,22,Medium
+SKU-00150,Brake Pad Set Model 1574,Automotive Parts,SUP-020,14.72,25.8,14,High
+SKU-00151,Spark Plug Model 1577,Automotive Parts,SUP-047,20.04,34.68,41,Low
+SKU-00152,Sports Bag Model 1582,Sporting Goods,SUP-013,22.57,31.65,14,Low
+SKU-00153,Fleece Roll Model 1589,Textiles,SUP-048,16.53,29.88,24,Medium
+SKU-00154,Foam Insert Model 1594,Packaging,SUP-010,2.29,3.87,20,Low
+SKU-00155,Suspension Bushing Model 1597,Automotive Parts,SUP-001,37.97,57.37,25,High
+SKU-00156,Storage Cabinet Model 1603,Furniture,SUP-032,177.88,249.83,27,Low
+SKU-00157,Lubricant Drum Model 1606,Chemicals,SUP-034,4.49,6.63,31,Medium
+SKU-00158,Storage Cabinet Model 1608,Furniture,SUP-037,73.49,120.06,26,High
+SKU-00159,Synthetic Blend Sheet Model 1612,Textiles,SUP-049,6.85,9.79,20,Medium
+SKU-00160,Radiator Hose Model 1615,Automotive Parts,SUP-001,17.19,22.44,27,Critical
+SKU-00161,Canned Goods Case Model 1616,Food & Beverage,SUP-005,7.8,13.39,19,Critical
+SKU-00162,Storage Cabinet Model 1623,Furniture,SUP-032,251.18,362.36,26,Medium
+SKU-00163,Adhesive Compound Model 1629,Chemicals,SUP-015,12.67,16.96,11,Medium
+SKU-00164,Threaded Rod Model 1630,Hardware,SUP-012,1.68,2.53,18,Low
+SKU-00165,Office Chair Model 1635,Furniture,SUP-033,74.04,116.46,13,High
+SKU-00166,Canvas Roll Model 1638,Textiles,SUP-048,18.42,23.83,21,Low
+SKU-00167,Mounting Plate Model 1641,Hardware,SUP-027,5.37,6.77,18,High
+SKU-00168,Suspension Bushing Model 1648,Automotive Parts,SUP-020,32.78,48.29,13,High
+SKU-00169,Industrial Solvent Model 1652,Chemicals,SUP-011,12.76,23.91,27,Low
+SKU-00170,Pallet Wrap Model 1658,Packaging,SUP-036,1.27,1.82,16,Critical
+SKU-00171,Dumbbell Set Model 1659,Sporting Goods,SUP-029,19.2,26.93,25,Low
+SKU-00172,Yoga Mat Model 1663,Sporting Goods,SUP-022,25.45,40.57,8,Medium
+SKU-00173,Timing Belt Model 1667,Automotive Parts,SUP-020,8.32,13.59,14,Low
+SKU-00174,Foam Insert Model 1668,Packaging,SUP-046,1.4,1.97,24,Low
+SKU-00175,Binder Set Model 1674,Office Supplies,SUP-002,7.59,10.25,12,Medium
+SKU-00176,Storage Cabinet Model 1680,Furniture,SUP-037,109.11,176.21,27,Low
+SKU-00177,Sensor Model 1683,Electronics,SUP-035,54.63,96.12,22,Low
+SKU-00178,Shrink Wrap Roll Model 1685,Packaging,SUP-036,2.73,5.18,14,Medium
+SKU-00179,Sports Bag Model 1690,Sporting Goods,SUP-013,15.41,27.42,13,High
+SKU-00180,Denim Bolt Model 1695,Textiles,SUP-048,6.43,8.81,27,Critical
+SKU-00181,Brake Pad Set Model 1701,Automotive Parts,SUP-020,44.55,58.64,12,Low
+SKU-00182,Desk Frame Model 1708,Furniture,SUP-033,72.78,115.23,15,Low
+SKU-00183,Lubricant Drum Model 1714,Chemicals,SUP-021,13.27,16.9,22,Low
+SKU-00184,Air Filter Model 1715,Automotive Parts,SUP-047,19.84,25.33,45,Low
+SKU-00185,Pallet Wrap Model 1721,Packaging,SUP-004,0.63,0.81,19,Low
+SKU-00186,Adhesive Compound Model 1723,Chemicals,SUP-042,13.57,19.72,10,Low
+SKU-00187,Resistance Band Set Model 1728,Sporting Goods,SUP-013,17.69,23.4,13,High
+SKU-00188,Bubble Wrap Roll Model 1735,Packaging,SUP-010,3.38,5.76,22,High
+SKU-00189,Printer Paper Case Model 1738,Office Supplies,SUP-003,3.17,4.58,29,Critical
+SKU-00190,Dumbbell Set Model 1745,Sporting Goods,SUP-013,27.65,34.59,11,Low
+SKU-00191,Circuit Board Model 1746,Electronics,SUP-024,63.91,115.73,16,High
+SKU-00192,Shrink Wrap Roll Model 1749,Packaging,SUP-004,1.8,2.82,13,Low
+SKU-00193,Circuit Board Model 1755,Electronics,SUP-035,20.59,31.51,21,Medium
+SKU-00194,Denim Bolt Model 1759,Textiles,SUP-045,4.8,6.81,37,Medium
+SKU-00195,Denim Bolt Model 1764,Textiles,SUP-026,14.06,19.79,14,Critical
+SKU-00196,Battery Pack Model 1771,Electronics,SUP-050,28.37,39.67,16,Medium
+SKU-00197,Suspension Bushing Model 1777,Automotive Parts,SUP-001,34.55,64.08,24,Low
+SKU-00198,Shelving Unit Model 1781,Furniture,SUP-018,51.42,88.06,23,Medium
+SKU-00199,Office Chair Model 1782,Furniture,SUP-033,92.66,118.68,13,Medium
+SKU-00200,Synthetic Blend Sheet Model 1785,Textiles,SUP-049,9.19,11.54,17,Medium
+SKU-00201,Dumbbell Set Model 1789,Sporting Goods,SUP-022,29.51,37.49,7,Medium
+SKU-00202,Notebook Pack Model 1790,Office Supplies,SUP-030,1.63,2.29,16,Low
+SKU-00203,Resistance Band Set Model 1794,Sporting Goods,SUP-029,36.22,59.17,26,High
+SKU-00204,Canned Goods Case Model 1801,Food & Beverage,SUP-044,6.3,11.37,28,Medium
+SKU-00205,Canvas Roll Model 1805,Textiles,SUP-045,19.65,26.64,38,Medium
+SKU-00206,Adhesive Compound Model 1811,Chemicals,SUP-034,9.6,13.59,31,Low
+SKU-00207,Cotton Fabric Roll Model 1815,Textiles,SUP-006,6.89,10.65,22,High
+SKU-00208,Adhesive Compound Model 1820,Chemicals,SUP-011,36.62,54.38,25,Medium
+SKU-00209,Bicycle Helmet Model 1823,Sporting Goods,SUP-008,12.62,18.39,32,Medium
+SKU-00210,Packaged Snack Case Model 1826,Food & Beverage,SUP-040,7.49,10.42,8,Medium
+SKU-00211,Stapler Set Model 1828,Office Supplies,SUP-003,6.87,10.01,31,Medium
+SKU-00212,Corrugated Box Model 1831,Packaging,SUP-046,2.37,3.5,20,Medium
+SKU-00213,Timing Belt Model 1833,Automotive Parts,SUP-047,31.28,42.46,43,High
+SKU-00214,Stapler Set Model 1839,Office Supplies,SUP-030,11.59,20.05,21,Medium
+SKU-00215,Pen Box Model 1840,Office Supplies,SUP-003,9.87,18.05,27,Low
+SKU-00216,Spark Plug Model 1843,Automotive Parts,SUP-001,30.18,40.54,25,Low
+SKU-00217,Mounting Plate Model 1849,Hardware,SUP-027,2.32,3.16,21,Low
+SKU-00218,Sensor Model 1855,Electronics,SUP-038,23.46,29.39,25,Low
+SKU-00219,Bulk Grain Sack Model 1858,Food & Beverage,SUP-039,5.77,10.94,40,Medium
+SKU-00220,Lubricant Drum Model 1863,Chemicals,SUP-011,15.09,27.66,25,High
+SKU-00221,Aluminum Bracket Model 1870,Hardware,SUP-012,4.09,6.54,15,Medium
+SKU-00222,Suspension Bushing Model 1876,Automotive Parts,SUP-047,27.82,35.69,43,Medium
+SKU-00223,Shelving Unit Model 1879,Furniture,SUP-032,48.17,69.44,23,High
+SKU-00224,Canvas Roll Model 1883,Textiles,SUP-006,3.27,4.13,20,Low
+SKU-00225,Notebook Pack Model 1888,Office Supplies,SUP-030,8.23,11.52,21,Low
+SKU-00226,Foam Insert Model 1893,Packaging,SUP-004,2.04,3.36,19,Low
+SKU-00227,Air Filter Model 1900,Automotive Parts,SUP-016,17.45,26.31,30,High
+SKU-00228,Spark Plug Model 1901,Automotive Parts,SUP-001,57.1,92.42,25,Medium
+SKU-00229,Beverage Concentrate Model 1903,Food & Beverage,SUP-044,5.62,10.62,24,Medium
+SKU-00230,Shrink Wrap Roll Model 1908,Packaging,SUP-031,2.23,2.81,19,Low
+SKU-00231,Display Module Model 1909,Electronics,SUP-035,33.71,53.54,20,Critical
+SKU-00232,Lubricant Drum Model 1913,Chemicals,SUP-042,10.96,20.04,9,Medium
+SKU-00233,Canned Goods Case Model 1914,Food & Beverage,SUP-044,4.91,8.32,26,Low
+SKU-00234,Adhesive Compound Model 1921,Chemicals,SUP-042,8.49,11.6,8,Medium
+SKU-00235,Industrial Solvent Model 1925,Chemicals,SUP-011,30.78,55.66,27,Low
+SKU-00236,Notebook Pack Model 1930,Office Supplies,SUP-002,2.8,4.36,16,Medium
+SKU-00237,Radiator Hose Model 1933,Automotive Parts,SUP-016,11.83,21.54,29,Low
+SKU-00238,Steel Fastener Kit Model 1938,Hardware,SUP-012,3.77,6.53,16,Medium
+SKU-00239,Bubble Wrap Roll Model 1941,Packaging,SUP-010,0.53,0.93,26,Low
+SKU-00240,Hinge Set Model 1943,Hardware,SUP-012,2.28,4.19,17,Medium
+SKU-00241,Synthetic Blend Sheet Model 1950,Textiles,SUP-048,5.49,9.71,24,Medium
+SKU-00242,Stapler Set Model 1954,Office Supplies,SUP-030,10.21,17.7,16,Critical
+SKU-00243,Stapler Set Model 1957,Office Supplies,SUP-030,4.23,7.98,22,Low
+SKU-00244,Office Chair Model 1961,Furniture,SUP-037,216.3,395.16,23,Medium
+SKU-00245,Timing Belt Model 1962,Automotive Parts,SUP-020,32.03,46.68,12,Medium
+SKU-00246,Suspension Bushing Model 1966,Automotive Parts,SUP-001,45.92,69.61,25,Low
+SKU-00247,Brake Pad Set Model 1972,Automotive Parts,SUP-001,48.7,90.48,24,Medium
+SKU-00248,Sports Bag Model 1976,Sporting Goods,SUP-008,31.5,47.1,32,Medium
+SKU-00249,Binder Set Model 1979,Office Supplies,SUP-023,5.75,7.68,24,Medium
+SKU-00250,Steel Fastener Kit Model 1983,Hardware,SUP-012,4.95,7.28,15,High
+SKU-00251,Sealant Cartridge Model 1984,Chemicals,SUP-042,20.93,29.48,8,Medium
+SKU-00252,Circuit Board Model 1990,Electronics,SUP-035,43.7,79.65,18,Critical
+SKU-00253,Bicycle Helmet Model 1995,Sporting Goods,SUP-013,14.14,19.53,15,Medium
+SKU-00254,Suspension Bushing Model 1999,Automotive Parts,SUP-020,24.48,38.05,11,Medium
+SKU-00255,Wiring Harness Model 2005,Electronics,SUP-043,43.96,56.24,16,Low
+SKU-00256,Industrial Solvent Model 2010,Chemicals,SUP-034,21.55,36.08,29,Low
+SKU-00257,Binder Set Model 2013,Office Supplies,SUP-002,1.94,2.56,11,Medium
+SKU-00258,Hinge Set Model 2016,Hardware,SUP-027,3.58,6.25,17,Low
+SKU-00259,Canvas Roll Model 2021,Textiles,SUP-048,7.89,14.49,21,Medium
+SKU-00260,Adhesive Compound Model 2027,Chemicals,SUP-042,8.61,16.1,13,Low
+SKU-00261,Frozen Food Case Model 2030,Food & Beverage,SUP-005,3.47,4.65,23,Medium
+SKU-00262,Aluminum Bracket Model 2033,Hardware,SUP-027,3.22,4.23,18,Low
+SKU-00263,Aluminum Bracket Model 2034,Hardware,SUP-027,1.71,2.82,18,High
+SKU-00264,Fleece Roll Model 2041,Textiles,SUP-049,6.52,9.22,20,High
+SKU-00265,Yoga Mat Model 2047,Sporting Goods,SUP-022,17.11,30.86,8,High
+SKU-00266,Binder Set Model 2052,Office Supplies,SUP-019,3.25,4.69,28,Low
+SKU-00267,Threaded Rod Model 2059,Hardware,SUP-012,1.86,2.81,14,High
+SKU-00268,Display Module Model 2062,Electronics,SUP-043,41.8,57.87,21,High
+SKU-00269,Conference Table Model 2065,Furniture,SUP-037,65.94,87.6,22,Low
+SKU-00270,Bubble Wrap Roll Model 2072,Packaging,SUP-041,1.06,1.51,23,Critical
+SKU-00271,Bubble Wrap Roll Model 2078,Packaging,SUP-041,1.17,1.6,21,Medium
+SKU-00272,Suspension Bushing Model 2083,Automotive Parts,SUP-047,39.61,55.83,41,Critical
+SKU-00273,Shrink Wrap Roll Model 2085,Packaging,SUP-028,3.28,5.92,8,Low
+SKU-00274,Storage Cabinet Model 2090,Furniture,SUP-018,55.61,88.7,29,High
+SKU-00275,Yoga Mat Model 2093,Sporting Goods,SUP-008,39.55,55.73,31,High
+SKU-00276,Suspension Bushing Model 2098,Automotive Parts,SUP-016,19.45,35.54,26,High
+SKU-00277,Synthetic Blend Sheet Model 2105,Textiles,SUP-048,6.01,9.53,22,High
+SKU-00278,Display Module Model 2106,Electronics,SUP-035,41.34,66.09,21,Medium
+SKU-00279,Foam Insert Model 2107,Packaging,SUP-031,1.78,2.38,19,Low
+SKU-00280,Industrial Solvent Model 2114,Chemicals,SUP-021,18.77,29.34,16,High
+SKU-00281,Steel Fastener Kit Model 2117,Hardware,SUP-027,9.12,12.37,18,Medium
+SKU-00282,Threaded Rod Model 2121,Hardware,SUP-027,2.25,3.18,19,Medium
+SKU-00283,Cotton Fabric Roll Model 2124,Textiles,SUP-026,12.8,16.99,9,High
+SKU-00284,Bicycle Helmet Model 2129,Sporting Goods,SUP-029,31.15,51.25,28,Low
+SKU-00285,Air Filter Model 2132,Automotive Parts,SUP-001,54.67,82.57,24,Low
+SKU-00286,Frozen Food Case Model 2136,Food & Beverage,SUP-005,7.1,13.44,20,Low
+SKU-00287,Conference Table Model 2141,Furniture,SUP-018,108.99,188.78,25,Medium
+SKU-00288,Binder Set Model 2147,Office Supplies,SUP-003,6.27,11.59,29,Low
+SKU-00289,Controller Unit Model 2150,Electronics,SUP-014,25.16,32.27,16,Medium
+SKU-00290,Threaded Rod Model 2156,Hardware,SUP-012,3.14,5.2,16,Medium
+SKU-00291,Industrial Solvent Model 2161,Chemicals,SUP-042,14.99,26.47,12,Medium
+SKU-00292,Bicycle Helmet Model 2162,Sporting Goods,SUP-029,21.35,32.77,23,High
+SKU-00293,Battery Pack Model 2166,Electronics,SUP-024,42.6,53.31,18,Low
+SKU-00294,Power Adapter Model 2173,Electronics,SUP-007,39.6,51.1,24,Low
+SKU-00295,Fleece Roll Model 2179,Textiles,SUP-045,12.7,16.94,35,Low
+SKU-00296,Lubricant Drum Model 2182,Chemicals,SUP-015,14.22,21.41,12,High
+SKU-00297,Shelving Unit Model 2188,Furniture,SUP-032,122.51,178.55,23,High
+SKU-00298,Woven Liner Model 2195,Textiles,SUP-048,13.9,23.34,26,Low
+SKU-00299,Corrugated Box Model 2202,Packaging,SUP-025,0.98,1.53,16,High
+SKU-00300,Coating Resin Model 2207,Chemicals,SUP-034,6.98,9.53,32,Critical
+SKU-00301,Sports Bag Model 2210,Sporting Goods,SUP-008,28.89,52.0,33,High
+SKU-00302,Bubble Wrap Roll Model 2213,Packaging,SUP-004,0.99,1.81,13,High
+SKU-00303,Coating Resin Model 2214,Chemicals,SUP-021,12.89,21.64,17,Medium
+SKU-00304,Bulk Grain Sack Model 2218,Food & Beverage,SUP-040,12.57,18.71,5,Critical
+SKU-00305,Shelving Unit Model 2221,Furniture,SUP-033,173.68,262.61,17,High
+SKU-00306,Packaged Snack Case Model 2225,Food & Beverage,SUP-039,8.8,13.91,39,Medium
+SKU-00307,Industrial Solvent Model 2226,Chemicals,SUP-021,16.01,24.38,17,Medium
+SKU-00308,Suspension Bushing Model 2231,Automotive Parts,SUP-047,20.83,31.56,43,Low
+SKU-00309,Storage Cabinet Model 2235,Furniture,SUP-018,123.56,164.55,28,High
+SKU-00310,Lubricant Drum Model 2239,Chemicals,SUP-021,20.97,35.15,16,Medium
+SKU-00311,Sensor Model 2245,Electronics,SUP-043,65.68,82.94,22,Medium
+SKU-00312,Resistance Band Set Model 2246,Sporting Goods,SUP-013,41.14,72.23,11,High
+SKU-00313,Office Chair Model 2248,Furniture,SUP-018,39.34,55.48,29,Low
+SKU-00314,Coating Resin Model 2252,Chemicals,SUP-042,15.4,22.0,11,Low
+SKU-00315,Threaded Rod Model 2256,Hardware,SUP-027,3.38,4.85,17,Medium
+SKU-00316,Fleece Roll Model 2258,Textiles,SUP-049,9.37,12.95,21,Medium
+SKU-00317,Sealant Cartridge Model 2261,Chemicals,SUP-015,20.41,34.82,16,Critical
+SKU-00318,Battery Pack Model 2263,Electronics,SUP-035,15.13,21.42,24,Medium
+SKU-00319,Yoga Mat Model 2266,Sporting Goods,SUP-022,19.95,29.09,11,High
+SKU-00320,Shrink Wrap Roll Model 2269,Packaging,SUP-041,2.21,3.75,23,Low
+SKU-00321,Steel Fastener Kit Model 2273,Hardware,SUP-012,5.1,7.7,18,High
+SKU-00322,Office Chair Model 2280,Furniture,SUP-033,147.36,226.72,17,Medium
+SKU-00323,Fleece Roll Model 2285,Textiles,SUP-045,11.97,21.61,34,High
+SKU-00324,Threaded Rod Model 2291,Hardware,SUP-012,6.51,10.21,16,High
+SKU-00325,Resistance Band Set Model 2292,Sporting Goods,SUP-013,21.05,30.88,14,High
+SKU-00326,Foam Insert Model 2293,Packaging,SUP-031,1.53,2.83,18,Medium
+SKU-00327,Cleaning Agent Model 2300,Chemicals,SUP-042,9.3,17.54,7,Low
+SKU-00328,Cotton Fabric Roll Model 2303,Textiles,SUP-048,7.22,12.6,26,Critical
+SKU-00329,Conference Table Model 2307,Furniture,SUP-037,305.63,472.72,25,High
+SKU-00330,Synthetic Blend Sheet Model 2310,Textiles,SUP-006,8.62,12.4,17,Medium
+SKU-00331,Dumbbell Set Model 2312,Sporting Goods,SUP-013,21.22,34.61,11,High
+SKU-00332,Bolt Assembly Model 2317,Hardware,SUP-012,8.28,14.74,16,High
+SKU-00333,Resistance Band Set Model 2320,Sporting Goods,SUP-013,35.23,47.88,11,Low
+SKU-00334,Bubble Wrap Roll Model 2325,Packaging,SUP-028,1.17,2.07,4,High
+SKU-00335,Air Filter Model 2331,Automotive Parts,SUP-020,61.79,82.79,14,Low
+SKU-00336,Timing Belt Model 2336,Automotive Parts,SUP-001,17.18,25.83,26,Medium
+SKU-00337,Mounting Plate Model 2341,Hardware,SUP-012,1.8,2.48,20,Low
+SKU-00338,Stapler Set Model 2344,Office Supplies,SUP-023,9.67,15.98,23,Low
+SKU-00339,Sensor Model 2345,Electronics,SUP-043,33.56,63.35,20,High
+SKU-00340,Radiator Hose Model 2347,Automotive Parts,SUP-047,27.81,49.06,39,Medium
+SKU-00341,Display Module Model 2353,Electronics,SUP-038,46.41,84.71,23,Low
+SKU-00342,Suspension Bushing Model 2355,Automotive Parts,SUP-047,14.91,26.71,43,Low
+SKU-00343,Woven Liner Model 2356,Textiles,SUP-026,11.09,16.92,11,Medium
+SKU-00344,Shelving Unit Model 2358,Furniture,SUP-033,90.38,153.29,14,Medium
+SKU-00345,Sealant Cartridge Model 2361,Chemicals,SUP-021,16.42,31.11,16,Critical
+SKU-00346,Hinge Set Model 2366,Hardware,SUP-012,3.87,5.08,20,Low
+SKU-00347,Office Chair Model 2369,Furniture,SUP-037,115.25,217.23,23,Low
+SKU-00348,Cotton Fabric Roll Model 2372,Textiles,SUP-048,14.08,21.49,23,High
+SKU-00349,Beverage Concentrate Model 2379,Food & Beverage,SUP-039,8.09,13.65,41,High
+SKU-00350,Pen Box Model 2381,Office Supplies,SUP-003,7.1,12.72,28,Medium
+SKU-00351,Sports Bag Model 2385,Sporting Goods,SUP-022,13.44,20.44,8,Medium
+SKU-00352,Denim Bolt Model 2390,Textiles,SUP-048,16.83,29.8,23,Critical
+SKU-00353,Shrink Wrap Roll Model 2393,Packaging,SUP-004,1.12,2.05,14,Low
+SKU-00354,Conference Table Model 2400,Furniture,SUP-037,93.63,122.89,22,Low
+SKU-00355,Wiring Harness Model 2401,Electronics,SUP-035,37.56,59.98,19,Low
+SKU-00356,Radiator Hose Model 2404,Automotive Parts,SUP-047,37.58,46.99,39,Medium
+SKU-00357,Packaged Snack Case Model 2409,Food & Beverage,SUP-039,4.12,7.22,36,Medium
+SKU-00358,Brake Pad Set Model 2413,Automotive Parts,SUP-047,26.21,46.79,39,High
+SKU-00359,Timing Belt Model 2419,Automotive Parts,SUP-001,28.56,38.43,21,Low
+SKU-00360,Denim Bolt Model 2422,Textiles,SUP-045,5.12,8.19,38,Medium
+SKU-00361,Adhesive Compound Model 2424,Chemicals,SUP-042,10.65,13.95,9,Medium
+SKU-00362,Yoga Mat Model 2425,Sporting Goods,SUP-008,38.09,53.99,31,Low
+SKU-00363,Cleaning Agent Model 2430,Chemicals,SUP-034,15.28,24.11,29,Low
+SKU-00364,Resistance Band Set Model 2433,Sporting Goods,SUP-022,47.23,70.33,11,Low
+SKU-00365,Pen Box Model 2438,Office Supplies,SUP-017,1.84,2.55,26,Medium
+SKU-00366,Bicycle Helmet Model 2442,Sporting Goods,SUP-022,28.24,36.88,11,Medium
+SKU-00367,Power Adapter Model 2445,Electronics,SUP-043,37.13,50.64,16,Low
+SKU-00368,Frozen Food Case Model 2448,Food & Beverage,SUP-005,6.58,12.46,22,Medium
+SKU-00369,Radiator Hose Model 2455,Automotive Parts,SUP-016,34.38,57.58,26,High
+SKU-00370,Notebook Pack Model 2457,Office Supplies,SUP-023,5.28,9.6,25,Medium
+SKU-00371,Notebook Pack Model 2459,Office Supplies,SUP-030,10.44,18.97,19,Low
+SKU-00372,Printer Paper Case Model 2461,Office Supplies,SUP-002,2.76,4.63,11,Medium
+SKU-00373,Beverage Concentrate Model 2465,Food & Beverage,SUP-039,5.28,9.12,36,Medium
+SKU-00374,Notebook Pack Model 2472,Office Supplies,SUP-030,3.25,5.81,19,High
+SKU-00375,Mounting Plate Model 2474,Hardware,SUP-027,9.85,12.48,19,Critical
+SKU-00376,Conference Table Model 2478,Furniture,SUP-033,50.66,79.33,11,Critical
+SKU-00377,Conference Table Model 2481,Furniture,SUP-033,84.89,129.21,12,Medium
+SKU-00378,Timing Belt Model 2485,Automotive Parts,SUP-016,13.48,21.77,30,Critical
+SKU-00379,Timing Belt Model 2488,Automotive Parts,SUP-016,32.31,46.07,25,Critical
+SKU-00380,Spark Plug Model 2494,Automotive Parts,SUP-016,15.5,25.06,28,Medium
+SKU-00381,Storage Cabinet Model 2498,Furniture,SUP-033,60.32,77.99,13,Medium
+SKU-00382,Spark Plug Model 2499,Automotive Parts,SUP-047,15.07,27.6,39,High
+SKU-00383,Canned Goods Case Model 2506,Food & Beverage,SUP-039,7.2,9.8,41,Low
+SKU-00384,Radiator Hose Model 2507,Automotive Parts,SUP-020,64.53,100.63,16,Critical
+SKU-00385,Radiator Hose Model 2511,Automotive Parts,SUP-016,26.39,34.01,27,Low
+SKU-00386,Dumbbell Set Model 2516,Sporting Goods,SUP-022,53.3,73.4,7,Low
+SKU-00387,Stapler Set Model 2518,Office Supplies,SUP-003,3.15,4.38,32,Low
+SKU-00388,Resistance Band Set Model 2524,Sporting Goods,SUP-013,10.32,15.74,9,Low
+SKU-00389,Canned Goods Case Model 2530,Food & Beverage,SUP-044,7.4,9.9,27,Low
+SKU-00390,Steel Fastener Kit Model 2535,Hardware,SUP-012,2.86,4.25,20,Medium
+SKU-00391,Shelving Unit Model 2541,Furniture,SUP-032,57.98,85.94,23,High
+SKU-00392,Spark Plug Model 2544,Automotive Parts,SUP-001,46.74,64.66,22,Critical
+SKU-00393,Woven Liner Model 2549,Textiles,SUP-026,7.29,13.52,12,Medium
+SKU-00394,Circuit Board Model 2553,Electronics,SUP-050,22.59,29.93,13,Low
+SKU-00395,Wiring Harness Model 2557,Electronics,SUP-050,14.61,19.42,14,Medium
+SKU-00396,Brake Pad Set Model 2558,Automotive Parts,SUP-020,29.34,52.31,15,Medium
+SKU-00397,Canvas Roll Model 2561,Textiles,SUP-048,9.83,18.66,24,Critical
+SKU-00398,Bicycle Helmet Model 2565,Sporting Goods,SUP-013,25.99,37.96,9,High
+SKU-00399,Storage Cabinet Model 2567,Furniture,SUP-018,67.46,109.62,29,Low
+SKU-00400,Storage Cabinet Model 2573,Furniture,SUP-032,68.38,128.97,26,Low
+SKU-00401,Coating Resin Model 2578,Chemicals,SUP-015,8.3,13.04,13,Low
+SKU-00402,Bulk Grain Sack Model 2583,Food & Beverage,SUP-040,6.27,9.46,9,Low
+SKU-00403,Synthetic Blend Sheet Model 2585,Textiles,SUP-048,5.38,7.17,25,Low
+SKU-00404,Corrugated Box Model 2588,Packaging,SUP-036,2.72,3.58,13,Low
+SKU-00405,Spark Plug Model 2591,Automotive Parts,SUP-001,56.81,92.77,25,Low
+SKU-00406,Sealant Cartridge Model 2593,Chemicals,SUP-011,11.5,17.6,23,Medium
+SKU-00407,Storage Cabinet Model 2595,Furniture,SUP-037,93.11,172.48,26,Medium
+SKU-00408,Radiator Hose Model 2596,Automotive Parts,SUP-020,27.53,40.3,16,Medium
+SKU-00409,Packaging Film Model 2598,Packaging,SUP-041,3.24,5.25,19,Low
+SKU-00410,Pen Box Model 2602,Office Supplies,SUP-030,5.81,9.36,19,Medium
+SKU-00411,Conference Table Model 2609,Furniture,SUP-032,65.73,96.93,21,High
+SKU-00412,Printer Paper Case Model 2614,Office Supplies,SUP-019,11.93,16.2,26,Medium
+SKU-00413,Industrial Solvent Model 2619,Chemicals,SUP-011,24.72,37.15,27,Low
+SKU-00414,Bicycle Helmet Model 2621,Sporting Goods,SUP-013,15.99,27.84,10,Low
+SKU-00415,Sports Bag Model 2622,Sporting Goods,SUP-013,18.88,33.75,15,High
+SKU-00416,Office Chair Model 2627,Furniture,SUP-037,124.58,209.89,27,High
+SKU-00417,Desk Frame Model 2632,Furniture,SUP-037,194.08,361.88,26,Medium
+SKU-00418,Controller Unit Model 2636,Electronics,SUP-043,54.23,88.2,18,High
+SKU-00419,Display Module Model 2639,Electronics,SUP-050,45.53,58.05,19,Low
+SKU-00420,Shrink Wrap Roll Model 2640,Packaging,SUP-004,2.4,3.04,17,Medium
+SKU-00421,Fleece Roll Model 2641,Textiles,SUP-006,14.53,26.21,17,Critical
+SKU-00422,Office Chair Model 2644,Furniture,SUP-037,133.99,167.96,24,Low
+SKU-00423,Threaded Rod Model 2650,Hardware,SUP-027,4.53,6.64,22,Medium
+SKU-00424,Bulk Grain Sack Model 2657,Food & Beverage,SUP-044,16.34,26.43,29,Medium
+SKU-00425,Resistance Band Set Model 2663,Sporting Goods,SUP-022,21.77,29.48,9,Low
+SKU-00426,Sports Bag Model 2668,Sporting Goods,SUP-013,6.9,11.03,14,High
+SKU-00427,Corrugated Box Model 2675,Packaging,SUP-004,3.05,5.72,18,Critical
+SKU-00428,Conference Table Model 2679,Furniture,SUP-037,50.45,82.55,26,High
+SKU-00429,Foam Insert Model 2682,Packaging,SUP-010,2.05,3.06,20,Low
+SKU-00430,Cotton Fabric Roll Model 2689,Textiles,SUP-048,10.88,17.01,21,Medium
+SKU-00431,Circuit Board Model 2691,Electronics,SUP-007,39.69,74.95,23,Low
+SKU-00432,Display Module Model 2696,Electronics,SUP-043,83.36,124.25,20,High
+SKU-00433,Circuit Board Model 2702,Electronics,SUP-007,37.82,50.19,24,Medium
+SKU-00434,Shrink Wrap Roll Model 2704,Packaging,SUP-004,1.43,2.05,18,Low
+SKU-00435,Air Filter Model 2711,Automotive Parts,SUP-020,39.8,72.37,10,Medium
+SKU-00436,Adhesive Compound Model 2714,Chemicals,SUP-015,18.1,28.08,11,Critical
+SKU-00437,Resistance Band Set Model 2718,Sporting Goods,SUP-022,36.27,49.19,10,Low
+SKU-00438,Bicycle Helmet Model 2724,Sporting Goods,SUP-013,19.78,32.68,13,Medium
+SKU-00439,Frozen Food Case Model 2728,Food & Beverage,SUP-005,6.73,10.43,23,Critical
+SKU-00440,Frozen Food Case Model 2731,Food & Beverage,SUP-044,2.71,3.63,26,Medium
+SKU-00441,Suspension Bushing Model 2733,Automotive Parts,SUP-047,43.48,64.08,40,Low
+SKU-00442,Bubble Wrap Roll Model 2740,Packaging,SUP-010,3.1,4.69,20,High
+SKU-00443,Controller Unit Model 2744,Electronics,SUP-035,55.29,104.13,19,Medium
+SKU-00444,Bolt Assembly Model 2746,Hardware,SUP-027,5.56,10.1,16,Low
+SKU-00445,Denim Bolt Model 2753,Textiles,SUP-045,7.19,10.99,32,Low
+SKU-00446,Corrugated Box Model 2756,Packaging,SUP-036,2.49,3.98,14,Medium
+SKU-00447,Printer Paper Case Model 2763,Office Supplies,SUP-002,2.98,5.58,14,Low
+SKU-00448,Stapler Set Model 2765,Office Supplies,SUP-019,3.47,5.02,24,Low
+SKU-00449,Coating Resin Model 2766,Chemicals,SUP-015,14.2,18.17,13,Critical
+SKU-00450,Woven Liner Model 2773,Textiles,SUP-048,4.19,5.56,27,Critical
+SKU-00451,Binder Set Model 2777,Office Supplies,SUP-003,7.17,12.85,32,Medium
+SKU-00452,Suspension Bushing Model 2781,Automotive Parts,SUP-020,24.86,45.87,11,Low
+SKU-00453,Lubricant Drum Model 2785,Chemicals,SUP-034,12.22,18.43,31,Low
+SKU-00454,Storage Cabinet Model 2787,Furniture,SUP-033,142.3,267.48,14,Low
+SKU-00455,Controller Unit Model 2794,Electronics,SUP-014,69.25,95.09,13,High
+SKU-00456,Power Adapter Model 2799,Electronics,SUP-038,25.61,33.58,24,Medium
+SKU-00457,Canned Goods Case Model 2801,Food & Beverage,SUP-039,11.19,19.14,39,Low
+SKU-00458,Frozen Food Case Model 2808,Food & Beverage,SUP-039,9.08,16.32,41,Medium
+SKU-00459,Coating Resin Model 2815,Chemicals,SUP-034,6.72,8.95,32,Critical
+SKU-00460,Shelving Unit Model 2817,Furniture,SUP-033,118.85,190.55,16,Low
+SKU-00461,Sports Bag Model 2819,Sporting Goods,SUP-008,23.14,43.54,32,Medium
+SKU-00462,Woven Liner Model 2820,Textiles,SUP-006,1.91,2.95,20,Medium
+SKU-00463,Corrugated Box Model 2826,Packaging,SUP-010,1.84,2.73,21,Low
+SKU-00464,Sports Bag Model 2829,Sporting Goods,SUP-008,37.34,48.55,31,Medium
+SKU-00465,Notebook Pack Model 2835,Office Supplies,SUP-019,5.92,9.12,25,Low
+SKU-00466,Bicycle Helmet Model 2839,Sporting Goods,SUP-008,41.86,53.28,35,Low
+SKU-00467,Timing Belt Model 2842,Automotive Parts,SUP-001,37.8,52.31,22,Medium
+SKU-00468,Beverage Concentrate Model 2843,Food & Beverage,SUP-005,8.11,12.86,23,Medium
+SKU-00469,Packaging Film Model 2848,Packaging,SUP-046,2.67,5.03,20,Low
+SKU-00470,Coating Resin Model 2855,Chemicals,SUP-034,12.76,17.22,27,Low
+SKU-00471,Bulk Grain Sack Model 2860,Food & Beverage,SUP-039,4.69,6.46,37,Critical
+SKU-00472,Bubble Wrap Roll Model 2866,Packaging,SUP-009,2.27,3.63,12,Medium
+SKU-00473,Sensor Model 2870,Electronics,SUP-035,44.8,61.88,21,Medium
+SKU-00474,Office Chair Model 2876,Furniture,SUP-018,274.42,497.16,28,High
+SKU-00475,Denim Bolt Model 2883,Textiles,SUP-048,15.03,22.19,21,Medium
+SKU-00476,Lubricant Drum Model 2890,Chemicals,SUP-011,45.73,70.18,21,High
+SKU-00477,Circuit Board Model 2892,Electronics,SUP-050,73.13,109.4,15,Medium
+SKU-00478,Notebook Pack Model 2895,Office Supplies,SUP-002,4.5,6.16,15,Critical
+SKU-00479,Timing Belt Model 2900,Automotive Parts,SUP-001,60.45,101.23,22,Low
+SKU-00480,Industrial Solvent Model 2902,Chemicals,SUP-042,22.65,31.68,11,Low
+SKU-00481,Packaged Snack Case Model 2905,Food & Beverage,SUP-039,8.32,11.31,41,Medium
+SKU-00482,Notebook Pack Model 2911,Office Supplies,SUP-023,3.14,4.14,28,Low
+SKU-00483,Threaded Rod Model 2917,Hardware,SUP-012,1.77,2.81,14,Medium
+SKU-00484,Industrial Solvent Model 2918,Chemicals,SUP-034,12.04,22.84,29,Low
+SKU-00485,Canvas Roll Model 2923,Textiles,SUP-049,4.29,6.7,23,Critical
+SKU-00486,Canned Goods Case Model 2924,Food & Beverage,SUP-040,7.19,11.76,5,High
+SKU-00487,Shelving Unit Model 2926,Furniture,SUP-033,184.78,307.56,15,Medium
+SKU-00488,Bulk Grain Sack Model 2928,Food & Beverage,SUP-044,19.19,29.84,23,Low
+SKU-00489,Pen Box Model 2935,Office Supplies,SUP-003,4.29,6.69,31,High
+SKU-00490,Canvas Roll Model 2937,Textiles,SUP-048,10.32,17.25,21,High
+SKU-00491,Threaded Rod Model 2941,Hardware,SUP-027,3.28,5.01,19,Medium
+SKU-00492,Cotton Fabric Roll Model 2944,Textiles,SUP-048,25.26,41.94,25,Medium
+SKU-00493,Brake Pad Set Model 2946,Automotive Parts,SUP-001,73.25,123.11,26,Low
+SKU-00494,Conference Table Model 2951,Furniture,SUP-037,62.65,93.42,25,Low
+SKU-00495,Canvas Roll Model 2956,Textiles,SUP-006,10.07,17.9,18,Medium
+SKU-00496,Cleaning Agent Model 2957,Chemicals,SUP-021,7.88,12.2,19,Medium
+SKU-00497,Woven Liner Model 2962,Textiles,SUP-026,3.92,6.8,10,Medium
+SKU-00498,Threaded Rod Model 2966,Hardware,SUP-012,7.02,11.64,14,Low
+SKU-00499,Spark Plug Model 2970,Automotive Parts,SUP-016,9.69,17.75,30,Low
+SKU-00500,Canned Goods Case Model 2974,Food & Beverage,SUP-040,17.11,32.02,4,Medium
